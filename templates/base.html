@@ -23,6 +23,7 @@
   <body>
 
     <header class="container-fluid">
+      <!-- Menu Button -->
       <button class="button menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
           <!-- <span>
             <i class="fas fa-angle-double-down"></i>
@@ -66,11 +67,50 @@
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2 border-black rounded-0" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark rounded-0" type="submit">
+              <span>
+                <i class="fas fa-search"></i>
+              </span>
+            </button>
           </form>
         </div>
       </div>
+      <!-- Navbar row with icons -->
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 float-end">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item">
+              <a class="nav-link" href="#">
+                  <div class="text-center text-black">
+                      <div class="icons"><i class="far fa-heart"></i></div>
+                  </div>
+              </a>
+            </li>
+            <li class="list-inline-item dropdown">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="text-center">
+                        <div class="icons"><i class="far fa-user"></i></div>
+                    </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                        <a href="#" class="dropdown-item">My Profile</a>
+                        <a href="#" class="dropdown-item">Logout</a>
+                    {% else %}
+                        <a href="#" class="dropdown-item">Register</a>
+                        <a href="#" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+            <li class="list-inline-item">
+                <a class="text-black nav-link" href="#">
+                    <div class="text-center">
+                        <div class="icons"><i class="fas fa-shopping-cart"></i></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
     </header>
 
       {% block content %}
