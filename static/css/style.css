@@ -1,0 +1,15 @@
+.button {
+    background-color: #e9efe7;
+    border: solid 0.5px black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 10px 2px;
+  }
+
+.menu-btn {
+    border-radius: 50%;
+    color: black;
+}
