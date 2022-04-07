@@ -1,6 +1,16 @@
 
 /* Styling for navbar */
 
+#nav-btn-par {
+    position: relative;
+}
+
+#nav-btn-chi {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+}
+
 .menu-btn {
     background-color: #e9efe7;
     border: solid 0.5px black;
@@ -11,11 +21,12 @@
     font-size: 30px;
     border-radius: 50%;
     color: black;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);*/
     transition: all 0.3s ease 0s;
     cursor: grab;
     outline: none;
     margin: 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .menu-btn:hover {
@@ -27,4 +38,43 @@
 
 .icons {
     font-size: 25px;
+}
+
+/* Media Queries */
+
+/* For tablet view */
+@media (min-width: 1200px) {
+    #nav-btn-par {
+        position: relative;
+    }
+    
+    #nav-btn-chi {
+        position: absolute;
+        top: 8px;
+        left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-btn-par {
+        position: relative;
+    }
+    
+    #nav-btn-chi {
+        position: absolute;
+        top: 8px;
+        left: 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    #nav-btn-par {
+        position: relative;
+    }
+    
+    #nav-btn-chi {
+        position: absolute;
+        top: 8px;
+        left: 15px;
+    }
 }
