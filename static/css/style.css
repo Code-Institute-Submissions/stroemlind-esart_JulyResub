@@ -1,6 +1,7 @@
 
 /* Styling for navbar */
-.button {
+
+.menu-btn {
     background-color: #e9efe7;
     border: solid 0.5px black;
     padding: 10px 20px;
@@ -8,13 +9,21 @@
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    margin: 10px 2px;
-  }
-
-.menu-btn {
     border-radius: 50%;
     color: black;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: grab;
+    outline: none;
+    margin: 0px 10px;
 }
+
+.menu-btn:hover {
+    background-color: #a0c7b7;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transform: translateY(-7px);
+  }
 
 .icons {
     font-size: 25px;
