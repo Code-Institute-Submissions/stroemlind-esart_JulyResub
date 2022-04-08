@@ -40,6 +40,8 @@
     font-size: 25px;
 }
 
+/* Footer styling */
+
 footer {
     height: 100vh;
 }
@@ -50,11 +52,24 @@ footer {
 
 .bottom-footer {
     padding: 20px 0px;
+    background-color: #e9efe7;
 }
 
 .footer-sections {
     padding: 10px 0px;
     margin: 10px 0px;
+}
+
+.btn-mail {
+    color: black;
+}
+
+.btn-mail:hover {
+    color: #fcfffe;
+}
+
+#fqa li {
+    background-color: #e9efe7;
 }
 
 /* ---------- Media Queries */

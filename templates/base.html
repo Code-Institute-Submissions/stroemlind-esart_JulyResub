@@ -124,32 +124,53 @@
       <div class="row">
         <div class="col-12 mt-2 top-footer">
           <h2 class="text-center">Sign up for a news letter</h2>
-          <form action="" class="text-center">
-            <input type="text">
-            <button type="submit" class="btn border-dark rounded-0 btn-outline-dark">Keep in touch</button>
-          </form>
+          <!-- <form action="" class="text-center">
+            <input type="text" class="">
+            <button type="submit" aria-label="keep in touch" class="btn border-dark rounded-0 btn-outline-dark">Keep in touch</button>
+          </form> -->
+          <div class="input-group">
+            <input class="form-control border border-black rounded-0" type="email" name="signup news" placeholder="Enter email here">
+            <div class="input-group-append">
+                <button class="form-control btn border border-dark rounded-0 btn-outline-dark" type="submit" aria-label="keep in touch">
+                  Keep in Touch!
+                </button>
+            </div>
+        </div>
         </div>
         <div class="col-12 d-md-inline-flex d-lg-inline-flex d-xl-inline-flex justify-content-md-start justify-content-lg-start justify-content-xl-start mt-3 bottom-footer">
           <div class="col-12 col-md-4 col-lg-4 footer-sections">
-            <ul class="list-group list-group-flush ps-3">
-              <li class="list-group-item border-0 text-uppercase">You Find Us Here:</li>
-              <li class="list-group-item border-0">Facebook</li>
-              <li class="list-group-item border-0">Instagram</li>
-              <li class="list-group-item border-0">Spotify</li>
-            </ul>
+            <div class="ps-4">
+              <div class="mb-4">
+                <p class="text-black text-uppercase mb-2">You Can Find Us Here: </p>
+                <a class="btn btn-link btn-floating btn-lg text-black" href="https://www.spotify.com/" target="_blank" rel="noopener" aria-label="Visit our Spotify (open in new tab)"><i class="fab fa-spotify"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-black" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook (open in new tab)"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-black" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram (open in new tab)"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-md-4 col-lg-4 text-center footer-sections">
-            <h2>Send Us a Hello!</h2>
+            <h2 class="text-uppercase">Send Us a Hello!</h2>
+            <hr>
             <div>
-              <a href="">e.stroemlind@gmail.com</a>
+              <form action="">
+                <a href="#" class="nav-link btn-mail">e.stroemlind@gmail.com</a>
+              </form>
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-4 text-end footer-sections">
-            <ul class="list-group list-group-flush text-uppercase pe-3">
-              <li class="list-group-item border-0">About</li>
-              <li class="list-group-item border-0">Products</li>
-              <li class="list-group-item border-0">Terms and Conditions</li>
-              <li class="list-group-item border-0">Privacy Policy</li>
+            <ul id="fqa" class="list-group list-group-flush text-uppercase pe-3">
+              <li class="list-group-item border-0">
+                <a href="#" class="nav-link text-black p-0">About Us</a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="#" class="nav-link text-black p-0">Products</a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="#" class="nav-link text-black p-0">Terms and Conditions</a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="#" class="nav-link text-black p-0">Privacy Policy</a>
+              </li>
             </ul>
           </div>
         </div>
