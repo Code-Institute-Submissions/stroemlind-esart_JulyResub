@@ -40,10 +40,17 @@
     font-size: 25px;
 }
 
+/* Index page styling */
+.logo-heading {
+    font-size: 50px;
+}
+
+
 /* Footer styling */
 
 footer {
-    height: 100vh;
+    margin-top: auto;
+    min-height: 120px;
 }
 
 .top-footer {
