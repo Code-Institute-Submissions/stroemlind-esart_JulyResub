@@ -43,7 +43,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link text-black" aria-current="page" href="#">Home</a>
+                  <a class="nav-link text-black" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-black" href="#">My Profile</a>
@@ -56,7 +56,7 @@
                     Categories
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="#">Hey</a></li>
+                    <li><a class="dropdown-item" href="{% url 'posters' %}">All Posters</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
@@ -144,7 +144,7 @@
                 <a href="{% url 'about-us' %}" class="nav-link text-black p-0">About Us</a>
               </li>
               <li class="list-group-item border-0">
-                <a href="#" class="nav-link text-black p-0">Products</a>
+                <a href="{% url 'posters' %}" class="nav-link text-black p-0">Products</a>
               </li>
               <li class="list-group-item border-0">
                 <a href="#" class="nav-link text-black p-0">Terms and Conditions</a>
