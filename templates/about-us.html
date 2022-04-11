@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-2 mt-4">
+        <div class="col-12 col-md-12 col-lg-7 col-xl-7 border">
+            <div id="carouselExampleIndicators" class="carousel slide d-none d-lg-block d-xl-block" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4 d-lg-none d-xl-none">
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-5 col-xl-5 border">
+            <div class="card border-0">
+                <div class="card-body">
+                    <div class="card-text py-3">
+                        Who is the person behind the posters?
+                        <br>
+                        <br>
+                        E. Strömlind takes the colorful and vibrant moments in life and makes them abstract and easy for the eye. 
+                        The inspiration for the posters comes from different types of photos, like concert pictures, fashion editorials from magazines, or random everyday life pictures. 
+                        <br>
+                        <br>
+                        All the posters are handmade on acrylic paper, drawn with pen and different types of markers. The process of creating the posters is both digital and handmade. 
+                        First, the motive picture gets edited to make the motive fit the desired look. When done with the editing process, the artist starts to draw the motive on acrylic paper with a pen.
+                        With the primary line drawn, the process of coloring the poster begins.
+                        The artist sometimes uses colored pencils depending on the poster and motive, but primarily black markers in different sizes for most posters.
+                        <br>
+                        <br>
+                        Would you like a poster with a specific motive? You can make a <a href="#">request here</a> to order one or contact us <a href="#">here</a> for more information!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
