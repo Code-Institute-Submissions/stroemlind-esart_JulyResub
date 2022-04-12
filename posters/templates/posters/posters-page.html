@@ -4,22 +4,25 @@
 {% block content %}
 <div class="container">
     <div class="row g-2 mt-4">
-        <h2>Posters</h2>
+        <h2 class="col-2 offset-1 ps-5">Posters</h2>
     </div>
     <div class="row">
-        <div class="col-4 card rounded-0">
+        <div class="col-lg-3 col-md-5 col-sm-5 col-10 card rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto">
             <img src="..." class="card-img-top" alt="...">
             <div class="row card-body p-0">
                 <div class="col-10 border p-0 ps-1 pt-1">
                     <p>Title</p>
-                    <p>Price</p>
+                    <p>€ Price</p>
                 </div>
                 <div class="col-2 border p-0">
-                    <a class="nav-link" href="#">
-                        <div class="text-start text-black">
-                            <div class="icons"><i class="far fa-heart"></i></div>
-                        </div>
-                    </a>
+                    <form class="d-inline" action="#" method="POST" name="likeForm">
+                        <button type="submit" value="" name="likes" class="btn-like icons">
+                            <i class="fas fa-heart"></i> 
+                        </button>
+                        <button type="submit" value="" name="likes" class="btn-like icons">
+                            <i class="far fa-heart"></i> 
+                        </button>
+                    </form>
                 </div>
                 <a class="text-black nav-link" href="#">
                     <div class="text-start row">

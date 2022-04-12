@@ -45,6 +45,18 @@
     font-size: 50px;
 }
 
+/* Poster Product styling */
+
+.btn-like {
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    background: transparent;
+    border: none;
+}
 
 /* Footer styling */
 
