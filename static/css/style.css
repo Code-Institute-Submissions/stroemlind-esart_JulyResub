@@ -47,6 +47,15 @@
 
 /* Poster Product styling */
 
+.product-title {
+    color: black;
+    text-decoration: none;
+}
+
+.product-title:hover {
+    color: black;
+}
+
 .btn-like {
     border: none;
     background: transparent;

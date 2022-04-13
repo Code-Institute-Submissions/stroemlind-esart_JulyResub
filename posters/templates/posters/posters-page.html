@@ -10,17 +10,19 @@
         {% for poster in posters %}
         <div class="col-lg-3 col-md-5 col-sm-5 col-10 card rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto">
             {% if poster.image %}
-            <a href="#">
+            <a href="{% url 'poster-detail' poster.pk %}">
                 <img src="{{ poster.image.url }}" class="card-img-top" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
             </a>
             {% else %}
-            <a href="#">
+            <a href="{% url 'poster-detail' poster.pk %}">
                 <img src="{{ MEDIA_URL }}no-image.jpeg" class="card-img-top" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
             </a>
             {% endif %}
             <div class="row card-body p-0">
                 <div class="col-10 border p-0 ps-1 pt-1">
-                    <p>{{ poster.name }}</p>
+                    <a href="{% url 'poster-detail' poster.pk %}" class="product-title">
+                        <p>{{ poster.name }}</p>
+                    </a>
                     <p><strong>€</strong> {{ poster.price }}</p>
                 </div>
                 <div class="col-2 border p-0">
