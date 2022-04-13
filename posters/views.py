@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+
+from .models import Poster, Motive
 
 # Create your views here.
 def index(request):
@@ -13,6 +15,12 @@ def about_us(request):
 
 def posters(request):
     """ A view to render the Poster product page """
+
+    posters = Poster.objects.all()
     template = 'posters/posters-page.html'
 
-    return render(request, template)
+    context = {
+        'posters': posters,
+    }
+
+    return render(request, template, context)
