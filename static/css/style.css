@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@200;300&family=Rock+3D&display=swap');
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Rock 3D', cursive;
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Rock 3D', cursive;
+}
+
+h3 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
 
 /* Styling for navbar */
 
@@ -41,8 +60,19 @@
 }
 
 /* Index page styling */
-.logo-heading {
-    font-size: 50px;
+#logo-heading {
+    font-size: 70px;
+}
+
+.text-link {
+    text-decoration: none;
+    color: black;
+}
+
+.text-link:hover {
+    color: rgb(3, 31, 5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 4px;
 }
 
 /* Poster Product styling */
@@ -50,6 +80,7 @@
 .product-title {
     color: black;
     text-decoration: none;
+    font-family: 'Amatic SC', cursive;
 }
 
 .product-title:hover {
@@ -127,6 +158,16 @@ footer {
         top: 8px;
         left: 25px;
     }
+
+    #logo-heading {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 375px) {
+    #logo-heading {
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -138,5 +179,9 @@ footer {
         position: absolute;
         top: 8px;
         left: 15px;
+    }
+
+    #logo-heading {
+        font-size: 40px;
     }
 }
