@@ -3,10 +3,78 @@
 
 {% block content %}
 <div class="container">
-    <div class="row g-2 mt-4">
-        <h2 class="col-2 offset-1 ps-5">{{ poster.name }}</h2>
-    </div>
-    <div class="row justify-content-around mb-3">
+    <div class="row justify-content-around my-3">
+        <div class="col-10 m-sm-3 m-md-3 m-lg-3 mx-auto mt-3 poster-element">
+            <div class="row p-0">
+                <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                {% if poster.image %}
+                <a href="{% url 'poster-detail' poster.pk %}">
+                    <img src="{{ poster.image.url }}" class="card-img-top border" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
+                </a>
+                {% else %}
+                <a href="{% url 'poster-detail' poster.pk %}">
+                    <img src="{{ MEDIA_URL }}no-image.jpeg" class="card-img-top border" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+                </a>
+                {% endif %}
+                </div>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 p-0 ps-1 pt-1">
+                    <div class="row">
+                        <div class="col-10">
+                            <h3>{{ poster.name }}</h3>
+                            <p>€ {{ poster.price }}</p>
+                        </div>
+                        <div class="col-2 px-auto">
+                            <form class="d-inline" action="#" method="POST" name="likeForm">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" value="" name="likes" class="btn-like icons mt-3">
+                                    <i class="fas fa-heart"></i> 
+                                </button>
+                                {% else %}
+                                <button type="submit" value="" name="likes" class="btn-like icons mt-3">
+                                    <i class="far fa-heart"></i> 
+                                </button>
+                                {% endif %}
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="d-sm-none d-md-none d-lg-none d-xl-none">
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <hr class="d-none d-sm-block d-md-block d-lg-block d-xl-block my-3">
+                            <p class="col-10 mb-1">Details</p>
+                            <a class="col-2 text-end text-black" data-bs-toggle="collapse" href="#collapseDetail" role="button" aria-expanded="false" aria-controls="collapseDetail">
+                            <i class="fas fa-angle-down"></i>
+                            </a>
+                        </div>
+                        <div class="collapse" id="collapseDetail">
+                            <div class="col">
+                                {{ poster.description }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <hr class="my-3">
+                            <p class="col-10 mb-1">Returns</p>
+                            <a class="col-2 text-end text-black" data-bs-toggle="collapse" href="#collapseReturn" role="button" aria-expanded="false" aria-controls="collapseReturn">
+                            <i class="fas fa-angle-down"></i>
+                            </a>
+                        </div>
+                        <div class="collapse" id="collapseReturn">
+                            <div class="col">
+                                <p>
+                                We offer a 30 days return from the date of your receipt (excluding shipping costs) if you change your mind.
+                                You will find <a href="#" class="text-link">More information here</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="my-3">
+                    </div>
+                    <div class="col-12 text-center mt-3 pt-3">
+                        <a href="#" class="btn btn-outline-dark rounded-0" id="load-more">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

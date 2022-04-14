@@ -8,7 +8,7 @@
     </div>
     <div class="row justify-content-around mb-3">
         {% for poster in posters %}
-        <div class="col-lg-3 col-md-5 col-sm-5 col-10 card rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto">
+        <div class="col-lg-3 col-md-5 col-sm-5 col-10 card rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto poster-element">
             {% if poster.image %}
             <a href="{% url 'poster-detail' poster.pk %}">
                 <img src="{{ poster.image.url }}" class="card-img-top" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
@@ -48,6 +48,40 @@
             </div>
         </div>
         {% endfor %}
+        <div class="col-12 text-center mt-3">
+            <a href="#" class="btn btn-outline-dark rounded-0" id="load-more">Load more</a>
+        </div>
     </div>
 </div>
+
+<!-- <script>
+    $(document).ready (function () {
+        $(".poster-element").slice(0, 4).show();
+        $("#load-more").on("click", function(e){
+            e.preventDefault();
+            $(".poster-element:hidden").slice(0, 4).slideDown();
+            if ($(".poster-element:hidden").length == 0) {
+                $("#load-more").text("No Content").addClass("no-content");
+            }
+        });
+    })
+</script> -->
+
+<!-- <script>
+    const loadmore = document.querySelector('#load-more');
+        let currentItems = 2;
+        loadmore.addEventListener('click', (e) => {
+            const elementList = [...document.querySelectorAll('.poster-element')];
+            for (let i = currentItems; i < currentItems + 2; i++) {
+                if (elementList[i]) {
+                    elementList[i].style.display = 'block';
+                }
+            }
+            currentItems += 2;
+
+            if (currentItems >= elementList.length) {
+                event.target.style.display = 'none';
+            }
+        })
+</script> -->
 {% endblock %}

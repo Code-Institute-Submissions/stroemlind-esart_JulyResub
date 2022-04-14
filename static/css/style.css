@@ -75,6 +75,12 @@ h3 {
     padding: 4px;
 }
 
+.no-content {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
 /* Poster Product styling */
 
 .product-title {
