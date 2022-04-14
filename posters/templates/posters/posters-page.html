@@ -39,49 +39,15 @@
                         {% endif %}
                     </form>
                 </div>
-                <a class="text-black nav-link" href="#">
+                <!-- <a class="text-black nav-link" href="#">
                     <div class="text-start row">
                         <div class="icons col-1 p-0 ps-1"><i class="fas fa-shopping-cart"></i></div>
                         <p class="col my-auto">Add To Cart</p>
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
         {% endfor %}
-        <div class="col-12 text-center mt-3">
-            <a href="#" class="btn btn-outline-dark rounded-0" id="load-more">Load more</a>
-        </div>
     </div>
 </div>
-
-<!-- <script>
-    $(document).ready (function () {
-        $(".poster-element").slice(0, 4).show();
-        $("#load-more").on("click", function(e){
-            e.preventDefault();
-            $(".poster-element:hidden").slice(0, 4).slideDown();
-            if ($(".poster-element:hidden").length == 0) {
-                $("#load-more").text("No Content").addClass("no-content");
-            }
-        });
-    })
-</script> -->
-
-<!-- <script>
-    const loadmore = document.querySelector('#load-more');
-        let currentItems = 2;
-        loadmore.addEventListener('click', (e) => {
-            const elementList = [...document.querySelectorAll('.poster-element')];
-            for (let i = currentItems; i < currentItems + 2; i++) {
-                if (elementList[i]) {
-                    elementList[i].style.display = 'block';
-                }
-            }
-            currentItems += 2;
-
-            if (currentItems >= elementList.length) {
-                event.target.style.display = 'none';
-            }
-        })
-</script> -->
 {% endblock %}
