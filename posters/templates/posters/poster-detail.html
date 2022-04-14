@@ -39,7 +39,34 @@
                         </div>
                     </div>
                     <hr class="d-sm-none d-md-none d-lg-none d-xl-none">
-                    <div class="col-12 mb-3">
+                    <div class="accordion accordion-flush border-top border-bottom" id="accordionFlush">
+                        <div class="accordion-item">
+                          <h4 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Details
+                            </button>
+                          </h4>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+                            <div class="accordion-body">{{ poster.description }}</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h4 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Returns
+                            </button>
+                          </h4>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
+                            <div class="accordion-body">
+                                <p>
+                                We offer a 30 days return from the date of your receipt (excluding shipping costs) if you change your mind.
+                                You will find <a href="#" class="text-link">More information here</a>.
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- <div class="col-12 mb-3">
                         <div class="row">
                             <hr class="d-none d-sm-block d-md-block d-lg-block d-xl-block my-3">
                             <p class="col-10 mb-1">Details</p>
@@ -68,7 +95,7 @@
                             </div>
                         </div>
                         <hr class="my-3">
-                    </div>
+                    </div> -->
                     <div class="col-12 text-center mt-3 pt-3">
                         <a href="#" class="btn btn-outline-dark rounded-0" id="load-more">Add to Cart</a>
                     </div>
