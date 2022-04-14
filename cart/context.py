@@ -1,4 +1,6 @@
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from posters.models import Poster
 
 
 def cart_contents(request):
@@ -6,14 +8,25 @@ def cart_contents(request):
     function to make the cart intems available to all templates
     """
 
-    bag_items = []
+    cart_items = []
     total = 0
     product_count = 0
+    cart = request.session.get('cart', {})
+
+    for item_id, quantity in cart.items():
+        poster = get_object_or_404(Poster, pk=item_id)
+        total += quantity * poster.price
+        product_count += quantity
+        cart_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'poster': poster,
+        })
 
     total_cost = total
 
     context = {
-        'bag_items': bag_items,
+        'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
         'total_cost': total_cost,
