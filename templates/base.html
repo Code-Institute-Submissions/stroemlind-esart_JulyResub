@@ -74,8 +74,8 @@
                   </ul>
                 </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2 border-black rounded-0" type="search" placeholder="Search" aria-label="Search">
+              <form class="d-flex" method="GET" action="{% url 'posters' %}">
+                <input class="form-control me-2 border-black rounded-0" name="q" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-dark rounded-0" type="submit">
                   <span>
                     <i class="fas fa-search"></i>

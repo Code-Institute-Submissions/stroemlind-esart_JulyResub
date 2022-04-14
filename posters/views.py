@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.db.models import Q
 
 from .models import Poster, Motive
 
@@ -18,9 +20,21 @@ def posters_all_view(request):
 
     posters = Poster.objects.all()
     template = 'posters/posters-page.html'
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You need to enter something to search for")
+                return redirect(reverse('posters'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            posters = posters.filter(queries)
 
     context = {
         'posters': posters,
+        'search': query,
     }
 
     return render(request, template, context)
