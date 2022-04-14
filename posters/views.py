@@ -21,20 +21,28 @@ def posters_all_view(request):
     posters = Poster.objects.all()
     template = 'posters/posters-page.html'
     query = None
+    motives = None
 
     if request.GET:
+        if 'motive' in request.GET:
+            motives = request.GET['motive'].split(',')
+            posters = posters.filter(motive__name__in=motives)
+            motives = Motive.objects.filter(name__in=motives)
+
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "You need to enter something to search for")
                 return redirect(reverse('posters'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             posters = posters.filter(queries)
 
     context = {
         'posters': posters,
         'search': query,
+        'motives_atm': motives,
     }
 
     return render(request, template, context)
