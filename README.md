@@ -16,6 +16,8 @@ amiresponisive image
 * As a Store Manager, I want to be able to manage products through the admin page.
 
 ## UX (briefly explain your design)
+
+### SEO and KeyWords
 ### Colour Scheme (explain your colors, etc.... perhaps use coolors.co?)
 ### Typography (explain any fonts and icon libraries used, font-awesome/google fonts, etc)
 #### Fonts
@@ -146,7 +148,7 @@ Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also r
 * Create a **requirements.txt** file for Heroku, using the following command:
     - `pip3 freeze --local > requirements.txt`
 
-The live link can be found here - [https://esart.herokuapp.com/](https://esart.herokuapp.com/)
+The live link can be found here - [https://es-art.herokuapp.com/](https://es-art.herokuapp.com/)
 
 ### Local Deployment
 In order to make a local copy of this project, you can type the following into your IDE Terminal to clone this repository:

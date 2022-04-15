@@ -4,7 +4,7 @@ from posters.models import Poster
 
 def cart_contents(request):
     """
-    function to make the cart intems available to all templates
+    Function to make the cart intems available to all templates
     """
 
     cart_items = []
