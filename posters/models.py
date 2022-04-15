@@ -28,7 +28,7 @@ class Poster(models.Model):
     description = models.TextField()
     size = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=7, decimal_places=2)
-    image = models.ImageField(null=True, blank=True)
+    image = models.CharField(max_length=100, null=True, blank=True)
     like = models.ManyToManyField(
         User, related_name='poster_like', blank=True)
 

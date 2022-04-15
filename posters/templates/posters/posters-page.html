@@ -11,11 +11,11 @@
         <div class="col-lg-3 col-md-5 col-sm-5 col-10 card rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto poster-element">
             {% if poster.image %}
             <a href="{% url 'poster-detail' poster.pk %}">
-                <img src="{{ poster.image.url }}" class="card-img-top" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
+                <img src="{% static '' %}/img/{{ poster.image }}" class="card-img-top" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
             </a>
             {% else %}
             <a href="{% url 'poster-detail' poster.pk %}">
-                <img src="{{ MEDIA_URL }}no-image.jpeg" class="card-img-top" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+                <img src="{% static '' %}/img/no-image.jpeg" class="card-img-top" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
             </a>
             {% endif %}
             <div class="row card-body p-0">
