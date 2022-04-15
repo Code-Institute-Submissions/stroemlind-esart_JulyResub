@@ -19,7 +19,11 @@
                 <tbody>
                     <tr class="border-bottom border-dark">
                         <td class="p-3 w-30 img-fluid">
-                            <img src="{{ item.poster.image }}" alt="{{ item.poster.name }}">
+                            {% if item.poster.image %}
+                                <img src="{% static '' %}img/{{ item.poster.image }}" alt="{{ item.poster.name }}">
+                            {% else %}
+                                <img src="{% static '' %}img/no-image.jpeg" class="card-img-top" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+                            {% endif %}
                         </td>
                         <td class="py-3 px-2">
                             <a href="{% url 'poster-detail' item.item_id%}" class="cart-text">

@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 
 from .models import Poster, Motive
+from cart.context import cart_contents
 
 
 def index(request):
@@ -54,10 +55,12 @@ def poster_detail(request, poster_id):
     """ A view to show individual poster details """
 
     poster = get_object_or_404(Poster, pk=poster_id)
+    cart = cart_contents(request)
     template = 'posters/poster-detail.html'
 
     context = {
         'poster': poster,
+        'cart': cart,
     }
 
     return render(request, template, context)

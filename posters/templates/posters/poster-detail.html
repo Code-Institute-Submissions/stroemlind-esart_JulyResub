@@ -16,11 +16,11 @@
                 <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
                 {% if poster.image %}
                 <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{{ poster.image.url }}" class="card-img-top border" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
+                    <img src="{% static '' %}img/{{ poster.image }}" class="card-img-top border" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
                 </a>
                 {% else %}
                 <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{{ MEDIA_URL }}no-image.jpeg" class="card-img-top border" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+                    <img src="{% static '' %}img/no-image.jpeg" class="card-img-top border" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
                 </a>
                 {% endif %}
                 </div>
@@ -103,6 +103,8 @@
                         </div>
                         <hr class="my-3">
                     </div> -->
+                    <p>{{ cart }}</p>
+                    {% if poster.item_id not in cart.cart_items %}
                     <div class="col-12 text-center mt-3 pt-3">
                         <form action="{% url 'add_to_cart' poster.id %}" method="POST">
                             {% csrf_token %}
@@ -115,6 +117,9 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
                     </div>
+                    {% else %}
+                    <p>This item is currently in a cart</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
