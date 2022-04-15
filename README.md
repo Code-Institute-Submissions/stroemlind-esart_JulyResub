@@ -51,6 +51,30 @@ And for the footer:
 ### Existing Features
 ### Features Left to Implement
 ## Technologies Used
+These are the following technologies and packages used to develop this project:
+
+* [HTML](https://html.spec.whatwg.org/): HTML5 are used to build the core structure of the website
+
+* [CSS](https://www.w3.org/TR/css/): CSS is used to style the website with colors, fonts, placement of elements, etc.
+
+* [JavaScript](https://www.javascript.com/): JavaScript are used to make the website more interactive for the User
+
+* [Python](https://www.python.org/): Python is used to build the core structure and code for the project
+
+* [Heroku](https://www.heroku.com/home): Heroku is the deployment environment used to deploy the project and connected with the GitHub repository
+
+* [Gitpod](https://gitpod.io/): Gitpod is the development environment used for developing all the code during this project
+
+* [GitHub](https://github.com/): GitHub are used to store the repository for this project
+
+* [Git](https://atlassian.com/git/): Git is used to create backups of the project and ensure that all versions of the project is pushed to GitHub
+
+* [Canva](https://www.canva.com/): Canva is a web application used to create the wireframes for this project
+
+* [DevTools](https://developer.chrome.com/docs/devtools/): Dev Tools is used to look over the development of the website, debugging problems, and try different approaches to issues that would occur during the process. 
+
+* [Auto Prefixer](https://autoprefixer.github.io/): Auto Prefixer is an application used at the end of the project to give the CSS code some extra properties when used on different browsers.
+
 ## Testing
 ### Code Validation
 ### Browser Compatibility
