@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 
 def shopping_cart(request):
@@ -20,3 +20,20 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def remove_from_cart(request, item_id):
+    """ Remove the item from the shopping cart """
+
+    cart = request.session.get('cart', {})
+    quantity = cart[item_id] - 1
+
+    if quantity > 0:
+        cart[item_id] = quantity
+    else:
+        cart.pop(item_id)
+    request.session['cart'] = cart
+
+    if not cart:
+        return redirect(reverse('home'))
+    return redirect(reverse('shopping_cart'))

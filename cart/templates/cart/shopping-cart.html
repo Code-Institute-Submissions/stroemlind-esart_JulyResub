@@ -22,7 +22,9 @@
                             <img src="{{ item.poster.image }}" alt="{{ item.poster.name }}">
                         </td>
                         <td class="py-3 px-2">
-                            {{ item.poster.name }}
+                            <a href="{% url 'poster-detail' item.item_id%}" class="cart-text">
+                                {{ item.poster.name }}
+                            </a>
                         </td>
                         <!-- <td class="py-3 px-2">
                             <p class="my-0">{{ item.quantity }}</p>
@@ -31,10 +33,13 @@
                             € {{ item.poster.price }}
                         </td>
                         <td class=" py-sm-3 py-md-3 py-lg-3 px-2 text-center">
-                            <a href="#">
+                            {% for item in cart_items %}
+                            <a href="{% url 'remove_from_cart' item.item_id %}">
                                 <i class="fas fa-times text-link"></i>
                             </a>
+                            {% endfor %}
                         </td>
+                        
                     </tr>
                 {% endfor %}
                     <tr class="border border-dark">
@@ -65,3 +70,21 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- {% block postloadjs %}
+<script>
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var poster = $(this).data('poster_in_cart');
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'poster_in_cart': poster_in_cart};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+{% endblock %} -->

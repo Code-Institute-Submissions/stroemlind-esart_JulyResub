@@ -62,11 +62,13 @@ h3 {
 }
 
 /* Index page styling */
+
 #logo-heading {
     font-size: 70px;
 }
 
-.text-link {
+.text-link,
+.cart-text {
     text-decoration: none;
     color: black;
 }
@@ -78,11 +80,15 @@ h3 {
     cursor: pointer;
 }
 
-.no-content {
+.cart-text:hover {
+    color: #000;
+}
+
+/* .no-content {
     color: #000 !important;
     background-color: transparent !important;
     pointer-events: none;
-}
+} */
 
 /* Poster Product styling */
 
