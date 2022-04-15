@@ -21,7 +21,22 @@ amiresponisive image
 #### Fonts
 
 #### Icons
+For this project, the different icons for the navbar are:
+* [hamburger-menu](https://fontawesome.com/v5/icons/align-justify?s=solid)
+* [search](https://fontawesome.com/v5/icons/search?s=solid)
+* [heart](https://fontawesome.com/v5/icons/heart?s=regular)
+* [user](https://fontawesome.com/v5/icons/user?s=regular)
+* [shopping-cart](https://fontawesome.com/v5/icons/shopping-cart?s=solid )
 
+, for the pages, like poster-detail.html are: 
+* [heart-regular](https://fontawesome.com/v5/icons/heart?s=regular)
+* [heart-solid](https://fontawesome.com/v5/icons/heart?s=solid)
+* [arrow-left](https://fontawesome.com/v5/icons/angle-double-left?s=solid)
+
+And for the footer:
+* [facebook-icon](https://fontawesome.com/v5/icons/facebook-f?s=brands)
+* [instagram-icon](https://fontawesome.com/v5/icons/instagram?s=brands)
+* [pinterest-icon](https://fontawesome.com/v5/icons/pinterest-square?s=brands)
 
 ### Wireframes
 
