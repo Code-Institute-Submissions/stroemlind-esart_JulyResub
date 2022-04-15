@@ -104,7 +104,58 @@ To view all tests for this project, please refer to the [TESTING.md](TESTING.md)
 ### Tested User Stories
 ### Unfixed Bugs
 ## Deployment
+The site was deployed to Heroku. The steps to deploy are as follows:
+* Go to the [Heroku](https://www.heroku.com/home) site, [sign up](https://signup.heroku.com/login) for free if you do not already have an account.
+    * If creating an account, fill in the signup form with name.
+* On the dashboard page, navigate to the Create New App button and click.
+* Give the app a unique name; it can not have the same name as another app, choose the region you are currently located in and select Create app.
+* Go to the Resources tab and select add a database. In the add-ons box, search for Postgres. Select Heroku Postgres and click Submit Order Form.
+* On the apps dashboard page, navigate to the Settings tab.
+* On the Settings page, go down to the config vars section. 
+* Create the following config vars:
+  * Set the key to `DATABASE_URL`, value to `Provided-postgres-link`, and click add. 
+  * Set the key to `SECRET_KEY`, value to `Your-SECRET_KEY`, and click add. 
+  * Set the key to `DEBUG`, value to `True`, and click add. 
+  * Set the key to `DISABLE_COLLECTSTATIC`, value to `1`, and click add. 
+
+Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also remember to have the env.py file in the **.gitignore** file before the first deployment. So no value information will be visible after deplyment.
+
+* To obtain a Stripe key,
+
+* To obtain a PostgreSQL DATABASE_URL 
+  * Install the supporting libraries by typing in the command 'pip3 install dj_database_url pyscopg2'
+  * When done, type in the command `pip3 freeze --local > requirements.txt` in the terminal
+  * In the env.py file, import os. 
+  *  Setup the following environment variable: 
+      DATABASE_URL and paste in the DATABASE_URL from Heroku.
+      ```os.environ['DATABASE_URL'] = 'postgres://***************'```
+
+  * In the settings.py file, import os dj_database_url.
+    So scroll down to the DATABASES section and comment out the entire section. 
+    Below the comment out section, add in the following code: 
+    ```DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}```
+
+* Navigate to the Deploy tab and down to the section called Deployment method. 
+* Select GitHub and confirm the connection between Heroku and GitHub.
+* Search for the project's repository name on GitHub and click "connect" to link GitHub with Heroku.
+* On the same page, scroll down and choose how to deploy the app. For this project, automatic deploys are selected and enabled.
+* Create a **Procfile** for Heroku, inside the file insert the following line:
+    - `web: gunicorn cosmos.wsgi`
+    * Note that cosmos is the name for this app.
+    
+* Create a **requirements.txt** file for Heroku, using the following command:
+    - `pip3 freeze --local > requirements.txt`
+
+The live link can be found here - [https://esart.herokuapp.com/](https://esart.herokuapp.com/)
+
 ### Local Deployment
+In order to make a local copy of this project, you can type the following into your IDE Terminal to clone this repository:
+
+- `git clone https://github.com/stroemlind/esart.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/stroemlind/esart)
 ## Credits
 ### Content
 [](https://)
