@@ -75,7 +75,29 @@ These are the following technologies and packages used to develop this project:
 
 * [Auto Prefixer](https://autoprefixer.github.io/): Auto Prefixer is an application used at the end of the project to give the CSS code some extra properties when used on different browsers.
 
+### Django packages
+To build this project the following packages needs to be installed:
+<details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
+
+| Package  | Version | Description |
+| ------------- | ------------- | ------------- |
+| [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework|
+| dj_database_url | 0.5.0 | Utilizes the 12factor inspired DATABASE_URL environment variable to configure Django apps  |
+| [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) | 0.48.0 | An integrated Django application for addressing authentication, registration, account management, and social account authentication. |
+| [Gunicorn](https://gunicorn.org/)  | 20.1.0 | Gunicorn is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The server is compatible with various web frameworks and light in server resources |
+| [Pillow](https://pillow.readthedocs.io/en/stable/) | 9.1.0 | Pillow is a Python Imaging Library that adds image processing capabilities to the Python interpreter. |
+| [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
+| [Whitenoise](https://whitenoise.evans.io/en/stable/django.html) | 6.0.0 | Whitenoise allows the web app to serve its own static files |
+
+
+The [requirements.txt](requirements.txt) command for the installed packages is:
+- `pip3 install -r requirements.txt`
+
+</details>
+
 ## Testing
+To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
+
 ### Code Validation
 ### Browser Compatibility
 ### Responsiveness
