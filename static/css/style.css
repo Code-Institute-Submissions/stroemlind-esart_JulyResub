@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@200;300&family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@200;300;500;600&family=Rock+3D&display=swap');
 /*
 font-family: 'Amatic SC', cursive;
 font-family: 'Montserrat', sans-serif;
@@ -7,6 +7,7 @@ font-family: 'Rock 3D', cursive;
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
 }
 
 h1, h2 {
@@ -74,6 +75,7 @@ h3 {
     color: rgb(3, 31, 5);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 4px;
+    cursor: pointer;
 }
 
 .no-content {
@@ -115,6 +117,26 @@ h3 {
     font-size: 30px;
     font-family: 'Amatic SC', cursive;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; /* #93 getcssscan */
+}
+
+table {
+    background-color: #e9efe7;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; /* #93 getcssscan */
+}
+
+.th-text {
+    font-weight: 500;
+}
+
+.cart-btn {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.cart-btn:hover {
+    color: #000;
+    text-decoration: underline;
 }
 
 /* Footer styling */

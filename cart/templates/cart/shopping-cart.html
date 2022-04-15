@@ -7,28 +7,33 @@
         <h2>Shopping Cart</h2>
     </div>
     <div class="row">
-        <div class="col-11 col-lg-8 col-xl-8 d-flex mx-auto mb-3 py-2">
+        <div class="col-12 col-lg-8 col-xl-8 d-flex mx-auto mb-3 py-2">
             {% if cart_items %}
             <table class="tabel table-bordered border-dark w-100 my-3">
                 <thead class="border-bottom border-dark">
-                    <th scope="col" colspan="2" class="ps-2">In the Shopping Cart</th>
-                    <th scope="col" class="ps-2">Quantity</th>
-                    <th scope="col" class="ps-2">Price</th>
+                    <th scope="col" colspan="2" class="ps-2 py-2 th-text">In the Shopping Cart</th>
+                    <!-- <th scope="col" class="ps-2 py-2">Quantity</th> -->
+                    <th scope="col" colspan="2" class="ps-2 py-2">Price</th>
                 </thead>
                 {% for item in cart_items %}
                 <tbody>
                     <tr class="border-bottom border-dark">
                         <td class="p-3 w-30 img-fluid">
-                            {{ item.poster.image }}
+                            <img src="{{ item.poster.image }}" alt="{{ item.poster.name }}">
                         </td>
                         <td class="py-3 px-2">
                             {{ item.poster.name }}
                         </td>
-                        <td class="py-3 px-2">
+                        <!-- <td class="py-3 px-2">
                             <p class="my-0">{{ item.quantity }}</p>
-                        </td>
+                        </td> -->
                         <td class="py-3 px-2">
                             € {{ item.poster.price }}
+                        </td>
+                        <td class=" py-sm-3 py-md-3 py-lg-3 px-2 text-center">
+                            <a href="#">
+                                <i class="fas fa-times text-link"></i>
+                            </a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -38,11 +43,11 @@
                         </td>
                     </tr>
                     <tr class="border border-dark">
-                        <td colspan="2" class="pt-3 ps-2 text-start">
-                            <p>Keep Shopping</p>
+                        <td colspan="1" class="pt-3 pb-2 ps-2 text-start text-link">
+                            <a href="{% url 'posters' %}" class="cart-btn pb-2">Keep Shopping</a>
                         </td>
-                        <td colspan="2" class="pt-3 pe-2 text-end">
-                            <p>Check Out</p>
+                        <td colspan="3" class="pt-3 pb-2 pe-2 text-end text-link">
+                            <a href="#" class="cart-btn">Check Out</a>
                         </td>
                     </tr>
                 </tbody>
