@@ -146,6 +146,11 @@ table {
     text-decoration: underline;
 }
 
+.img-cart {
+    width: 100px;
+    height: auto;
+}
+
 /* Footer styling */
 
 footer {
@@ -215,6 +220,10 @@ footer {
 @media (max-width: 375px) {
     #logo-heading {
         font-size: 50px;
+    }
+
+    .td-p {
+        padding-left: 30px;
     }
 }
 
