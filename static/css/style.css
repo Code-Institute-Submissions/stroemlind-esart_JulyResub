@@ -84,12 +84,6 @@ h3 {
     color: #000;
 }
 
-/* .no-content {
-    color: #000 !important;
-    background-color: transparent !important;
-    pointer-events: none;
-} */
-
 /* Poster Product styling */
 
 #poster-header {
@@ -115,6 +109,11 @@ h3 {
 .btn-like:active {
     background: transparent;
     border: none;
+}
+
+.img-poster {
+    width: 304px;
+    height: auto;
 }
 
 /* Shopping Cart styling */
