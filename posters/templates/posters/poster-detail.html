@@ -16,11 +16,11 @@
                 <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
                 {% if poster.image %}
                 <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{% static '' %}img/{{ poster.image }}" class="card-img-top border" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
+                    <img src="{% static '' %}img/{{ poster.image }}" class="card-img-top rounded-0" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
                 </a>
                 {% else %}
                 <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{% static '' %}img/no-image.jpeg" class="card-img-top border" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+                    <img src="{% static '' %}img/no-image.jpeg" class="card-img-top rounded-0" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
                 </a>
                 {% endif %}
                 </div>
@@ -45,7 +45,6 @@
                             </form>
                         </div>
                     </div>
-                    <hr class="d-sm-none d-md-none d-lg-none d-xl-none">
                     <div class="accordion accordion-flush border-top border-bottom" id="accordionFlush">
                         <div class="accordion-item">
                           <h4 class="accordion-header" id="flush-headingOne">
