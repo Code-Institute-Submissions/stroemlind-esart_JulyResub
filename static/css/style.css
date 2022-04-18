@@ -64,7 +64,7 @@ h3 {
 /* Index page styling */
 
 #logo-heading {
-    font-size: 70px;
+    font-size: 60px;
 }
 
 .text-link,
@@ -82,6 +82,34 @@ h3 {
 
 .cart-text:hover {
     color: #000;
+}
+
+/* From youtube video to get gallary wall effect with media queries */
+
+.row-col-ind {
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 100%;
+}
+
+.gallery {
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 800px){
+    .row-col-ind {
+        flex: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .row-col-ind {
+        flex: 100%;
+    }
 }
 
 /* Poster Product styling */
