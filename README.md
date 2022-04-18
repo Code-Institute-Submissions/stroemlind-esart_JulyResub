@@ -52,6 +52,9 @@ And for the footer:
 ## Features
 ### Existing Features
 ### Features Left to Implement
+
+* A feature left to implement for the future would be to wire up the application to Amazon AWS3 and create a front-end feature to add new posters to the shop and website.
+
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
 
