@@ -6,16 +6,6 @@ from .models import Poster, Motive
 from cart.context import cart_contents
 
 
-def index(request):
-    """ A view to render the index page """
-    return render(request, 'index.html')
-
-
-def about_us(request):
-    """ A view to render the About Us page """
-    return render(request, 'about-us.html')
-
-
 def posters_all_view(request):
     """ A view to render the Poster product page """
 
