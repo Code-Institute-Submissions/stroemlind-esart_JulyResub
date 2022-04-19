@@ -13,10 +13,10 @@
     <div class="row justify-content-around my-3">
         <div class="col-10 m-sm-3 m-md-3 m-lg-3 mx-auto mt-3 poster-element">
             <div class="row p-0">
-                <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 me-sm-4 me-md-4 me-lg-4 me-xl-4">
                 {% if poster.image %}
                 <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{% static '' %}img/{{ poster.image }}" class="card-img-top rounded-0" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
+                    <img src="{% static '' %}img/{{ poster.image }}" class="card-img-top rounded-0 border border-dark" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
                 </a>
                 {% else %}
                 <a href="{% url 'poster-detail' poster.pk %}">
@@ -94,52 +94,26 @@
                           </div>
                         </div>
                       </div>
-                    <!-- <div class="col-12 mb-3">
-                        <div class="row">
-                            <hr class="d-none d-sm-block d-md-block d-lg-block d-xl-block my-3">
-                            <p class="col-10 mb-1">Details</p>
-                            <a class="col-2 text-end text-black" data-bs-toggle="collapse" href="#collapseDetail" role="button" aria-expanded="false" aria-controls="collapseDetail">
-                            <i class="fas fa-angle-down"></i>
-                            </a>
-                        </div>
-                        <div class="collapse" id="collapseDetail">
-                            <div class="col">
-                                {{ poster.description }}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <hr class="my-3">
-                            <p class="col-10 mb-1">Returns</p>
-                            <a class="col-2 text-end text-black" data-bs-toggle="collapse" href="#collapseReturn" role="button" aria-expanded="false" aria-controls="collapseReturn">
-                            <i class="fas fa-angle-down"></i>
-                            </a>
-                        </div>
-                        <div class="collapse" id="collapseReturn">
-                            <div class="col">
-                                <p>
-                                We offer a 30 days return from the date of your receipt (excluding shipping costs) if you change your mind.
-                                You will find <a href="#" class="text-link">More information here</a>.
-                                </p>
-                            </div>
-                        </div>
-                        <hr class="my-3">
-                    </div> -->
                     <p>{{ cart }}</p>
-                    {% if poster.item_id not in cart.cart_items %}
+                    {% if cart.cart_items in poster.item_id %}
+                    <p>This item is currently in a cart</p>
+                    {% else %}
                     <div class="col-12 text-center mt-3 pt-3">
                         <form action="{% url 'add_to_cart' poster.id %}" method="POST">
                             {% csrf_token %}
                             <div class="input-group input-group-{{ poster.id }} d-none">
-                                <input class="form-control qty_input id_qty_{{ poster.id }}" type="number"
+                                <input class="form-control id_qty_{{ poster.id }}" type="number"
                                     name="quantity" value="1" min="1" max="1"
                                     data-item_id="{{ poster.id }}">
+                                 <!-- <input class="form-control id_qty_{{ poster.item_id }} 
+                                  {% if poster.quantity %}quantity_{{ poster.item_id }}_{{ poster.quantity }}{% endif %}" type="number"
+                                  name="quantity" value="{{ poster.quantity }}" min="1" max="1"
+                                  data-item_id="{{ poster.item_id }}" data-size="{{ poster.quantity }}"> -->
                             </div>
                             <input type="submit" class="btn btn-outline-dark rounded-0" value="Add to Cart">
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
                     </div>
-                    {% else %}
-                    <p>This item is currently in a cart</p>
                     {% endif %}
                 </div>
             </div>

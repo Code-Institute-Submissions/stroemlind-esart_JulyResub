@@ -8,6 +8,7 @@ class PosterAdmin(admin.ModelAdmin):
         'name',
         'motive',
         'description',
+        'quantity',
         'price',
         'image',
     )

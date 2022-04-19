@@ -27,6 +27,7 @@ class Poster(models.Model):
         'Motive', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
     size = models.BooleanField(default=False, null=True, blank=True)
+    quantity = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=7, decimal_places=2)
     image = models.CharField(max_length=100, null=True, blank=True)
     like = models.ManyToManyField(
