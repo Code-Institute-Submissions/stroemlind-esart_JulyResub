@@ -23,6 +23,7 @@ def cart_contents(request):
             'poster': poster,
         })
 
+    # Codebase from Boutique Ado
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = settings.STANDARD_DELIVERY_COST
         free_delivery = settings.FREE_DELIVERY_THRESHOLD - total
