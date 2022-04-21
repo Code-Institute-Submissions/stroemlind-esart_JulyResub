@@ -178,6 +178,19 @@ table {
     height: auto;
 }
 
+/* Checkout styling */
+
+.orderform-style-input {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background-color: #e9efe7;
+    height: 40px;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+}
+
 /* Footer styling */
 
 footer {

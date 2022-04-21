@@ -4,10 +4,138 @@
 {% block content %}
 <div class="container">
     <div class="row g-2 mt-4">
-        <h2>Checkout</h2>
+        <div class="col-12">
+            <h2>Checkout</h2>
+        </div>
+        <div class="col-12">
+            <p class="text-muted mb-0 mt-2 ps-2">Please fill out the form below to complete your order</p>
+        </div>
     </div>
     <div class="row">
-        <div class="col"></div>
+        <div class="col-12 col-md-6 col-lg-6 border-end border-dark">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <table class="tabel table-bordered border-dark w-100 my-3">
+                    <thead class="border-bottom border-dark">
+                        <th class="ps-2 py-2 th-text">Your Details:</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.full_name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.email }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.phone_number }}</td>
+                        </tr>
+                        <tr>
+                            <td class="ps-2 py-2 th-text">Delivery:</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.street_address1 }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.street_address2 }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.postcode }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.town_or_city }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.county }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ poster_order_form.country }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-check form-check-inline float-right mr-0">
+                    {% if user.is_authenticated %}
+                        <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" name="save-info" id="id-save-info" checked>
+                    {% else %}
+                        <label class="form-check-label" for="id-save-info">
+                            <a class="text-info" href="#">Create an account</a> or
+                            <a class="text-info" href="#">login</a> to save this information
+                        </label>
+                    {% endif %}
+                </div>
+                <fieldset class="px-3">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A stripe card element will go here -->
+                    <div class="mb-3" id="card-element"></div>
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                </fieldset>
+
+                <div class="submit-button mt-5 mb-2 text-center">
+                    <a href="#" class="btn btn-dark btn-outline-light border border-dark rounded-0">
+                        <span>Adjust Cart</span>
+                    </a>
+                    <button id="submit-button" class="btn btn-outline-light btn-dark border border-dark rounded-0 ms-3">
+                        <span>Complete Order</span>
+                    </button>
+                    <p class="small text-danger my-0 mt-2">
+                        <span>
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>€ {{ total_cost|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-md-5 col-lg-5 mx-auto">
+            <div class="row">
+                <div class="col d-flex mx-auto py-2">
+                    <table class="tabel table-bordered border-dark w-100 my-2">
+                        <thead class="border-bottom border-dark">
+                            <th scope="col" colspan="2" class="ps-2 py-2 th-text">Now purchasing</th>
+                            <th scope="col" colspan="2" class="ps-2 py-2">Price</th>
+                        </thead>
+                        {% for item in cart_items %}
+                        <tbody>
+                            <tr class="border-bottom border-dark">
+                                <td class="py-2 ps-2 ps-sm-4 ps-md-4 ps-lg-4 ps-xl-4 td-p" style="width: 150px;">
+                                    {% if item.poster.image %}
+                                        <img src="{% static '' %}img/{{ item.poster.image }}" class="img-cart" alt="{{ item.poster.name }}">
+                                    {% else %}
+                                        <img src="{% static '' %}img/no-image.jpeg" class="img-cart" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+                                    {% endif %}
+                                </td>
+                                <td class="py-3 px-2">
+                                    <a href="{% url 'poster-detail' item.item_id%}" class="cart-text">
+                                        {{ item.poster.name }}
+                                    </a>
+                                </td>
+                                <td class="py-3 px-2">
+                                    € {{ item.poster.price }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                            <tr class="border border-dark">
+                                <td colspan="4" class="pt-3 text-end pe-2 border-bottom border-dark">
+                                    <p class="mb-1">
+                                        <strong>Delivery Cost:</strong> € {{ delivery|floatformat:2 }}
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="border border-dark">
+                                <td colspan="4" class="pt-3 text-end pe-2">
+                                    <h6>
+                                        Cart Total: € {{ total_cost|floatformat:2 }}
+                                    </h6>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
