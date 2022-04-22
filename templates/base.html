@@ -18,6 +18,9 @@
       <!-- Font Awsome Link-->
       <script src="https://kit.fontawesome.com/a1bd5fe01f.js" crossorigin="anonymous"></script>
 
+      <!-- Stripe -->
+      <script src="https://js.stripe.com/v3/"></script>
+
       <!-- Favicon -->
       <link rel="icon" sizes="192x192" href="{% static '' %}img/diamond-logo.png">
 
@@ -206,6 +209,12 @@
         </div>
       </div>
     </footer>
+
+    {% block postloadjs %}
+    <script>
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 
