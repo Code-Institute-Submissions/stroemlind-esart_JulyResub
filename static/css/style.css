@@ -180,6 +180,8 @@ table {
 
 /* Checkout styling */
 
+   
+.StripeElement,
 .orderform-style-input {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -189,6 +191,25 @@ table {
     width: 100%;
     padding: 10px 12px;
     border: none;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
+
+#card-element {
+    color: #000;
+    border: 1px solid #000;
 }
 
 /* Footer styling */
