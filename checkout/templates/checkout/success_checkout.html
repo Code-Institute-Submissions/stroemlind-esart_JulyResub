@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-2 mt-4">
+        <div class="col-12">
+            <h2>Thank You!</h2>
+        </div>
+        <div class="col-12">
+            <p class="mb-0 mt-2 ps-2">Your Order information is below. You will get a confirmation sent to {{ order.email }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col-5 btn btn-dark btn-outline-light">
+            <a href="{% url 'posters' %}">
+                <span>Check out our Posters</span>
+            </a>
+        </div>
+        <div class="col-5 btn btn-dark btn-outline-light">
+            <a href="{% url 'home' %}">
+                <span>Take me to the Home page</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

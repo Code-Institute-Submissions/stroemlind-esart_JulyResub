@@ -7,7 +7,7 @@ import stripe
 
 from posters.models import Poster
 from cart.context import cart_contents
-from .models import OrderLineItem
+from .models import Order, OrderLineItem
 from .forms import PosterOrderForm
 
 
@@ -18,23 +18,58 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     client_secret = settings.CLIENT_SECRET
 
-    cart = request.session.get('cart', {})
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
 
-    if not cart:
-        messages.error(request, "There is nothing in your shopping cart at this moment")
-        return redirect(reverse('posters'))
+        poster_order_form = PosterOrderForm(request.POST)
 
-    current_cart = cart_contents(request)
-    total = current_cart['total_cost']
-    amount_total = round(total * 100)
-    stripe_currency = 'EUR'
-    stripe.api_key = client_secret
-    intent = stripe.PaymentIntent.create(
-        amount=amount_total,
-        currency=stripe_currency,
-    )
+        if poster_order_form.is_valid():
+            order = poster_order_form.save(commit=False)
+            order.date = timezone.now()
+            order.save()
 
-    print(intent)
+            for item_id, quantity in cart.items():
+                try:
+                    poster = get_object_or_404(Poster, pk=item_id)
+                    # total += quantity * poster.price
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        poster=poster,
+                        quantity=quantity
+                    )
+                    order_line_item.save()
+                except Poster.DoesNotExist:
+                    messages.error(request, (
+                        "A product in the cart wasn't found in our database"
+                        "Please contact us for assistance!")
+                    )
+                    order.delete()
+                    return redirect(reverse('shopping_cart'))
+
+            # Save the info to the user's profile if all is well
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('success_checkout',
+                                    args=[order.order_number]))
+        else:
+            messages.error(request, ('There was an error with your form. '
+                                     'Please double check your information.'))
+    else:
+        cart = request.session.get('cart', {})
+
+        if not cart:
+            messages.error(request, (
+                'There is nothing in your shopping cart at this moment'))
+            return redirect(reverse('posters'))
+
+        current_cart = cart_contents(request)
+        total = current_cart['total_cost']
+        amount_total = round(total * 100)
+        stripe_currency = 'EUR'
+        stripe.api_key = client_secret
+        intent = stripe.PaymentIntent.create(
+            amount=amount_total,
+            currency=stripe_currency,
+        )
 
     poster_order_form = PosterOrderForm()
     template = 'checkout/checkout.html'
@@ -43,6 +78,27 @@ def checkout(request):
         'poster_order_form': poster_order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def success_checkout(request, order_number):
+    """
+    View handling successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully made! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+    
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/success_checkout.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
