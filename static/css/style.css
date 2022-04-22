@@ -179,8 +179,7 @@ table {
 }
 
 /* Checkout styling */
-
-   
+ 
 .StripeElement,
 .orderform-style-input {
     box-sizing: border-box;
@@ -210,6 +209,16 @@ table {
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+
+.success-links {
+    text-decoration: none;
+    color: white;
+}
+
+.success-links:hover {
+    text-decoration: none;
+    color: black;
 }
 
 /* Footer styling */
