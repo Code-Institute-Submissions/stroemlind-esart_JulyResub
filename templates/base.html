@@ -62,14 +62,14 @@
                   <a class="nav-link text-black" href="#">My Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-black" href="#">Log Out</a>
+                  <a class="nav-link text-black" href="{% url 'account_logout' %}">Log Out</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                  <a class="nav-link text-black" href="#">Sign Up</a>
+                  <a class="nav-link text-black" href="{% url 'account_signup' %}">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-black" href="#">Log In</a>
+                  <a class="nav-link text-black" href="{% url 'account_login' %}">Log In</a>
                 </li>
                 {% endif %}
                 <li class="nav-item">

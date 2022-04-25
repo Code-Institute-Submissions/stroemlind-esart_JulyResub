@@ -256,6 +256,16 @@ footer {
     background-color: #e9efe7;
 }
 
+/* Allauth Form Styling */
+
+.bg-allauth {
+    background-color: #e9efe7;
+}
+
+/* .allauth-form-inner-content p {
+    margin-top: 1.5rem;
+} */
+
 /* ---------- Media Queries */
 
 /* For tablet view */

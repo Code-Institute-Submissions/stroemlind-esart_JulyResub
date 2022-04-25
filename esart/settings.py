@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'home',
     'posters',
     'cart',
@@ -60,6 +61,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,6 +82,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
