@@ -206,6 +206,16 @@ table {
     color: #aab7c4;
 }
 
+select, 
+select option {
+    color: #000;
+}
+
+select, 
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 #card-element {
     color: #000;
     border: 1px solid #000;
