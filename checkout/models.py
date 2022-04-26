@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from posters.models import Poster
+from customers.models import Customer
 
 
 class Order(models.Model):
@@ -14,6 +15,13 @@ class Order(models.Model):
     The model handling Orders
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    customer_info = models.ForeignKey(
+        Customer,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='orders'
+    )
     full_name = models.CharField(max_length=70, null=False, blank=False)
     email = models.EmailField(max_length=200, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -22,7 +30,11 @@ class Order(models.Model):
     postcode = models.CharField(max_length=10, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     town_or_city = models.CharField(max_length=85, null=False, blank=False)
-    country = CountryField(blank_label='Country *', null=False, blank=False)
+    country = CountryField(
+        blank_label='(Select Country)',
+        null=False,
+        blank=False
+    )
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2,
@@ -54,7 +66,8 @@ class Order(models.Model):
         accounting for delivery costs.
         Codebase from Boutique Ado
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = settings.STANDARD_DELIVERY_COST
         else:
