@@ -1,0 +1,443 @@
+[{
+    "model": "posters.poster",
+    "pk": 1,
+    "fields": {
+        "name": "Number 2",
+        "motive": 1,
+        "description": "Model from a fashion tutorial. The second poster by the artist. She made it on aquarelle paper with a pen and marker. Size 30x40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "IMG_4723.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 2,
+    "fields": {
+        "name": "Number 9",
+        "motive": 1,
+        "description": "Actress/Model from a fashion shoot. The artist's ninth poster. Made on aquarelle paper with a pen and marker. Size 30x40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "IMG_4243.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 3,
+    "fields": {
+        "name": "Number 3",
+        "motive": 5,
+        "description": "\"...with every heartbeat\", inspiration from an image seen online of a tattoo. The artist's third poster. Made on aquarelle paper with a pen and marker. Size 30x40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "IMG_4721.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 4,
+    "fields": {
+        "name": "Number 5",
+        "motive": 5,
+        "description": "\"Lips of insecurity\", inspiration from an image seen online. The artist's fifth poster. Made on aquarelle paper with a pen and marker. Size 30x40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": null,
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 5,
+    "fields": {
+        "name": "Number 21",
+        "motive": 1,
+        "description": "Male model from a fashion shoot. The artist's twenty-first poster. Made on aquarelle paper with a pen and marker. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "45.00",
+        "image": "IMG_4714.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 6,
+    "fields": {
+        "name": "Number 11 - Oskar Linnros",
+        "motive": 6,
+        "description": "Portrait of Swedish musician and producer Oskar Linnros. The artist's eleventh poster. Made on aquarelle paper with a pen and marker. Size Small cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "60.00",
+        "image": "IMG_4717.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 7,
+    "fields": {
+        "name": "Number 12 - Oskar Linnros",
+        "motive": 6,
+        "description": "A Portrait of Swedish musician and producer Oskar Linnros. The artist's twelfth poster. Made on aquarelle paper with a pen and marker. Size Small cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "60.00",
+        "image": "IMG_3257.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 8,
+    "fields": {
+        "name": "Number 37",
+        "motive": 6,
+        "description": "A portrait of singer Sky Ferrera. The artist's thirty-seventh poster. Made on aquarelle paper with a pen and marker. Size XS cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "40.00",
+        "image": "IMG_3377.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 9,
+    "fields": {
+        "name": "Number 29",
+        "motive": 1,
+        "description": "Model from a fashion shoot. The artist's twenty-ninth poster. Made on aquarelle paper with a pen and marker. Size Small.",
+        "size": true,
+        "quantity": 1,
+        "price": "45.00",
+        "image": "IMG_4716.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 10,
+    "fields": {
+        "name": "Number 39",
+        "motive": 1,
+        "description": "Models from Swedish Elle fashion tutorial. The artist's thirty-ninth poster. Made on aquarelle paper with a pen and marker. Size Medium.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "IMG_4722.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 11,
+    "fields": {
+        "name": "Number 20 - Dave Grohl",
+        "motive": 6,
+        "description": "Portrait of musician Dave Grohl. The artist's twentieth poster. Made on ordinary paper with a pen. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "55.00",
+        "image": "IMG_4370.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 12,
+    "fields": {
+        "name": "Number 36",
+        "motive": 1,
+        "description": "A person with sunglasses and writing on their face. Inspiration from an image seen online. The artist's thirty-sixth poster. Made on aquarelle paper with a pen and marker. Size XS.",
+        "size": true,
+        "quantity": 1,
+        "price": "35.00",
+        "image": "nummer36.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 13,
+    "fields": {
+        "name": "Number 38",
+        "motive": 1,
+        "description": "Model from a fashion shoot. The artist's thirty-eighth poster. Made on aquarelle paper with a pen and marker. Size Small.",
+        "size": true,
+        "quantity": 1,
+        "price": "37.50",
+        "image": "IMG_4368.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 14,
+    "fields": {
+        "name": "Number 13 - Oskar Linnros",
+        "motive": 6,
+        "description": "Portrait of Swedish musician and producer Oskar Linnros. The artist's thirteenth poster. Made on aquarelle paper with a pen and marker. Size 30×40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "60.00",
+        "image": "oskar-4.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 15,
+    "fields": {
+        "name": "Number 10 - Oskar Linnros",
+        "motive": 6,
+        "description": "Portrait of Swedish musician and producer Oskar Linnros. The artist's twenty-first poster. Made on aquarelle paper with a pen and marker. Size Medium.",
+        "size": true,
+        "quantity": 1,
+        "price": "60.00",
+        "image": "IMG_4229.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 16,
+    "fields": {
+        "name": "I Want You",
+        "motive": 7,
+        "description": "Motive text \"I want you\". Inspiration from a song and image. From the artist's early work, no number is given. Made on aquarelle paper with acrylic paint. Size XS.",
+        "size": true,
+        "quantity": 1,
+        "price": "27.50",
+        "image": "iwantyou.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 17,
+    "fields": {
+        "name": "Number 51",
+        "motive": 1,
+        "description": "Model wearing a jacket with the text \"Good Luck,\" inspiration from a fashion shoot. The artist's fifty-first poster. Made on aquarelle paper with a pen and marker, with some adjustments made with white acrylic paint. Size 30×40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "nummer51.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 18,
+    "fields": {
+        "name": "Number 52",
+        "motive": 1,
+        "description": "A person smoking a cigarette. Inspiration from an image seen online. The artist's fifty-second poster. Made on aquarelle paper with a pen and marker. Size 30×40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "nummer52.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 19,
+    "fields": {
+        "name": "Number 53",
+        "motive": 1,
+        "description": "\"Are you dead or alive?\" Model wearing makeup to look like a skeleton. Inspiration from a fashion shoot. The artist's fifty-third poster. Made on aquarelle paper with a pen and marker. Size 30×40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "49.96",
+        "image": "nummer53.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 20,
+    "fields": {
+        "name": "Number 44",
+        "motive": 1,
+        "description": "Model from a fashion shoot. The artist's forty-fourth poster. Made on ordinary paper with a pen and marker. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "35.00",
+        "image": "nummer44.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 21,
+    "fields": {
+        "name": "Number 54",
+        "motive": 1,
+        "description": "Model on a chair from Styleby fashion tutorial. The artist's fifty-fourth poster. Made on aquarelle paper with a pen and marker. Size 30×40 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "50.00",
+        "image": "nummer54.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 22,
+    "fields": {
+        "name": "Number 55",
+        "motive": 1,
+        "description": "Model wearing a big hat. Inspiration from an old image seen online. The artist's fifty-fifth poster. Made on aquarelle paper with a pen and marker. Size Small.",
+        "size": true,
+        "quantity": 1,
+        "price": "35.00",
+        "image": "nummer55.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 23,
+    "fields": {
+        "name": "Number 56",
+        "motive": 1,
+        "description": "Smiling girl. Inspiration from a fashion shoot. The artist's fifty-sixth poster. Made on aquarelle paper with a pen and marker. Size Small.",
+        "size": true,
+        "quantity": 1,
+        "price": "37.50",
+        "image": "nummer56.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 24,
+    "fields": {
+        "name": "Number 57",
+        "motive": 1,
+        "description": "Laughing girl. Inspiration from a fashion shoot. The artist's fifty-seventh poster. Made on aquarelle paper with a pen and marker. Size Small.",
+        "size": true,
+        "quantity": 1,
+        "price": "37.50",
+        "image": "nummer57.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 25,
+    "fields": {
+        "name": "What do you see? - 1",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological pictures from films inspired it. Made on ordinary paper with a pen. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what1.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 26,
+    "fields": {
+        "name": "What do you see? -2",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological images from films inspired it. Made on ordinary paper with a pen. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what2.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 27,
+    "fields": {
+        "name": "What do you see? - 3",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological images from films inspired it. Made on ordinary paper with a pen. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what3.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 28,
+    "fields": {
+        "name": "What do you see? - 4",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological images from films inspired it. Made on ordinary paper with a pen. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what4.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 29,
+    "fields": {
+        "name": "What do you see? - 5",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological images from films inspired it. Made on ordinary paper with a marker. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what5.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 30,
+    "fields": {
+        "name": "What do you see? - 6",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological images from films inspired it. Made on ordinary paper with a marker. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what6.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 31,
+    "fields": {
+        "name": "What do you see? - 7",
+        "motive": 6,
+        "description": "From the Collection \"What do you see?\". Psychological images from films inspired it. Made on ordinary paper with a marker. Size 21×29,7 cm.",
+        "size": true,
+        "quantity": 1,
+        "price": "25.00",
+        "image": "what7.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 32,
+    "fields": {
+        "name": "Number 24",
+        "motive": 2,
+        "description": "\"Imagine\" John Lennon. The artist's twenty-fourth poster. Made on aquarelle paper with a pen. Size XS.",
+        "size": true,
+        "quantity": 1,
+        "price": "37.50",
+        "image": "IMG_3481.jpg",
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 33,
+    "fields": {
+        "name": "The Tiger",
+        "motive": 4,
+        "description": "Tiger. Made on aquarelle paper with a pen and marker. Size Small.",
+        "size": true,
+        "quantity": 1,
+        "price": "55.00",
+        "image": null,
+        "like": []
+    }
+}, {
+    "model": "posters.poster",
+    "pk": 34,
+    "fields": {
+        "name": "Test",
+        "motive": 5,
+        "description": "hej",
+        "size": false,
+        "quantity": 1,
+        "price": "30.00",
+        "image": "diamond-logo.png",
+        "like": []
+    }
+}]

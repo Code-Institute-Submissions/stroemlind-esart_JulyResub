@@ -1,0 +1,50 @@
+[{
+    "model": "posters.motive",
+    "pk": 1,
+    "fields": {
+        "name": "Personas",
+        "friendly_name": "Personas"
+    }
+}, {
+    "model": "posters.motive",
+    "pk": 2,
+    "fields": {
+        "name": "Portrait",
+        "friendly_name": "Portrait"
+    }
+}, {
+    "model": "posters.motive",
+    "pk": 3,
+    "fields": {
+        "name": "Lines",
+        "friendly_name": "Lines"
+    }
+}, {
+    "model": "posters.motive",
+    "pk": 4,
+    "fields": {
+        "name": "Animals",
+        "friendly_name": "Animals"
+    }
+}, {
+    "model": "posters.motive",
+    "pk": 5,
+    "fields": {
+        "name": "Other",
+        "friendly_name": "Other"
+    }
+}, {
+    "model": "posters.motive",
+    "pk": 6,
+    "fields": {
+        "name": "Collection",
+        "friendly_name": "Collection"
+    }
+}, {
+    "model": "posters.motive",
+    "pk": 7,
+    "fields": {
+        "name": "Text",
+        "friendly_name": "Text"
+    }
+}]

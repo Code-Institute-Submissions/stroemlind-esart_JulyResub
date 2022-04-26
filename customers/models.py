@@ -54,7 +54,7 @@ class Customer(models.Model):
     )
 
     def __str__(self):
-        return self.customer
+        return self.customer.username
 
 
 @receiver(post_save, sender=User)
@@ -63,6 +63,6 @@ def create_or_update_customer_info(sender, instance, created, **kwargs):
     A function to create or update the user profile
     """
     if created:
-        Customer.objects.create(user=instance)
+        Customer.objects.create(customer=instance)
 
-    instance.userprofile.save()
+    instance.customer.save()
