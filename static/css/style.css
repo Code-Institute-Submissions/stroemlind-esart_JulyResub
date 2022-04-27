@@ -181,7 +181,8 @@ table {
 /* Checkout styling */
  
 .StripeElement,
-.orderform-style-input {
+.orderform-style-input,
+.customer-form-style-input {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     color: #000;

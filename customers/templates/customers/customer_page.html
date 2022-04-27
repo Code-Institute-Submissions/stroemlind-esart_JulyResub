@@ -5,26 +5,55 @@
 {% block content %}
 <div class="container">
     <div class="row g-2 mt-4">
-        <h2>My Profile</h2>
+        <div class="col-12">
+            <h2>My Profile</h2>
+        </div>
+        <div class="col-12">
+            <p class="text-muted mb-0 mt-2 ps-2">Your given Delivery Information</p>
+        </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 col-xl-6 d-flex mx-auto mb-3 py-2">
-            <p>Your given Delivery Information</p>
-            {% if customer.orders %}
-            <form action="{% url 'customer_profile' %}" method="POST" id="customer-update-form">
+            <form action="{% url 'customer_profile' %}" method="POST" id="customer-update-form" class="col-12">
                 {% csrf_token %}
-                {{ form | crispy }}
+                <table class="tabel table-bordered border-dark w-100 my-3">
+                    <thead class="border-bottom border-dark">
+                        <th class="ps-2 py-2 th-text">Your Details:</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2">{{ customer_form.defualt_email }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_phone_number }}</td>
+                        </tr>
+                        <tr>
+                            <td class="ps-2 py-2 th-text">Delivery/Shipping Details:</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_street_address1 }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_street_address2 }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_postcode }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_town_or_city }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_county }}</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">{{ customer_form.default_country }}</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <button class="btn btn-dark rounded-0" type="submit">Update Info</button>
             </form>
-            {% else %}
-            <div class="card">
-                <div class="card-body">
-                    <p>You have not given any order information yet</p>
-                </div>
-            </div>
-            {% endif %}
         </div>
-        <div class="col-12 col-lg-6 col-xl-6 d-flex mx-auto mb-3 py-2">
+        <div class="col-12 col-md-5 col-lg-5 mx-auto">
             <p>Your Order History</p>
             {{ orders }}
         </div>
