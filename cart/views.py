@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 from posters.models import Poster
@@ -11,7 +11,7 @@ def shopping_cart(request):
 
 def add_to_cart(request, item_id):
     """ View to add a specific product to the cart"""
-    poster = Poster.objects.get(pk=item_id)
+    poster = get_object_or_404(Poster, pk=item_id)
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -33,6 +33,7 @@ def add_to_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """ Remove the item from the shopping cart """
 
+    poster = get_object_or_404(Poster, pk=item_id)
     cart = request.session.get('cart', {})
     quantity = cart[item_id] - 1
 
@@ -41,6 +42,10 @@ def remove_from_cart(request, item_id):
     else:
         cart.pop(item_id)
     request.session['cart'] = cart
+    messages.success(
+            request,
+            f'{poster.name} was removed to the shopping cart'
+        )
 
     if not cart:
         return redirect(reverse('home'))
