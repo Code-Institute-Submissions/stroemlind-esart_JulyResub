@@ -193,10 +193,11 @@
       <div class="row">
         <div class="col-12 mt-2 top-footer border-top border-dark">
           <h2 class="text-center mb-3">Sign up for our news letter</h2>
-          <form action="">
+          <form action="{% url 'newsletter_signup' %}" method="POST">
+            {% csrf_token %}
             <div class="input-group d-flex justify-content-center">
               <div class="col-lg-3">
-                <input class="form-control border border-dark rounded-0" type="email" name="signup news" placeholder="Enter email here" aria-label="Signup for newsletter" aria-describedby="signup for newsletter">
+                <input class="form-control border border-dark rounded-0" type="email" name="newsletter_signup" placeholder="Enter email here" aria-label="Signup for newsletter" aria-describedby="signup for newsletter">
               </div>
               <div class="col-lg-2">
                 <button class="btn btn-dark border border-dark rounded-0 btn-outline-light" type="submit" aria-label="keep in touch">
