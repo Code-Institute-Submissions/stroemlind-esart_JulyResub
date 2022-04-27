@@ -186,7 +186,6 @@
                             <p class="my-1">{{ order.full_name }}</p>
                         </div>
                     </div>
-                    {% if from_customer %}
                     <div class="row border-bottom">
                         <div class="col-10 col-md-3 col-lg-7 btn btn-dark btn-outline-light border border-dark rounded-0 mx-md-auto my-3 offset-1">
                             <a href="{% url 'customer_profile' %}" class="success-links">
@@ -194,7 +193,6 @@
                             </a>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
             </div>
         </div>

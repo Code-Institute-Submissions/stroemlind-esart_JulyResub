@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
+from checkout.models import Order
 from .models import Customer
 from .forms import CustomerForm
-
-from checkout.models import Order
 
 
 def customer_profile(request):
