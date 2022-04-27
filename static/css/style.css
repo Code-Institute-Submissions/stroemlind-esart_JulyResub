@@ -267,6 +267,29 @@ footer {
     background-color: #e9efe7;
 }
 
+/* Toast styling */
+
+.message-container {
+    position: fixed;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.toast-design {
+    overflow: visible;
+}
+
+.toast-img {
+    width: 30px;
+}
+
+.toast-heading {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+
+
 /* Allauth Form Styling */
 
 .bg-allauth {

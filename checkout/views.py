@@ -73,7 +73,25 @@ def checkout(request):
             currency=stripe_currency,
         )
 
-    poster_order_form = PosterOrderForm()
+    if request.user.is_authenticated:
+        try:
+            customer = Customer.objects.get(customer=request.user)
+            poster_order_form = PosterOrderForm(initial={
+                'full_name': customer.customer.get_full_name(),
+                'email': customer.defualt_email,
+                'phone_number': customer.default_phone_number,
+                'street_address1': customer.default_street_address1,
+                'street_address2': customer.default_street_address2,
+                'postcode': customer.default_postcode,
+                'town_or_city': customer.default_town_or_city,
+                'county': customer.default_county,
+                'country': customer.default_country,
+            })
+        except Customer.DoesNotExist:
+            poster_order_form = PosterOrderForm()
+    else:
+        poster_order_form = PosterOrderForm()
+
     template = 'checkout/checkout.html'
 
     context = {
@@ -100,13 +118,13 @@ def success_checkout(request, order_number):
         if save_info:
             info_data = {
                 'defualt_email': order.email,
-                'defualt_phone_number': order.phone_number,
-                'defualt_street_address1': order.street_address1,
-                'defualt_street_address2': order.street_address2,
-                'defualt_postcode': order.postcode,
-                'defualt_town_or_city': order.town_or_city,
-                'defualt_county': order.county,
-                'defualt_country': order.country,
+                'default_phone_number': order.phone_number,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_county': order.county,
+                'default_country': order.country,
             }
             customer_form = CustomerForm(info_data, instance=customer)
             if customer_form.is_valid():

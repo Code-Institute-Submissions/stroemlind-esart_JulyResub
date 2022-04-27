@@ -1,0 +1,16 @@
+{% load static %}
+<div class="toast rounded-0 border-dark" data-autohide="false">
+    <div class="toast-header bg-white text-black">
+        <img src="{% static '' %}img/diamond-logo.png" class="toast-img me-2" alt="{{ item.poster.name }}">
+        <strong class="me-auto toast-heading">Error!</strong>
+        <button type="button" class="me-2 m-auto btn btn-close text-black" data-bs-dismiss="toast" aria-label="Close">
+        </button>
+    </div>
+    <div class="toast-body bg-white text-black">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+            </div>
+        </div>
+    </div>
+</div>

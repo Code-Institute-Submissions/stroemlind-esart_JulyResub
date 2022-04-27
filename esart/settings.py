@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'customers',
 ]
 
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 SITE_ID = 1
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
