@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 
 from .models import NewsletterSubscriber
@@ -17,34 +17,29 @@ def about_us(request):
 
 def newsletter_signup(request):
     """
-    A view to render the newsletter subcribtion form
+    A view to render the newsletter subcription form
     """
-    newsletter_form = NewsletterForm(request.POST)
-    newsletter = get_object_or_404(NewsletterSubscriber)
+    # newsletter_form = NewsletterForm(request.POST)
 
     if request.method == 'POST':
+        newsletter_form = NewsletterForm(request.POST)
         if newsletter_form.is_valid():
             instance = newsletter_form.save(commit=False)
             if NewsletterSubscriber.objects.filter(email=instance.email).exists():
                 messages.error(
                     request,
-                    f'Sorry, {newsletter.email} does already exist'
-                    f'as a subscriber!'
+                    'Sorry, that email does already exist'
+                    'as a subscriber!'
                 )
             else:
                 instance.save()
                 messages.success(
                     request,
                     'You are now added'
-                    'to the Newsletter Subscribtion'
+                    'to the Newsletter Subscription'
                 )
-                return HttpResponseRedirect(reverse('home'))
+                return redirect('home')
         else:
             newsletter_form = NewsletterForm()
 
-    template = 'home/index.html'
-    context = {
-        'newsletter_form': newsletter_form,
-    }
-
-    return render(request, template, context)
+    return redirect(request.META.get('HTTP_REFERER'))
