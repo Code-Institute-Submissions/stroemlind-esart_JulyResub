@@ -253,6 +253,11 @@ footer {
     margin: 10px 0px;
 }
 
+.newsletter-style {
+    border-radius: 0;
+    border: solid 1px #000;
+}
+
 .btn-mail {
     color: black;
 }
