@@ -68,7 +68,13 @@
     <hr>
     <div class="row my-3">
         <div class="col-12 col-md-8 col-lg-8 col-xl-8 border bg-light">
-            CUSTOMIZE POSTER FORM
+            <form action="{% url 'home' %}" method="POST">
+            {% csrf_token %}
+                {{ form }}
+            <button class="btn btn-dark border border-dark rounded-0 btn-outline-light mt-3" type="submit" aria-label="request poster">
+                Send Request
+            </button>
+            </form>
         </div>
     </div>
 </div>

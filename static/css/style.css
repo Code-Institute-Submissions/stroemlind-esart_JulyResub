@@ -112,6 +112,12 @@ h3 {
     }
 }
 
+.request-form {
+    border-radius: 0;
+    border: solid 1px #000;
+    color: #000;
+}
+
 /* Poster Product styling */
 
 #poster-header {
@@ -294,16 +300,11 @@ footer {
 }
 
 
-
 /* Allauth Form Styling */
 
 .bg-allauth {
     background-color: #e9efe7;
 }
-
-/* .allauth-form-inner-content p {
-    margin-top: 1.5rem;
-} */
 
 /* ---------- Media Queries */
 
