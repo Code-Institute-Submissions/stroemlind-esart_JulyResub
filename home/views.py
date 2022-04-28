@@ -19,7 +19,6 @@ def newsletter_signup(request):
     """
     A view to render the newsletter subcription form
     """
-    # newsletter_form = NewsletterForm(request.POST)
 
     if request.method == 'POST':
         newsletter_form = NewsletterForm(request.POST)
