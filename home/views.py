@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.utils import timezone
 
-from .models import NewsletterSubscriber
+from .models import NewsletterSubscriber, RequestPoster
 from .forms import NewsletterForm, RequestPosterForm
 
 
@@ -10,26 +10,37 @@ def index(request):
     """ A view to render the index page """
 
     form = RequestPosterForm(request.POST)
+    context = {}
 
     if request.method == 'POST':
         form = RequestPosterForm(request.POST)
         if form.is_valid():
             poster_request = form.save(commit=False)
-            poster_request.date = timezone.now()
+            # poster_request.date = timezone.now()
+            full_name = form.cleaned_data.get('full_name')
+            email = form.cleaned_data.get('email')
+            phone_number = form.cleaned_data.get('phone_number')
+            motive = form.cleaned_data.get('motive')
+            image = form.cleaned_data.get('image')
+            poster_request = RequestPoster.objects.create(
+                                 full_name=full_name,
+                                 email=email,
+                                 phone_number=phone_number,
+                                 motive=motive,
+                                 image=image,
+                                 )
             poster_request.save()
+            print(poster_request)
             messages.success(
                 request,
-                'Your request have been send to Us'
-                'We will get back to you shortly!'
+                'Your request have been send to Us. We will get back to you shortly!'
             )
             return redirect('home')
         else:
             form = RequestPosterForm()
 
     template = 'home/index.html'
-    context = {
-        'form': form,
-    }
+    context['form'] = form
     return render(request, template, context)
 
 
