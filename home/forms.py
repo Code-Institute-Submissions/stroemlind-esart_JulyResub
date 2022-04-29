@@ -12,10 +12,10 @@ class NewsletterForm(forms.ModelForm):
         Tells django which lines to use from the model
         """
         model = NewsletterSubscriber
-        fields = ('email',)
+        fields = ('news_email',)
 
         widgets = {
-            'email': forms.EmailInput(attrs={
+            'news_email': forms.EmailInput(attrs={
                 'class': 'newsletter-style form-control',
                 'placeholder': 'Enter email here',
                 'aria-label': 'Signup for newsletter',
@@ -23,7 +23,7 @@ class NewsletterForm(forms.ModelForm):
         }
 
         labels = {
-            'email': '',
+            'news_email': '',
         }
 
 

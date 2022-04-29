@@ -7,7 +7,7 @@ class NewsletterAdmin(admin.ModelAdmin):
     Admin model to handle newsletter subscribers
     from the admin panel
     """
-    list_display = ('email', 'subscribe_date')
+    list_display = ('news_email', 'subscribe_date')
 
     ordering = ('subscribe_date',)
 
