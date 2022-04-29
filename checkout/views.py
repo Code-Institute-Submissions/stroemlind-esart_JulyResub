@@ -33,7 +33,6 @@ def checkout(request):
             for item_id, quantity in cart.items():
                 try:
                     poster = get_object_or_404(Poster, pk=item_id)
-                    # total += quantity * poster.price
                     order_line_item = OrderLineItem(
                         order=order,
                         poster=poster,
