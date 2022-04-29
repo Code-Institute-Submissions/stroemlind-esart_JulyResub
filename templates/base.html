@@ -135,7 +135,7 @@
             </li>
             {% if request.user.is_authenticated %}
             <li class="list-inline-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'posters_liked' %}">
                   <div class="text-center text-black">
                       <div class="icons"><i class="far fa-heart"></i></div>
                   </div>

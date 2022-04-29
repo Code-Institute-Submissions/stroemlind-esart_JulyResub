@@ -9,4 +9,5 @@ urlpatterns = [
         name='poster-detail'
     ),
     path('like/<int:pk>/', views.like_poster, name='poster_like'),
+    path('liked_posters/', views.posters_liked, name='posters_liked'),
 ]

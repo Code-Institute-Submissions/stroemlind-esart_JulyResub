@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.views import generic
 from django.contrib import messages
 from django.db.models import Q
 
@@ -70,7 +71,6 @@ def like_poster(request, pk):
     The function to determine the view if a user has liked a post or not
     """
     poster = get_object_or_404(Poster, pk=pk)
-    print(poster)
 
     if poster.like.filter(id=request.user.id).exists():
         poster.like.remove(request.user)
@@ -78,3 +78,31 @@ def like_poster(request, pk):
         poster.like.add(request.user)
 
     return redirect(reverse('poster-detail', args=[pk]))
+
+
+def posters_liked(request, pk):
+    """
+    The function to determine the view if a user has liked a post or not
+    """
+    poster = get_object_or_404(Poster, pk=pk)
+    liked = False
+
+    if poster.like.filter(pk=poster.like.request.user.id).exists():
+        liked = True
+
+    template = 'posters/liked_posters.html'
+    context = {
+        'poster': poster,
+        'liked': liked,
+    }
+
+    return render(request, template, context)
+
+    # poster = get_object_or_404(Poster, pk=pk)
+
+    # if poster.like.filter(pk=request.user.pk).exists():
+    #     poster.like.remove(request.user)
+    # else:
+    #     poster.like.add(request.user)
+
+    # return redirect(request.META.get('HTTP_REFERER'))

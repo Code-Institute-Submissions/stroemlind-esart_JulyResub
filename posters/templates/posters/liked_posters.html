@@ -7,6 +7,7 @@
         <h2 class="col ps-3 ps-sm-4 ps-md-5" id="poster-header">Posters</h2>
     </div>
     <div class="row justify-content-around mb-3">
+    {% if poster.like %}
         {% for poster in posters %}
         <div class="col-lg-3 col-md-5 col-sm-5 col-10 card border-dark rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto pt-2 h-100 w-auto poster-element">
             {% if poster.image %}
@@ -25,19 +26,14 @@
                     </a>
                     <p class="ps-2"><strong>€</strong> {{ poster.price }}</p>
                 </div>
-                <!-- <div class="col-2 border p-0">
-                    {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'poster_like' poster.pk %}" method="POST" name="likeForm">
-                        {% csrf_token %}
-                        <button type="submit" value="{{ poster.pk }}" name="poster_like" class="btn-like icons mt-3">
-                            <i class="{% if liked %}fas{% else %}far{% endif %} fa-heart"></i> 
-                        </button>
-                    </form>
-                    {% endif %}
-                </div> -->
             </div>
         </div>
         {% endfor %}
+    {% else %}
+    <div class="col">
+        <p>Not liked poster at the moment!</p>
+    </div>
+    {% endif %}
     </div>
 </div>
 {% endblock %}
