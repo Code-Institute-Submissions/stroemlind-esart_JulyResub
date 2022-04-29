@@ -68,27 +68,7 @@ class RequestPosterForm(forms.ModelForm):
                     'aria-label': 'Enter Motive Request',
                 }),
                 'image': forms.FileInput(attrs={
-                    'class': 'form-control rounded-0 border-dark mb-2'
+                    'class': 'form-control rounded-0 border-dark mb-2',
+                    'requires': 'False',
                 }),
         }
-
-    # def __init__(self, *args, **kwargs):
-    #     """
-    #     Add placeholders and classes, remove auto-generated
-    #     labels and set autofocus on first field
-    #     """
-    #     super().__init__(*args, **kwargs)
-    #     placeholders = {
-    #         'full_name': 'Full Name',
-    #         'email': 'Email',
-    #         'phone_number': 'Phone Number',
-    #         'motive': 'Enter Description/Motive of Poster here',
-    #         'image': 'Choose a file',
-    #     }
-    #     for field in self.fields:
-    #         if self.fields[field].required:
-    #             placeholder = f'{placeholders[field]} *'
-    #         else:
-    #             placeholder = placeholders[field]
-    #         self.fields[field].widget.attrs['placeholder'] = placeholder
-    #         self.fields[field].widget.attrs['class'] = 'form-control request-form'
