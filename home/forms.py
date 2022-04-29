@@ -69,6 +69,6 @@ class RequestPosterForm(forms.ModelForm):
                 }),
                 'image': forms.FileInput(attrs={
                     'class': 'form-control rounded-0 border-dark mb-2',
-                    'requires': 'False',
+                    'required': 'False',
                 }),
         }
