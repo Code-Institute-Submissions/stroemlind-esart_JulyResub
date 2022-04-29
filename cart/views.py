@@ -5,15 +5,18 @@ from posters.models import Poster
 
 
 def shopping_cart(request):
-    """ A view to render the shoppingcart page and its content """
+    """
+    A view to render the shoppingcart page and its content
+    """
     return render(request, 'cart/shopping-cart.html')
 
 
 def add_to_cart(request, item_id):
-    """ View to add a specific product to the cart"""
+    """
+    The view to add a specific product to the cart
+    """
     poster = get_object_or_404(Poster, pk=item_id)
 
-    # quantity = int(request.POST.get('quantity'))
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -36,7 +39,9 @@ def add_to_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """ Remove the item from the shopping cart """
+    """
+    Remove the item from the shopping cart
+    """
 
     poster = get_object_or_404(Poster, pk=item_id)
     cart = request.session.get('cart', {})

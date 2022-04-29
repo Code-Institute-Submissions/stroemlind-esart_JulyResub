@@ -7,7 +7,9 @@ from .models import Poster, Motive
 
 
 def posters_all_view(request):
-    """ A view to render the Poster product page """
+    """
+    A view to render the Poster product page
+    """
 
     posters = Poster.objects.all()
     template = 'posters/posters-page.html'
@@ -42,7 +44,9 @@ def posters_all_view(request):
 
 
 def poster_detail(request, poster_id):
-    """ A view to show individual poster details """
+    """
+    A view to show individual poster details
+    """
 
     poster = get_object_or_404(Poster, pk=poster_id)
     cart = cart_contents(request)

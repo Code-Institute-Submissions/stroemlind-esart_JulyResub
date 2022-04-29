@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.utils import timezone
 
 from .models import NewsletterSubscriber, RequestPoster
 from .forms import NewsletterForm, RequestPosterForm
 
 
 def index(request):
-    """ A view to render the index page """
+    """
+    A view to render the index page
+    """
 
     form = RequestPosterForm(request.POST)
     context = {}
@@ -16,7 +17,6 @@ def index(request):
         form = RequestPosterForm(request.POST)
         if form.is_valid():
             poster_request = form.save(commit=False)
-            # poster_request.date = timezone.now()
             full_name = form.cleaned_data.get('full_name')
             email = form.cleaned_data.get('email')
             phone_number = form.cleaned_data.get('phone_number')
@@ -33,7 +33,8 @@ def index(request):
             print(poster_request)
             messages.success(
                 request,
-                'Your request have been send to Us. We will get back to you shortly!'
+                'Your request have been send to Us.  \
+                We will get back to you shortly!'
             )
             return redirect('home')
         else:
@@ -45,12 +46,16 @@ def index(request):
 
 
 def about_us(request):
-    """ A view to render the About Us page """
+    """
+    A view to render the About Us page
+    """
     return render(request, 'home/about-us.html')
 
 
 def terms_and_conditions(request):
-    """ A view to render the About Us page """
+    """
+    A view to render the About Us page
+    """
     return render(request, 'home/terms-and-conditions.html')
 
 
@@ -63,18 +68,20 @@ def newsletter_signup(request):
         newsletter_form = NewsletterForm(request.POST)
         if newsletter_form.is_valid():
             instance = newsletter_form.save(commit=False)
-            if NewsletterSubscriber.objects.filter(email=instance.email).exists():
+            if NewsletterSubscriber.objects.filter(
+                email=instance.email
+            ).exists():
                 messages.error(
                     request,
-                    'Sorry, that email does already exist'
-                    'as a subscriber!'
+                    'Sorry, that email does already exist  \
+                    as a subscriber!'
                 )
             else:
                 instance.save()
                 messages.success(
                     request,
-                    'You are now added'
-                    'to the Newsletter Subscription'
+                    'You are now added  \
+                    to the Newsletter Subscription'
                 )
                 return redirect('home')
         else:

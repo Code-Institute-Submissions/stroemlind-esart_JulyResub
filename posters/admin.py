@@ -3,7 +3,9 @@ from .models import Motive, Poster
 
 
 class PosterAdmin(admin.ModelAdmin):
-    """ An admin class for Poster products """
+    """
+    An admin class for Poster products
+    """
     list_display = (
         'name',
         'motive',
@@ -17,7 +19,9 @@ class PosterAdmin(admin.ModelAdmin):
 
 
 class MotiveAdmin(admin.ModelAdmin):
-    """ An admin class for Motive/Categories """
+    """
+    An admin class for Motive/Categories
+    """
     list_display = (
         'name',
         'friendly_name',
