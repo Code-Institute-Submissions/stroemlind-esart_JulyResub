@@ -4,8 +4,8 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 
-from .models import Poster, Motive
 from cart.context import cart_contents
+from .models import Poster, Motive
 
 
 def posters_all_view(request):

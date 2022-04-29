@@ -13,12 +13,17 @@ def add_to_cart(request, item_id):
     """ View to add a specific product to the cart"""
     poster = get_object_or_404(Poster, pk=item_id)
 
-    quantity = int(request.POST.get('quantity'))
+    # quantity = int(request.POST.get('quantity'))
+    quantity = 1
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
     if item_id in list(cart.keys()):
-        cart[item_id] += quantity
+        cart[item_id] = quantity
+        messages.error(
+            request,
+            f'{poster.name} is already in the bag'
+        )
     else:
         cart[item_id] = quantity
         messages.success(
@@ -44,7 +49,7 @@ def remove_from_cart(request, item_id):
     request.session['cart'] = cart
     messages.success(
             request,
-            f'{poster.name} was removed to the shopping cart'
+            f'{poster.name} was removed from the shopping cart'
         )
 
     if not cart:

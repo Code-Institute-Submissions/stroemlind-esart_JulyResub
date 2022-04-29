@@ -81,12 +81,12 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                          <h4 class="accordion-header" id="flush-headingTwo">
+                          <h4 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                               Returns
                             </button>
                           </h4>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
                             <div class="accordion-body">
                                 <p>
                                 We offer a 30 days return from the date of your receipt (excluding shipping costs) if you change your mind.
@@ -96,26 +96,22 @@
                           </div>
                         </div>
                       </div>
-                    <p>{{ cart }}</p>
-                    {% if cart.cart_items in poster.item_id %}
-                    <p>This item is currently in a cart</p>
-                    {% else %}
+                    <!-- <p>{{ cart.cart_items }}</p> -->
+                    {% if poster.item_id not in cart %}
                     <div class="col-12 text-center mt-3 pt-3">
-                        <form action="{% url 'add_to_cart' poster.id %}" method="POST">
-                            {% csrf_token %}
-                            <div class="input-group input-group-{{ poster.id }} d-none">
-                                <input class="form-control id_qty_{{ poster.id }}" type="number"
-                                    name="quantity" value="1" min="1" max="1"
-                                    data-item_id="{{ poster.id }}">
-                                 <!-- <input class="form-control id_qty_{{ poster.item_id }} 
-                                  {% if poster.quantity %}quantity_{{ poster.item_id }}_{{ poster.quantity }}{% endif %}" type="number"
-                                  name="quantity" value="{{ poster.quantity }}" min="1" max="1"
-                                  data-item_id="{{ poster.item_id }}" data-size="{{ poster.quantity }}"> -->
-                            </div>
-                            <input type="submit" class="btn btn-outline-dark rounded-0" value="Add to Cart">
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </form>
+                      <form action="{% url 'add_to_cart' poster.id %}" method="POST">
+                          {% csrf_token %}
+                          <div class="input-group input-group-{{ poster.id }} d-none">
+                              <input class="form-control id_qty_{{ poster.id }}" type="number"
+                                  name="quantity" value="1" min="1" max="1"
+                                  data-item_id="{{ poster.id }}">
+                          </div>
+                          <input type="submit" class="btn btn-outline-dark rounded-0" value="Add to Cart">
+                          <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                      </form>
                     </div>
+                    {% else %}
+                    <p class="border border-dark p-2">This item is currently in a shopping cart. <br> Please don't hesitate to contact us if you to make a poster request.</p>
                     {% endif %}
                 </div>
             </div>
