@@ -49,6 +49,11 @@ def about_us(request):
     return render(request, 'home/about-us.html')
 
 
+def terms_and_conditions(request):
+    """ A view to render the About Us page """
+    return render(request, 'home/terms-and-conditions.html')
+
+
 def newsletter_signup(request):
     """
     A view to render the newsletter subcription form
