@@ -8,5 +8,5 @@ urlpatterns = [
         views.poster_detail,
         name='poster-detail'
     ),
-    path('like/<int:pk>', views.PosterLikeView.as_view(), name='poster_like'),
+    path('like/<int:pk>/', views.like_poster, name='poster_like'),
 ]

@@ -133,6 +133,7 @@
                 </form>
               </div>
             </li>
+            {% if request.user.is_authenticated %}
             <li class="list-inline-item">
               <a class="nav-link" href="#">
                   <div class="text-center text-black">
@@ -147,6 +148,7 @@
                     </div>
                 </a>
             </li>
+            {% endif %}
             <li class="list-inline-item">
                 <a class="text-black nav-link" href="{% url 'shopping_cart' %}">
                     <div class="text-center">
@@ -219,9 +221,7 @@
             <h2 class="text-uppercase">Send Us a Hello!</h2>
             <hr>
             <div>
-              <form action="">
-                <a href="#" class="col-12 col-md-6 col-lg-6 text-center mx-auto nav-link btn-mail">e.stroemlind@gmail.com</a>
-              </form>
+                <a href="mailto:e.stroemlind@gmail.com?subject=ES Art" class="col-12 col-md-6 col-lg-6 text-center mx-auto nav-link btn-mail">e.stroemlind@gmail.com</a>
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-4 text-center mt-2 footer-sections">

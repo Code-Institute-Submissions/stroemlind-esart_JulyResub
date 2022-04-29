@@ -20,7 +20,7 @@ h3 {
     font-size: 40px;
 }
 
-/* Styling for navbar */
+/* -----------------------------------------Styling for navbar */
 
 #nav-btn-par {
     position: relative;
@@ -42,7 +42,6 @@ h3 {
     font-size: 30px;
     border-radius: 50%;
     color: black;
-    /*box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);*/
     transition: all 0.3s ease 0s;
     cursor: grab;
     outline: none;
@@ -61,7 +60,7 @@ h3 {
     font-size: 25px;
 }
 
-/* Index page styling */
+/* -------------------------------------------Index page styling */
 
 #logo-heading {
     font-size: 60px;
@@ -122,7 +121,7 @@ h3 {
     background-color: #e9efe7;
 }
 
-/* Poster Product styling */
+/* -----------------------------------Poster Product styling */
 
 #poster-header {
     font-size: 60px;
@@ -154,7 +153,7 @@ h3 {
     height: auto;
 }
 
-/* Shopping Cart styling */
+/* --------------------------------------------- Shopping Cart styling */
 
 .empty {
     background-color: #e9efe7;
@@ -188,7 +187,7 @@ table {
     height: auto;
 }
 
-/* Checkout styling */
+/* ----------------------------------------- Checkout styling */
  
 .StripeElement,
 .orderform-style-input,
@@ -242,7 +241,7 @@ select option[value=""] {
     color: black;
 }
 
-/* Footer styling */
+/* --------------------------------------- Footer styling */
 
 footer {
     margin-top: auto;
@@ -282,7 +281,7 @@ footer {
     background-color: #e9efe7;
 }
 
-/* Toast styling */
+/* ------------------------------------------- Toast styling */
 
 .message-container {
     position: fixed;
@@ -304,13 +303,13 @@ footer {
 }
 
 
-/* Allauth Form Styling */
+/* ----------------------------- Allauth Form Styling */
 
 .bg-allauth {
     background-color: #e9efe7;
 }
 
-/* ---------- Media Queries */
+/* ----------------------------------- Media Queries */
 
 /* For tablet view */
 @media (min-width: 1200px) {

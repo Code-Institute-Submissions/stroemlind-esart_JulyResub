@@ -1,6 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.views import View
-from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 
@@ -51,10 +49,8 @@ def poster_detail(request, poster_id):
     template = 'posters/poster-detail.html'
     liked = False
 
-    if request.method == 'POST':
-        if poster.like.filter(id=poster.request.user.id).exists():
-            liked = True
-            return
+    if poster.like.filter(id=request.user.id).exists():
+        liked = True
 
     context = {
         'poster': poster,
@@ -65,28 +61,16 @@ def poster_detail(request, poster_id):
     return render(request, template, context)
 
 
-class PosterLikeView(View):
+def like_poster(request, pk):
     """
-    The view for likes
+    The function to determine the view if a user has liked a post or not
     """
-    def poster(self, request, pk, *args, **kwargs):
-        """
-        The function to determine the view if a user has liked a post or not
-        """
-        poster = get_object_or_404(Poster, pk=pk)
-        if poster.like.filter(id=request.user.id).exists():
-            poster.like.remove(request.user)
-        else:
-            poster.like.add(request.user)
+    poster = get_object_or_404(Poster, pk=pk)
+    print(poster)
 
-        return HttpResponseRedirect(reverse('posters', args=[pk]))
+    if poster.like.filter(id=request.user.id).exists():
+        poster.like.remove(request.user)
+    else:
+        poster.like.add(request.user)
 
-
-# class LikedPosters(generic.ListView):
-#     """
-#     The function for the 'Most Populare Post' view
-#     """
-#     model = Poster
-#     queryset = Poster.objects.filter(status=1).annotate(
-#         like_count=Count('likes')).order_by('-like_count')
-#     template_name = 'liked_posters.html'
+    return redirect(reverse('poster-detail', args=[pk]))
