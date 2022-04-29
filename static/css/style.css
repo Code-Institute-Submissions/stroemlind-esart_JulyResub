@@ -118,6 +118,10 @@ h3 {
     color: #000;
 }
 
+.bg-requestform {
+    background-color: #e9efe7;
+}
+
 /* Poster Product styling */
 
 #poster-header {

@@ -48,26 +48,47 @@ class RequestPosterForm(forms.ModelForm):
 
         widgets = {
                 'full_name': forms.TextInput(attrs={
-                    'class': 'form-control request-form',
+                    'class': 'form-control request-form mb-2',
                     'placeholder': 'Enter Your Full Name Here',
                     'aria-label': 'Enter Full Name',
                 }),
                 'email': forms.EmailInput(attrs={
-                    'class': 'form-control request-form',
+                    'class': 'form-control request-form mb-2',
                     'placeholder': 'Enter Your Email here',
                     'aria-label': 'Enter Email',
                 }),
                 'phone_number': forms.NumberInput(attrs={
-                    'class': 'form-control request-form',
+                    'class': 'form-control request-form mb-2',
                     'placeholder': 'Enter Your Phone number here',
                     'aria-label': 'Enter Phone number',
                 }),
                 'motive': forms.TextInput(attrs={
-                    'class': 'form-control request-form',
+                    'class': 'form-control request-form mb-2',
                     'placeholder': 'Enter Description/Motive of Poster here',
                     'aria-label': 'Enter Motive Request',
                 }),
                 'image': forms.FileInput(attrs={
-                    'class': 'form-control rounded-0 border-dark'
+                    'class': 'form-control rounded-0 border-dark mb-2'
                 }),
         }
+
+    # def __init__(self, *args, **kwargs):
+    #     """
+    #     Add placeholders and classes, remove auto-generated
+    #     labels and set autofocus on first field
+    #     """
+    #     super().__init__(*args, **kwargs)
+    #     placeholders = {
+    #         'full_name': 'Full Name',
+    #         'email': 'Email',
+    #         'phone_number': 'Phone Number',
+    #         'motive': 'Enter Description/Motive of Poster here',
+    #         'image': 'Choose a file',
+    #     }
+    #     for field in self.fields:
+    #         if self.fields[field].required:
+    #             placeholder = f'{placeholders[field]} *'
+    #         else:
+    #             placeholder = placeholders[field]
+    #         self.fields[field].widget.attrs['placeholder'] = placeholder
+    #         self.fields[field].widget.attrs['class'] = 'form-control request-form'
