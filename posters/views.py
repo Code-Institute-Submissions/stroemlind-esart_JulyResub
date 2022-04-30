@@ -80,20 +80,18 @@ def like_poster(request, pk):
     return redirect(reverse('poster-detail', args=[pk]))
 
 
-def posters_liked(request, pk):
+def posters_liked(request):
     """
     The function to determine the view if a user has liked a post or not
     """
-    poster = get_object_or_404(Poster, pk=pk)
-    liked = False
+    # poster = get_object_or_404(Poster)
 
-    if poster.like.filter(pk=poster.like.request.user.id).exists():
-        liked = True
+    # if poster.like.filter(id=request.user.id).exists():
+    likes = Poster.objects.get(pk=1).like.all()
 
     template = 'posters/liked_posters.html'
     context = {
-        'poster': poster,
-        'liked': liked,
+        'likes': likes,
     }
 
     return render(request, template, context)
@@ -106,3 +104,14 @@ def posters_liked(request, pk):
     #     poster.like.add(request.user)
 
     # return redirect(request.META.get('HTTP_REFERER'))
+
+     # posters = get_object_or_404(Poster, like=request.user)
+
+    # if request.user.is_authenticated:
+    #     likes = Poster.objects.filter(like=posters)
+
+    # poster = get_object_or_404(Poster, pk=pk)
+    # liked = False
+
+    # if poster.like.filter(id=like.request.user.id).exists():
+    #     liked = True
