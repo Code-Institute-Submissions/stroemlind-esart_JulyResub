@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container">
@@ -43,10 +44,10 @@
     <div class="row bg-requestform border border-dark mb-3">
         <div class="col-12 col-md-7 col-lg-7 col-xl-7 bg-requestform py-3 order-2 order-md-1">
             <h3>Request a Customized Poster here:</h3>
-            <form action="{% url 'home' %}" method="POST" name="request poster form">
+            <form action="{% url 'home' %}" method="POST" name="request poster form" id="request-poster">
             {% csrf_token %}
-                {{ form }}
-            <button class="btn btn-dark border border-dark rounded-0 btn-outline-light my-3" type="submit" aria-label="request poster">
+                {{ form|crispy}}
+            <button class="btn btn-dark border border-dark rounded-0 btn-outline-light my-3" type="submit" aria-label="request poster" id="form-submit">
                 Send Request
             </button>
             </form>
@@ -69,4 +70,16 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+       $( "#request-post" ).submit(function( event ) {
+            event.preventDefault();
+        });
+        $( "#form-submit" ).click(function() {
+             $( "#request-post" ).submit();
+        });
+    </script>
 {% endblock %}

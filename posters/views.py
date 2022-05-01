@@ -87,7 +87,8 @@ def posters_liked(request):
     # poster = get_object_or_404(Poster)
 
     # if poster.like.filter(id=request.user.id).exists():
-    likes = Poster.objects.get(pk=1).like.all()
+    if request.user.is_authenticated:
+        likes = Poster.objects.get(pk=1).like.all()
 
     template = 'posters/liked_posters.html'
     context = {

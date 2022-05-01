@@ -29,6 +29,7 @@
                         <div class="col-10">
                             <h3>{{ poster.name }}</h3>
                             <p>€ {{ poster.price }}</p>
+                            <p><small>Only 1 poster in Stock</small></p>
                         </div>
                         <div class="col-2 px-auto">
                           {% if user.is_authenticated %}
@@ -49,7 +50,9 @@
                             </button>
                           </h4>
                           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
-                            <div class="accordion-body">{{ poster.description }}</div>
+                            <div class="accordion-body">
+                              {{ poster.description }}
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">

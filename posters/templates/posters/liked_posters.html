@@ -8,7 +8,7 @@
     </div>
     <div class="row justify-content-around mb-3">
     {{ likes }}
-    {% if likes.pk %}
+    {% if like in likes %}
         {% for poster in posters %}
         <div class="col-lg-3 col-md-5 col-sm-5 col-10 card border-dark rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto pt-2 h-100 w-auto poster-element">
             {% if poster.image %}
@@ -32,7 +32,7 @@
         {% endfor %}
     {% else %}
     <div class="col">
-        <p>Not liked poster at the moment!</p>
+        <p>No liked poster at the moment!</p>
     </div>
     {% endif %}
     </div>
