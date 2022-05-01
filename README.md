@@ -21,15 +21,17 @@ Note: The creator of this web application is the owner of all the images used.
 * As a Store Manager, I want to be able to manage products through the admin page.
 
 ## UX
-
+The website design is minimalistic, focusing on the main product, handmade posters. The typography and colors' main point is to create an atmosphere that gives the user a feeling of being in the drawing process of the posters. 
 
 ### SEO and KeyWords
 ### Colour Scheme
 The website's primary colors are:
-* Black 
-* Cultured white (#ffffff)
-* Light green color 
-* Red
+* Black (#000001)
+* Cultured white (#F5F5F5)
+* Light green color (#E9EFE7)
+* Red (#FF0000)
+
+![Colorpallet](documentation/images/colorpallet.png)
 
 [Coolors.co](https://coolors.co/000001-f5f5f5-e9efe7-ff0000) to create the color pallet for the project. The green and white colors give the web application a soft and minimalistic feel to highlight the contrasts of the posters and the logo's diamond edges.
 The red color highlights errors or messages to catch the user's attention.
@@ -82,29 +84,33 @@ And for the footer:
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
 
-* [HTML](https://html.spec.whatwg.org/): HTML5 are used to build the core structure of the website
+* [HTML](https://html.spec.whatwg.org/): HTML5 are used to build the core structure of the web application.
 
-* [CSS](https://www.w3.org/TR/css/): CSS is used to style the website with colors, fonts, placement of elements, etc.
+* [CSS](https://www.w3.org/TR/css/): CSS is used to style the web application with colors, fonts, placement of elements, etc.
 
-* [JavaScript](https://www.javascript.com/): JavaScript are used to make the website more interactive for the User
+* [JavaScript](https://www.javascript.com/): JavaScript are used to make the web application more interactive for the User.
 
-* [Python](https://www.python.org/): Python is used to build the core structure and code for the project
+* [jQuery](https://releases.jquery.com/): jQuery is a fast, small, and feature-rich JavaScript library to make the web application more interactive for the User.
 
-* [Heroku](https://www.heroku.com/home): Heroku is the deployment environment used to deploy the project and connected with the GitHub repository
+* [Python](https://www.python.org/): Python is used to build the core structure and code for the project.
 
-* [Gitpod](https://gitpod.io/): Gitpod is the development environment used for developing all the code during this project
+* [Heroku](https://www.heroku.com/home): Heroku is the deployment environment used to deploy the project and connected with the GitHub repository.
 
-* [GitHub](https://github.com/): GitHub are used to store the repository for this project
+* [Gitpod](https://gitpod.io/): Gitpod is the development environment used for developing all the code during this project.
 
-* [Git](https://atlassian.com/git/): Git is used to create backups of the project and ensure that all versions of the project is pushed to GitHub
+* [GitHub](https://github.com/): GitHub are used to store the repository for this project.
 
-* [Canva](https://www.canva.com/): Canva is a web application used to create the wireframes for this project
+* [Git](https://atlassian.com/git/): Git is used to create backups of the project and ensure that all versions of the project is pushed to GitHub.
+
+* [Canva](https://www.canva.com/): Canva is a web application used to create the wireframes for this project.
+
+* [Bootstrap5](https://www.getbootstrap.com/): Bootstrap is a front-end open source toolkit to quickly design and customize responsive mobile-first web application. Bootstrap5 is used to create the base for all the templates in the project.
 
 * [DevTools](https://developer.chrome.com/docs/devtools/): Dev Tools is used to look over the development of the website, debugging problems, and try different approaches to issues that would occur during the process. 
 
 * [Auto Prefixer](https://autoprefixer.github.io/): Auto Prefixer is an application used at the end of the project to give the CSS code some extra properties when used on different browsers.
 
-* [Django Framework](https://www.djangoproject.com/): Django is a free and open source Python web framework for rapid development and clean, pragmatic design.
+* [Django Framework](https://www.djangoproject.com/): Django is a free and open source Python web framework for rapid development and clean, pragmatic design. Django is used as the base framework for this project.
 
 ### Django packages
 To build this project the following packages needs to be installed:
@@ -132,11 +138,6 @@ The [requirements.txt](requirements.txt) command for the installed packages is:
 ## Testing
 To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
 
-### Code Validation
-### Browser Compatibility
-### Responsiveness
-### Tested User Stories
-### Unfixed Bugs
 ## Deployment
 The site was deployed to Heroku. The steps to deploy are as follows:
 * Go to the [Heroku](https://www.heroku.com/home) site, [sign up](https://signup.heroku.com/login) for free if you do not already have an account.
@@ -150,11 +151,22 @@ The site was deployed to Heroku. The steps to deploy are as follows:
   * Set the key to `DATABASE_URL`, value to `Provided-postgres-link`, and click add. 
   * Set the key to `SECRET_KEY`, value to `Your-SECRET_KEY`, and click add. 
   * Set the key to `DEBUG`, value to `True`, and click add. 
-  * Set the key to `DISABLE_COLLECTSTATIC`, value to `1`, and click add. 
+  * Set the key to `DISABLE_COLLECTSTATIC`, value to `1`, and click add.
+  * Set the key to `STRIPE_PUBLIC_KEY`, value to `Your-STRIPE_PUBLIC_KEY_API`, and click add.
+  * Set the key to `CLIENT_SECRET`, value to `Your-STRIPE_SECRET_KEY_API`, and click add.
 
-Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also remember to have the env.py file in the **.gitignore** file before the first deployment. So no value information will be visible after deplyment.
+Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also remember to have the env.py file in the **.gitignore** file before the first deployment. So no value information will be visible after deployment.
 
-* To obtain a Stripe key,
+* To obtain a Stripe key (For this project Stripe is set in Test mode)
+  * Go to the [Stripe](https://www.stripe.com/home) site, [sign up](https://dashboard.stripe.com/register) for free if you do not already have an account. 
+    * If creating an account, fill in the signup form with email, name, country and password.
+  * On the dashboard page, navigate to the Developer button and click. Make sure that the test-mode is on.
+  * On the Developer menu, navigate to the API-Keys button and click.
+  * Retrive the Publishable key api code.
+  * Retrive the Secret Key API by clicking on the reveal Test Key.
+    * Make sure that the API keys begins with 'pk_test_...' and 'sk_test_...'.
+
+Note: Remember to have the env.py file and have it in the **.gitignore** file before the first deployment. So no value information will be visible after deployment. Add the Stripes API Keys to the env.py file and set the variables from the env.py file in the settings.py file. 
 
 * To obtain a PostgreSQL DATABASE_URL 
   * Install the supporting libraries by typing in the command 'pip3 install dj_database_url pyscopg2'
@@ -192,6 +204,74 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/stroemlind/esart)
 ## Credits
 ### Content
+Color choose: 
+[Coolors.co](https://coolors.co/)
+
+Fonts:
+[Google fonts](https://fonts.google.com/)
+
+Icons:
+[FontAwesome](https://fontawesome.com/)
+
+List in footer for icons:
+[Unused-css](https://unused-css.com/blog/css-horizontal-lists/)
+
+Secret Key generator:
+[Miniwebtool](https://miniwebtool.com/django-secret-key-generator/)
+
+Round Menu Button:
+[W3school](https://www.w3schools.com/howto/howto_css_round_buttons.asp)
+
+Menu Button:
+[Codepen](https://codepen.io/seme332/pen/reJOwo)
+[Getcssscan](https://getcssscan.com/css-box-shadow-examples) nr.9
+[W3school](https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2)
+
+White Noise:
+[White Noise](http://whitenoise.evans.io/en/stable/index.html)
+[Devcenter](https://devcenter.heroku.com/articles/django-assets)
+
+mobile wireframe base:
+[imockups](https://imockups.com/iphone-xs-wireframe-template_3884)
+
+Canva for wireframe design:
+[Canva](https://www.canva.com)
+
+Remove item from cart
+[Devdreamz](https://devdreamz.com/question/533451-remove-an-unique-item-from-shopping-cart-in-django)
+
+Django countries:
+[Django Countries](https://pypi.org/project/django-countries/)
+[Django Countries get countries](https://pypi.org/project/django-countries/#get-the-countries-from-python)
+
+Toasts help:
+[Stackoverflow](https://stackoverflow.com/questions/56503954/bootstrap-toast-does-not-show-up)
+
+Newsletter:
+[YouTube](https://www.youtube.com/watch?v=TBVsILIt4HM&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=20) Video 20 - 26.
+[Stackoverflow](https://stackoverflow.com/questions/66371279/how-to-create-a-simple-form-in-the-base-html-template-django)
+
+Request form image:
+[GeeksforGeeks](https://www.geeksforgeeks.org/imagefield-django-forms/)
+
+Stripe
+[Stripe Card](https://stripe.com/docs/payments/cards/overview)
+[Stripe Elements](https://stripe.com/docs/payments/elements)
+[Stripe Create Payment Element](https://stripe.com/docs/js/elements_object/create_payment_element)
+[Stripe JS Docs](https://stripe.com/docs/js)
+[Stripe Testing](https://stripe.com/docs/testing)
+
+Customer like page
+[Stackoverflow](https://stackoverflow.com/questions/63547411/django-filter-liked-posts-by-user )
+
+jQuery for index request poster form:
+[jQuery](https://api.jquery.com/submit/ )
+
+Bootstrap:
+[Bootstarp5](https://https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+
+
+[](https://)
 [](https://)
 ### Media
 ### Acknowledgements (edited) 
