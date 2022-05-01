@@ -27,7 +27,7 @@
         </form>
       </div>
       <div class="card-body pb-0">
-        <small class="text-muted text-center">
+        <div class="text-center small">
           {% get_providers as socialaccount_providers %}
 
           {% if socialaccount_providers %}
@@ -51,7 +51,7 @@
           <p>{% blocktrans %}If you have not created an account yet, then please
           <a href="{{ signup_url }}">Sign up</a> first.{% endblocktrans %}</p>
           {% endif %}
-        </small>
+          </div>
       </div>
     </div>
   </div>
