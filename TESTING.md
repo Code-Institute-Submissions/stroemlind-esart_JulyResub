@@ -23,19 +23,17 @@ There are no errors form the offical [Jigsaw validator](https://jigsaw.w3.org/cs
 
 ### JavaScript
 No errors where found when going through the offical [Jshint validator](https://jshint.com/).
- * There are 2 functions in this file.
- * Function with the largest signature take 1 arguments, while the median is 1.
- * Largest function has 1 statements in it, while the median is 1.
- * The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+* There are 4 functions in this file.
+* Function with the largest signature take 1 arguments, while the median is 1.
+* Largest function has 8 statements in it, while the median is 4.5.
+* The most complex function has a cyclomatic complexity value of 3 while the median is 1.5.
 
     ![script.js](documentation/testing/jshint.png)
 
 ### Python
 The code passed through [PEP8 linter](http://pep8online.com/checkresult). The result confirmed there are no problems with the code.
 
-![PEP8-Form](documentation/testing/pep8forms.png)
-![PEP8-Models](documentation/testing/pep8models.png)
-![PEP8-Views](documentation/testing/pep8views.png)
+![PEP8](documentation/testing/pep8forms.png)
 
 ## Browser Compatibility
 ### Google Chrome

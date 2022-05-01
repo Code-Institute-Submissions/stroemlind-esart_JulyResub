@@ -27,13 +27,13 @@ The website design is minimalistic, focusing on the main product, handmade poste
 ### Colour Scheme
 The website's primary colors are:
 * Black (#000001)
-* Cultured white (#F5F5F5)
+* Cultured white (#FEFEFE)
 * Light green color (#E9EFE7)
 * Red (#FF0000)
 
 ![Colorpallet](documentation/images/colorpallet.png)
 
-[Coolors.co](https://coolors.co/000001-f5f5f5-e9efe7-ff0000) to create the color pallet for the project. The green and white colors give the web application a soft and minimalistic feel to highlight the contrasts of the posters and the logo's diamond edges.
+[Coolors.co](https://coolors.co/000001-fefefe-e9efe7-ff0000) to create the color pallet for the project. The green and white colors give the web application a soft and minimalistic feel to highlight the contrasts of the posters and the logo's diamond edges.
 The red color highlights errors or messages to catch the user's attention.
 The black color is to connect and contrast the primary colors of the posters. 
 
@@ -269,7 +269,6 @@ jQuery for index request poster form:
 
 Bootstrap:
 [Bootstarp5](https://https://getbootstrap.com/docs/5.1/getting-started/introduction/)
-
 
 [](https://)
 [](https://)

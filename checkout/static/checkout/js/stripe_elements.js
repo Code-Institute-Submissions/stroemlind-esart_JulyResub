@@ -67,5 +67,5 @@ form.addEventListener('submit', function(ev) {
     }).fail(function () {
         // just reload the page
         location.reload();
-    })
+    });
 });
