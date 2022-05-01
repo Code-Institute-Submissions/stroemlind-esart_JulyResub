@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /checkout/
+Disallow: /customers/
+Sitemap: https://es-art.herokuapp.com/sitemap.xml

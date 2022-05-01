@@ -9,7 +9,7 @@ Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Saf
 
 ### HTML
 There are no errors form the offical [W3C Validatior](https://validator.w3.org/)
-    ![HTML-validation](documentation/testing/html-valid.png)
+    ![HTML-validation](documentation/testing/html1.png)
     
     Link to the validation for the home page: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fes-art.herokuapp.com%2F)
 
