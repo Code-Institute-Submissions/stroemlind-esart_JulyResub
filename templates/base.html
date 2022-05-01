@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 <!doctype html>
 <html lang="en">
@@ -190,7 +191,7 @@
             {% csrf_token %}
             <div class="input-group d-flex justify-content-center">
               <div class="col-lg-3">
-                {{ subscription_form }}
+                {{ subscription_form|crispy }}
               </div>
               <div class="col-lg-2">
                 <button class="btn btn-dark border border-dark rounded-0 btn-outline-light" type="submit" aria-label="keep in touch">
@@ -221,7 +222,7 @@
             <h2 class="text-uppercase">Send Us a Hello!</h2>
             <hr>
             <div>
-                <a href="mailto:e.stroemlind@gmail.com?subject=ES Art" class="col-12 col-md-6 col-lg-6 text-center mx-auto nav-link btn-mail">e.stroemlind@gmail.com</a>
+                <a href="mailto:e.stroemlind@gmail.com?subject=ES_Art" class="col-12 col-md-6 col-lg-6 text-center mx-auto nav-link btn-mail">e.stroemlind@gmail.com</a>
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-4 text-center mt-2 footer-sections">
