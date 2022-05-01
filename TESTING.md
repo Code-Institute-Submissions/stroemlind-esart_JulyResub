@@ -11,15 +11,19 @@ Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Saf
 There are no errors form the offical [W3C Validatior](https://validator.w3.org/)
     ![HTML-validation](documentation/testing/html-valid.png)
     
-    Link to the validation: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F)
+    Link to the validation for the home page: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fes-art.herokuapp.com%2F)
 
 ### CSS
-There are no errors form the offical [Jigsaw validator](https://jigsaw.w3.org/css-validator/), but warnings that I am aware of.
+There are no major errors form the offical [Jigsaw validator](https://jigsaw.w3.org/css-validator/), except for on the customer and liked poster page, where an error occur. The warning for the valid pages am I aware of.
+Note: See Unfixed bugs for more infromation.
+
   ![Css-validation](documentation/testing/cssvalid.png)
 
   ![Css-validation-warning](documentation/testing/csswarning.png)
+
+  ![Css-validation-warning](documentation/testing/csswarning.png)
     
-  Link to the validation: [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  Link to the validation: [Jigsaw validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fes-art.herokuapp.com%2F&usermedium=all&vextwarning=&warning=1)
 
 ### JavaScript
 No errors where found when going through the offical [Jshint validator](https://jshint.com/).
@@ -31,7 +35,7 @@ No errors where found when going through the offical [Jshint validator](https://
     ![script.js](documentation/testing/jshint.png)
 
 ### Python
-The code passed through [PEP8 linter](http://pep8online.com/checkresult). The result confirmed there are no problems with the code.
+The code passed through [PEP8 linter](http://pep8online.com/). The result confirmed there are no problems with the code.
 
 ![PEP8](documentation/testing/pep8forms.png)
 
