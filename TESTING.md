@@ -82,3 +82,5 @@ This section provides images of the tests for responsiveness on different screen
 ![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)
 
 * A bug that I can not figure out how to solve correctly is the Add to cart button not changing when a user adds a poster to the shopping cart. To fix this in the meantime, I implemented an Error message letting the user know that the poster was already in the shopping cart.
+
+* This project took shape with two different computers and screen sizes. Depending on which computer, the d in the heading "E.Stromlind posters and art" disappears into the image to the right. I have lowered the pixel size from 60px to 55px to make it look better on both computers, but it is something to look over in more detail.

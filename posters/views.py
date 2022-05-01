@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.views import generic
 from django.contrib import messages
 from django.db.models import Q
 
@@ -106,7 +105,7 @@ def posters_liked(request):
 
     # return redirect(request.META.get('HTTP_REFERER'))
 
-     # posters = get_object_or_404(Poster, like=request.user)
+    # posters = get_object_or_404(Poster, like=request.user)
 
     # if request.user.is_authenticated:
     #     likes = Poster.objects.filter(like=posters)

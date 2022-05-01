@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@200;300;500;600&family=Rock+3D&display=swap');
-/*
-font-family: 'Amatic SC', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Rock 3D', cursive;
-*/
 
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     background-color: #fefefe;
+    color: #000001;
 }
 
 h1, h2 {
@@ -35,14 +31,14 @@ h3 {
 
 .menu-btn {
     background-color: #e9efe7;
-    border: solid 0.5px black;
+    border: solid 0.5px #000001;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
     border-radius: 50%;
-    color: black;
+    color: #000001;
     transition: all 0.3s ease 0s;
     cursor: grab;
     outline: none;
@@ -61,16 +57,16 @@ h3 {
     font-size: 25px;
 }
 
-/* -------------------------------------------Index page styling */
+/* ----------------------------------Index page styling */
 
 #logo-heading {
-    font-size: 60px;
+    font-size: 55px;
 }
 
 .text-link,
 .cart-text {
     text-decoration: none;
-    color: black;
+    color: #000001;
 }
 
 .text-link:hover {
@@ -81,7 +77,7 @@ h3 {
 }
 
 .cart-text:hover {
-    color: #000;
+    color: #000001;
 }
 
 /* From youtube video to get gallary wall effect with media queries */
@@ -114,8 +110,8 @@ h3 {
 
 .request-form {
     border-radius: 0;
-    border: solid 1px #000;
-    color: #000;
+    border: solid 1px #000001;
+    color: #000001;
 }
 
 .bg-requestform {
@@ -129,14 +125,14 @@ h3 {
 }
 
 .product-title {
-    color: black;
+    color: #000001;
     text-decoration: none;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
 }
 
 .product-title:hover {
-    color: black;
+    color: #000001;
 }
 
 .btn-like {
@@ -175,12 +171,12 @@ table {
 
 .cart-btn {
     text-decoration: none;
-    color: #000;
+    color: #000001;
     font-size: 20px;
 }
 
 .cart-btn:hover {
-    color: #000;
+    color: #000001;
     text-decoration: underline;
 }
 
@@ -196,7 +192,7 @@ table {
 .customer-form-input {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    color: #000;
+    color: #000001;
     background-color: #e9efe7;
     height: 40px;
     width: 100%;
@@ -220,7 +216,7 @@ table {
 
 select, 
 select option {
-    color: #000;
+    color: #000001;
 }
 
 select, 
@@ -229,8 +225,8 @@ select option[value=""] {
 }
 
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: #000001;
+    border: 1px solid #000001;
 }
 
 .success-links {
@@ -240,7 +236,7 @@ select option[value=""] {
 
 .success-links:hover {
     text-decoration: none;
-    color: black;
+    color: #000001;
 }
 
 /* --------------------------------------- Footer styling */
@@ -266,15 +262,15 @@ footer {
 
 .newsletter-style {
     border-radius: 0;
-    border: solid 1px #000;
+    border: solid 1px #000001;
 }
 
 .btn-mail {
-    color: black;
+    color: #000001;
 }
 
 .btn-mail:hover {
-    color: black;
+    color: #000001;
     /* From get css scan #21 */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }

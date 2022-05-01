@@ -25,9 +25,15 @@ Note: The creator of this web application is the owner of all the images used.
 The website design is minimalistic, focusing on the main product, handmade posters. The typography and colors' main point is to create an atmosphere that gives the user a feeling of being in the drawing process of the posters. 
 
 ### SEO and KeyWords
+
+#### Facebook page 
+The Facebook page is a mock-up created with [Canva](https://www.canva.com/) using the Code Institutes template.
+
+![Facebook page](documentation/images/e.stromlind.png)
+
 ### Colour Scheme
 The website's primary colors are:
-* Black (#000001)
+* Black (#000001) Note: If not Bootstrap5 class text-balck or dark used.
 * Cultured white (#FEFEFE)
 * Light green color (#E9EFE7)
 * Red (#FF0000)
