@@ -1,6 +1,11 @@
 # E.Stromlind Art (ESART)
-Intro paragraph
 amiresponisive image
+
+ES Art is the name of the web application for E.Strömlind art & posters. 
+E.Strömlind takes the colorful and vibrant moments in life and makes them abstract and easy for the eye. The inspiration for the posters comes from different types of photos, like concert pictures, fashion editorials from magazines, or random everyday life pictures. All the posters are handmade on acrylic paper, drawn with pen and different types of markers.
+This web application exists to display and get the customer a view and an easy way to purchase posters directly or make a request. 
+Note: The creator of this web application is the owner of all the images used.
+
 ## User Stories
 
 * As a Shopper, I want to get an overview of all the products.
@@ -15,12 +20,31 @@ amiresponisive image
 * As a Shopper, if something goes wrong during the shopping process, I want to get a notification about it.
 * As a Store Manager, I want to be able to manage products through the admin page.
 
-## UX (briefly explain your design)
+## UX
+
 
 ### SEO and KeyWords
-### Colour Scheme (explain your colors, etc.... perhaps use coolors.co?)
-### Typography (explain any fonts and icon libraries used, font-awesome/google fonts, etc)
+### Colour Scheme
+The website's primary colors are:
+* Black 
+* Cultured white (#ffffff)
+* Light green color 
+* Red
+
+[Coolors.co](https://coolors.co/000001-f5f5f5-e9efe7-ff0000) to create the color pallet for the project. The green and white colors give the web application a soft and minimalistic feel to highlight the contrasts of the posters and the logo's diamond edges.
+The red color highlights errors or messages to catch the user's attention.
+The black color is to connect and contrast the primary colors of the posters. 
+
+![Colors](documentation/images/color.png)
+
+### Typography
 #### Fonts
+The fonts for this project comes from [Google fonts](https://fonts.google.com/), and are the following ones:
+* [Amatic SC](https://fonts.google.com/specimen/Amatic+SC?query=amatic): for h3 headings and the display of poster names. 
+* [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montse): The base font family for the project. Used when no other specifications are said.
+* [Rock 3D](https://fonts.google.com/specimen/Rock+3D?query=rock+3): This font is for the h1 and h2 heading.
+
+The use of fonts Amatic SC and Rock 3D gives the web application a feeling of hand-drawn letters and connects it to the shop's core product.
 
 #### Icons
 For this project, the different icons for the navbar are:

@@ -80,5 +80,7 @@ This section provides images of the tests for responsiveness on different screen
 
 ## Unfixed Bugs
 * Remove text from the request Poster Form 
+![Code for forms with Crispy FormHelper1](documentation/testing/crispyformhelper1.png)
+![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)
 
 * A bug that I can not figure out how to solve correctly is the Add to cart button not changing when a user adds a poster to the shopping cart. To fix this in the meantime, I implemented an Error message letting the user know that the poster was already in the shopping cart.
