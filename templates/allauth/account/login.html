@@ -15,7 +15,7 @@
     <div class="card col-10 col-md-8 shadow-sm border-dark rounded-0 my-4 mx-auto bg-allauth">
       <div class="card-body">
         <h1 class="text-center">Hey You, and Welcome!</h1>
-        <p class="text-center pb-2">{% blocktrans %}If you want to follow your Orders and Like Posters, you have to Sign In.{% endblocktrans %}</p>
+        <p class="text-center pb-2">{% blocktrans %}If you want to follow your Orders and Like Posters, you have to Login.{% endblocktrans %}</p>
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
           {{ form|crispy }}
