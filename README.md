@@ -80,6 +80,8 @@ These are the following technologies and packages used to develop this project:
 
 * [Auto Prefixer](https://autoprefixer.github.io/): Auto Prefixer is an application used at the end of the project to give the CSS code some extra properties when used on different browsers.
 
+* [Django Framework](https://www.djangoproject.com/): Django is a free and open source Python web framework for rapid development and clean, pragmatic design.
+
 ### Django packages
 To build this project the following packages needs to be installed:
 <details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
@@ -89,9 +91,12 @@ To build this project the following packages needs to be installed:
 | [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework|
 | dj_database_url | 0.5.0 | Utilizes the 12factor inspired DATABASE_URL environment variable to configure Django apps  |
 | [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) | 0.48.0 | An integrated Django application for addressing authentication, registration, account management, and social account authentication. |
+| [django-countries==7.2.1](https://pypi.org/project/django-countries/) | 2.9.3 | A Django application that provides country choices for use with forms, flag icons static files, and a country field for models (Text from website). |
+| [django-crispy-forms==1.14.0](https://django-crispy-forms.readthedocs.io/en/latest/) | 2.9.3 | A way to control the rendering behavior of your Django forms in a very elegant and DRY way. |
 | [Gunicorn](https://gunicorn.org/)  | 20.1.0 | Gunicorn is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The server is compatible with various web frameworks and light in server resources |
 | [Pillow](https://pillow.readthedocs.io/en/stable/) | 9.1.0 | Pillow is a Python Imaging Library that adds image processing capabilities to the Python interpreter. |
 | [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
+| [stripe==2.74.0](https://stripe.com/se) | 2.9.3 | A workframe to bring together everything needed to build websites and apps that can receive and send payments worldwide.  |
 | [Whitenoise](https://whitenoise.evans.io/en/stable/django.html) | 6.0.0 | Whitenoise allows the web app to serve its own static files |
 
 
