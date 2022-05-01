@@ -5,23 +5,26 @@ To see that the JavaScript code in the project worked without any bugs, I used t
 
 Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Safari, were used during all the testing. It works on all the mentioned internet browsers and mobile devices.
 ## Code Validation
-* Validator HTML table elements created 
 
 ### HTML
 There are no errors form the offical [W3C Validatior](https://validator.w3.org/)
-    ![HTML-validation](documentation/testing/html1.png)
+   ![HTML-validation](documentation/testing/html1.png)
+
+   ![HTML-validation](documentation/testing/html8.png)
     
-    Link to the validation for the home page: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fes-art.herokuapp.com%2F)
+  Link to the validation for the home page: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fes-art.herokuapp.com%2F)
+
+Except for the customer profile page and the liked poster page, which gave an Error 500. See unfixed bugs for more infromation. 
 
 ### CSS
 There are no major errors form the offical [Jigsaw validator](https://jigsaw.w3.org/css-validator/), except for on the customer and liked poster page, where an error occur. The warning for the valid pages am I aware of.
 Note: See Unfixed bugs for more infromation.
 
-  ![Css-validation](documentation/testing/cssvalid.png)
+  ![Css-validation](documentation/testing/css1.png)
 
-  ![Css-validation-warning](documentation/testing/csswarning.png)
+  ![Css-validation-warning](documentation/testing/css-warning.png)
 
-  ![Css-validation-warning](documentation/testing/csswarning.png)
+  ![Css-validation-warning](documentation/testing/css-error.png)
     
   Link to the validation: [Jigsaw validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fes-art.herokuapp.com%2F&usermedium=all&vextwarning=&warning=1)
 
@@ -31,6 +34,7 @@ No errors where found when going through the offical [Jshint validator](https://
 * Function with the largest signature take 1 arguments, while the median is 1.
 * Largest function has 8 statements in it, while the median is 4.5.
 * The most complex function has a cyclomatic complexity value of 3 while the median is 1.5.
+I am aware of the warning about the Stripe element, but to setup this code I followed the lessons and Strip documentation. Do not cause an issue with the functionality of the code. 
 
     ![script.js](documentation/testing/jshint.png)
 

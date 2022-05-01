@@ -243,6 +243,8 @@ These are the following technologies and packages used to develop this project:
 
 * [Django Framework](https://www.djangoproject.com/): Django is a free and open source Python web framework for rapid development and clean, pragmatic design. Django is used as the base framework for this project.
 
+* [Xml-stipemap](https://www.xml-sitemaps.com/details-es-art.herokuapp.com-49daa557a.html): To create a sitemap for the deployed web application and generate a way for the 'SEO spiders' to crawl on the pages of the web application.
+
 ### Django packages
 To build this project the following packages needs to be installed:
 <details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
