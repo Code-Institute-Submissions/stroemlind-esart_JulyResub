@@ -1,5 +1,6 @@
 # E.Stromlind Art (ESART)
 amiresponisive image
+![]()
 
 ES Art is the name of the web application for E.Strömlind art & posters. 
 E.Strömlind takes the colorful and vibrant moments in life and makes them abstract and easy for the eye. The inspiration for the posters comes from different types of photos, like concert pictures, fashion editorials from magazines, or random everyday life pictures. All the posters are handmade on acrylic paper, drawn with pen and different types of markers.
@@ -78,6 +79,8 @@ And for the footer:
 ## Features
 ### Existing Features
 #### Navbar: 
+![]()
+
 The web application contains a two-part navbar at the top of the pages: An offcanvas menu that the user access by clicking on the round button at the top left corner and a row with icons at the top right corner of the page. 
 * Offcanvas menu: 
 When a user accesses the offcanvas menu, it opens up on the left side of the page, displaying a list of navigation options. From the options a user can navigate to the:
@@ -87,22 +90,38 @@ When a user accesses the offcanvas menu, it opens up on the left side of the pag
   * All Posters page 
   * Request customized Poster form 
   * Posters by Categories with a dropdown function displaying all the different categories 
+  ![]()
+
 * Icon visible menu:
 The icons on the right side of the navbar give the user easy access to:
   * A search bar where the user can search with different words to find if what they are after is available on the web application.
   * If the user is authenticated, the heart icon will take the user to the page where the user can view all the posters they have provided a 'like' to different posters.
   * If the user is authenticated, the person icon will take the user to the page where the user can view the profile page.
   * The shopping cart, takes the user to the page of the shopping cart.
+  ![]()
 
 #### Messages: 
 Depending on if the user does different actions on the web application, a little message box pop-ups at the right top corner of the page. The different messages that can a user can encounter are: 
 * Success message for Signing Up to the web application or logging in to it.
-* Success message for adding a product to the cart displays the total amount in the shopping cart, and if it's under the free delivery threshold, tell the user how much is left to shop for to get free delivery. 
+![]()
+
+* Success message for adding a product to the cart displays the total amount in the shopping cart, and if it's under the free delivery threshold, tell the user how much is left to shop for to get free delivery.
+![]()
+
 * Success message if the user removes an item from the shopping cart.
-* Success message if the user signs up for the newsletter. 
-* Error message if the user tries to search for something on the web application, but the input is not a valid one. 
-* Error message if the user tries to add a poster already in the shopping cart. 
-* Error message if the user tries to sign up for the newsletter service with an existing email. 
+![]()
+
+* Success message if the user signs up for the newsletter.
+![]()
+
+* Error message if the user tries to search for something on the web application, but the input is not a valid one.
+![]()
+
+* Error message if the user tries to add a poster already in the shopping cart.
+![]()
+
+* Error message if the user tries to sign up for the newsletter service with an existing email.
+![]()
 
 #### Request Poster Form: 
 A user can fill out a form on the index page with a request to get a customized poster. The form contains five input fields: 
@@ -111,9 +130,12 @@ A user can fill out a form on the index page with a request to get a customized 
 * Phone number: phone number of the person making the request
 * Description of desired poster design: The person making the request can give relevant information about what they want the poster to look like, size, canvas, etc. 
 * Image: for the user to send a photo of the motive to complete the request.
-The Full name, email, and Phone number fields are required. Those are the information needed to contact the person about the request and start a dialog. 
+The Full name, email, and Phone number fields are required. Those are the information needed to contact the person about the request and start a dialog.
+![]()
+
 #### Sign Up for newsletters:
-A user can sign up for a newsletter by applying their email to the form. 
+A user can sign up for a newsletter by applying their email to the form.
+![]()
 
 #### Footer:
 The Footer gives the user access to the following features:
@@ -123,41 +145,54 @@ The Footer gives the user access to the following features:
 * Privacy Policy: Takes the user to the page about who and what privacy policy the web applications have. The Privacy policy opens up in a new tab on the web browser. 
 * Send email to e.stromlind:  When a user clicks on the email address displayed, it will open the user's nearest email application function with a new email and a set subject of the email. 
 * Access Social Media platforms: The web application has three social media icons in the footer that take them to the given social media platform when a user clicks on it. The link will open in a new tab.
+![]()
 
 #### View all the Posters: 
 A user can see all the available posters in the shop on a designated page for it. It shows the poster's image, name, and what each poster costs in EUR.
+![]()
 
 #### View Posters by category: 
-A user can browse through posters in a given category. 
+A user can browse through posters in a given category.
+![]()
 
 #### View a Poster in detail:
 The web application gives the user access to details about each poster available in the store. The user sees a bigger image of the poster, its name, the price, add to cart button, and a heart button on this page. The page also provides an accordion with the details, size guide, and return information. The detail contains information about the motive, the size of the poster, and what kind of canvas it's made on. The size guide gives the user information about the sizes in measurements. 
-The return information tab gives the user the most important part about the return policy and links to the terms and conditions page. 
+The return information tab gives the user the most important part about the return policy and links to the terms and conditions page.
+![]() 
 
 #### Like a Poster for saving for later or collect them to review:
 A user who is authenticated can like/heart posters as a reserve for later functionality. The function makes it easy for the user to track the kind of style of a poster they are after.
+![]()
 
 #### Add To Cart: 
-The add to cart button allows the user to add a poster to the cart. The button only allows the user to add one of the same posters to the cart as the posters are one of a kind. If a user tries to add the same poster twice, they will get a notification saying that the poster already exists in the shopping cart. 
+The add to cart button allows the user to add a poster to the cart. The button only allows the user to add one of the same posters to the cart as the posters are one of a kind. If a user tries to add the same poster twice, they will get a notification saying that the poster already exists in the shopping cart.
+![]()
 
 #### View shopping cart: 
 A user can access the shopping cart page anytime during their time spent at the web application. If there are no posters in the shopping cart, they see a message saying that the shopping cart is currently empty. Have the user add posters to the shopping cart; they will be displayed on a table with the information about the poster and the total cost of all the posters together. If the shopping cart contains an unlimited amount under €70, the user gets notified by a red text, letting them know how much more they need to spend to get free delivery. 
-From the shopping cart, they can either go to check out or back to the all poster page to browser some more. 
+From the shopping cart, they can either go to check out or back to the all poster page to browser some more.
+![]()
 
 #### Remove poster from shopping cart:
 If a user wants to update the current shopping cart, they can remove the poster by clicking on the 'x' on the right side of the table. If users remove all the posters in the shopping cart, they will get redirected to the home page.
+![]()
 
 #### Buy Posters: 
 Users can buy posters via a checkout page with stripe card payment.
 The user needs to fill out a form about delivery information and card information to go through with a purchase.
 A user, if authenticated, can choose to save the delivery information for later purchases in the future. 
-When a purchase has gone through, the user gets redirected to a success page with the order information and an option to go to their profile page to see order history or saved information if they have chosen to save delivery information during purchase. 
+When a purchase has gone through, the user gets redirected to a success page with the order information and an option to go to their profile page to see order history or saved information if they have chosen to save delivery information during purchase.
+![]()
+![]()
 
 #### Save information regarding shipping/ delivery and update:
 A user who is authenticated can, during the buying process, choose if they want to save the delivery information to their profile for future purchases. On their profile page, the user can prefill the delivery information form to update it before or after the purchase with the delivery information if it has changed since the last purchase.
+![]()
+![]()
 
 #### See order history made by the user, if authenticated:
 On the profile page of an authenticated user, all the orders made by the user shows in an order history table. The user can click on the order number to get all the specific order information about that order.
+![]()
 
 ### Features Left to Implement
 
