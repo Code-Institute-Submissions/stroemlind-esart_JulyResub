@@ -78,14 +78,18 @@ And for the footer:
 #### Mobile
 
 ![wireframe1](documentation/wireframes/wireframe1.png)
+
 ![wireframe2](documentation/wireframes/wireframe2.png)
+
 ![wireframe3](documentation/wireframes/wireframe3.png)
+
 ![wireframe4](documentation/wireframes/wireframe4.png)
 
 ## Features
 ### Existing Features
 #### Navbar: 
 ![Navbar no login](documentation/testing/navbar1.png)
+
 ![Navbar user login]()
 
 The web application contains a two-part navbar at the top of the pages: An offcanvas menu that the user access by clicking on the round button at the top left corner and a row with icons at the top right corner of the page. 
@@ -96,7 +100,8 @@ When a user accesses the offcanvas menu, it opens up on the left side of the pag
   * My Profile page and Sign Out if the user is authenticated
   * All Posters page 
   * Request customized Poster form 
-  * Posters by Categories with a dropdown function displaying all the different categories 
+  * Posters by Categories with a dropdown function displaying all the different categories
+
   ![Offcanvas menu button](documentation/testing/hiddenmenu1.png)
 
   ![Offcanvas no login](documentation/testing/hiddenmenu2.png)
@@ -111,33 +116,49 @@ The icons on the right side of the navbar give the user easy access to:
   * If the user is authenticated, the heart icon will take the user to the page where the user can view all the posters they have provided a 'like' to different posters.
   * If the user is authenticated, the person icon will take the user to the page where the user can view the profile page.
   * The shopping cart, takes the user to the page of the shopping cart.
+
   ![Icon navbar no login](documentation/testing/successsignout.png)
+
   ![Icon navbar no login](documentation/testing/successsignout.png)
+
   ![Icon navbar user login](documentation/testing/successlogin.png)
+
+#### Create an account and login as created user
+A user can create a personal account for the web application. The created account is saved for the user to use whenever they like to log in and will make the shopping experience easier and smoother.
+
+![Account Sign Up](documentation/testing/signup1.png)
+
+![Account Login](documentation/testing/desk-login.png)
 
 #### Messages: 
 Depending on if the user does different actions on the web application, a little message box pop-ups at the right top corner of the page. The different messages that can a user can encounter are: 
 * Success message for Signing Up to the web application, logging in to it or signing out.
+
 ![Success message Sign Up]()
+
 ![Success message Login](documentation/testing/successlogin.png)
-![SUccess message Sign out](documentation/testing/successsignout.png)
+
+![Success message Sign out](documentation/testing/successsignout.png)
 
 * Success message for adding a product to the cart displays the total amount in the shopping cart, and if it's under the free delivery threshold, tell the user how much is left to shop for to get free delivery.
-![]()
+![Success message add to cart]()
 
 * Success message if the user removes an item from the shopping cart.
-![]()
+![Success message remove from cart]()
 
 * Success message if the user signs up for the newsletter.
+
 ![Success message newsletter](docuemntation/testing/newsletter5.png)
 
 * Error message if the user tries to search for something on the web application, but the input is not a valid one.
+
 ![Error message search](documentation/testing/errorsearch.png)
 
 * Error message if the user tries to add a poster already in the shopping cart.
-![]()
+![Error message add to cart]()
 
 * Error message if the user tries to sign up for the newsletter service with an existing email.
+
 ![Error message existing email](documentation/testing/newsletter6.png)
 
 #### Request Poster Form: 
@@ -148,10 +169,12 @@ A user can fill out a form on the index page with a request to get a customized 
 * Description of desired poster design: The person making the request can give relevant information about what they want the poster to look like, size, canvas, etc. 
 * Image: for the user to send a photo of the motive to complete the request.
 The Full name, email, Phone number and Description fields are required. Those are the information needed to contact the person about the request and start a dialog.
+
 ![RequestForm](documentation/testing/requestform1.png)
 
 #### Sign Up for newsletters:
 A user can sign up for a newsletter by applying their email to the form.
+
 ![Newsletter Sign Up](documentation/testing/newsletter1.png)
 
 #### Footer:
@@ -162,7 +185,8 @@ The Footer gives the user access to the following features:
 * Privacy Policy: Takes the user to the page about who and what privacy policy the web applications have. The Privacy policy opens up in a new tab on the web browser. 
 * Send email to e.stromlind:  When a user clicks on the email address displayed, it will open the user's nearest email application function with a new email and a set subject of the email. 
 * Access Social Media platforms: The web application has three social media icons in the footer that take them to the given social media platform when a user clicks on it. The link will open in a new tab.
-![]()
+
+![Footer](documentation/images/footer1.png)
 
 #### View all the Posters: 
 A user can see all the available posters in the shop on a designated page for it. It shows the poster's image, name, and what each poster costs in EUR.
