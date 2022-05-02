@@ -178,45 +178,71 @@ This section provides images of the tests for responsiveness on different screen
 
 ### Mobile
 #### Home
-![Home page](documentation/testing/)
+![Home page](documentation/testing/mobile-home.png)
+
+#### Request Poster Form
+![Request Form 1](documentation/testing/mobile-requestform1.png)
+
+![Request Form 2](documentation/testing/mobile-requestform2.png)
 
 #### Menu/Navbar
-![Menu/Navbar](documentation/testing/)
+![Menu/Navbar](documentation/testing/mobile-menu1.png)
+
+![Menu/Navbar](documentation/testing/mobile-menu2.png)
 
 #### Sign Up/Login/Sign Out/Profile page
-![Signup](documentation/testing/desk-)
+![Signup](documentation/testing/mobile-signup.png)
 
-![Login](documentation/testing/desk-login.png)
+![Login](documentation/testing/mobile-login.png)
 
-![Signout](documentation/testing/desk-signout.png)
+![Signout](documentation/testing/mobile-signout.png)
 
-![Profile page](documentation/testing/desk-profile.png)
+![Profile page 1](documentation/testing/mobile-profile1.png)
+
+![Profile page 2](documentation/testing/mobile-profile2.png)
+
+![Profile page 3](documentation/testing/mobile-profile3.png)
 
 #### Posters view, category and detail view
-![](documentation/testing/)!
-![Category page](documentation/testing/desk-categorypage.png)
+![All Posters](documentation/testing/mobile-posters.png)
 
-![Poster detail view](documentation/testing/desk-posterdetail1.png)
+![Category page](documentation/testing/mobile-category.png)
+
+![Poster detail view 1](documentation/testing/mobile-posterdetail1.png)
+
+![Poster detail view 2](documentation/testing/desk-posterdetail2.png)
 
 #### Liked Posters page
-![Liked posters page](documentation/testing/desk-likedposterpage.png)
+![Liked posters page](documentation/testing/mobile-likedposters.png)
 
 #### Shopping Cart
-![Cart No free](documentation/testing/desk-checkout.png)
+![Cart No free](documentation/testing/mobile-cart1.png)
 
-![Cart free](documentation/testing/)
-![Cart empty](documentation/testing/)
+![Cart free](documentation/testing/mobile-cart2.png)
+
+![Cart empty](documentation/testing/mobile-emptycart.png)
 
 #### Checkout/Checkout Success
-![](documentation/testing/)
-![](documentation/testing/)
+![Checkout 1](documentation/testing/mobile-checkout1.png)
+
+![Checkout 2](documentation/testing/mobile-checkout2.png)
+
+![Checkout 3](documentation/testing/mobile-checkout3.png)
+
+![Success 1](documentation/testing/mobile-success1.png)
+
+![Success 2](documentation/testing/mobile-success2.png)
+
+![Success 3](documentation/testing/mobile-success3.png)
 
 #### Footer/About Us/Terms & Conditions
-![Whole footer](documentation/testing/footer1.png)
+![Footer 1](documentation/testing/mobile-footer1.png)
 
-![About Us](documentation/testing/aboutus.png)
+![Footer 2](documentation/testing/mobile-footer2.png)
 
-![Terms & Cond](documentation/testing/terms.png)
+![About Us](documentation/testing/mobile-aboutus.png)
+
+![Terms & Cond](documentation/testing/mobile-terms.png)
 
 
 ## Tested User Stories
@@ -227,7 +253,7 @@ A user can quickly check all the posters available in the shop on a single page.
 
 ![Poster page 2 tablet](documentation/testing/tablet-posters.png)
 
-![Poster page 3 mobile](documentation/testing/)
+![Poster page 3 mobile](documentation/testing/mobile-posters.png)
 
 ### See poster all the posters depending on the poster's motive/category
 When users select to view posters by category, they get redirected to a page that displays all the posters for the selected category.
