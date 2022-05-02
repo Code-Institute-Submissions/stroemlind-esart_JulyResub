@@ -24,8 +24,8 @@ Note: The creator of this web application is the owner of all the images used.
 ## UX
 The website design is minimalistic, focusing on the main product, handmade posters. The typography and colors' main point is to create an atmosphere that gives the user a feeling of being in the drawing process of the posters. 
 
-### SEO and KeyWords
-Start of the keyword research process. I was brainstorming for general topics that would fit the content and purpose of the website.
+### SEO and Keywords
+The keyword research process begins with browsing through other web applications and shops that sell posters. After going through many web applications, brainstorming begins for general topics that would fit the content and purpose of the website.
 * Topics: 
   * Print
   * Art
@@ -387,6 +387,9 @@ The [requirements.txt](requirements.txt) command for the installed packages is:
 - `pip3 install -r requirements.txt`
 
 </details>
+
+### Models
+
 
 ## Testing
 To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
