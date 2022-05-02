@@ -159,6 +159,81 @@ Submitted form stored on the Admin page
 ![](documentation/testing/)
 
 ## Tested Features
+Test existing web application features that are not related to a User Story.
+
+### Menu/Navbar
+#### Hidden Menu/Navbar
+![](documentation/testing/)
+![](documentation/testing/)
+
+Home
+![](documentation/testing/)
+
+Login
+![](documentation/testing/)
+
+Sign Up
+![](documentation/testing/)
+
+Profile
+![](documentation/testing/)
+
+Sign out
+![](documentation/testing/)
+
+All Posters
+![](documentation/testing/)
+
+Customize/Request Poster
+![](documentation/testing/)
+
+Categories
+![](documentation/testing/)
+
+#### Visable icon Menu/Navbar
+Search function
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
+Liked Posters Page
+![](documentation/testing/)
+![](documentation/testing/)
+
+Profile
+![](documentation/testing/)
+![](documentation/testing/)
+
+Shopping Cart
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
+### Footer
+![](documentation/testing/)
+
+About Us page
+![](documentation/testing/)
+
+Posters
+![](documentation/testing/)
+
+Terms and Conditions
+![](documentation/testing/)
+
+Privacy Policy
+![](documentation/testing/)
+
+Send a hello email
+![](documentation/testing/)
+
+Social Media platforms
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
+### Newsletter
 ![](documentation/testing/)
 
 ## Unfixed Bugs

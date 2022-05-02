@@ -69,7 +69,7 @@ def newsletter_signup(request):
         if newsletter_form.is_valid():
             instance = newsletter_form.save(commit=False)
             if NewsletterSubscriber.objects.filter(
-                email=instance.email
+                news_email=instance.news_email
             ).exists():
                 messages.error(
                     request,

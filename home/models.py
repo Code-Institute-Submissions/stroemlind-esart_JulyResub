@@ -10,7 +10,7 @@ class NewsletterSubscriber(models.Model):
     subscribe_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.email
+        return self.news_email
 
 
 class RequestPoster(models.Model):
