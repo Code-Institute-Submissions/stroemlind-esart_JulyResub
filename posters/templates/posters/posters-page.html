@@ -25,16 +25,6 @@
                     </a>
                     <p class="ps-2"><strong>€</strong> {{ poster.price }}</p>
                 </div>
-                <!-- <div class="col-2 border p-0">
-                    {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'poster_like' poster.pk %}" method="POST" name="likeForm">
-                        {% csrf_token %}
-                        <button type="submit" value="{{ poster.pk }}" name="poster_like" class="btn-like icons mt-3">
-                            <i class="{% if liked %}fas{% else %}far{% endif %} fa-heart"></i> 
-                        </button>
-                    </form>
-                    {% endif %}
-                </div> -->
             </div>
         </div>
         {% endfor %}

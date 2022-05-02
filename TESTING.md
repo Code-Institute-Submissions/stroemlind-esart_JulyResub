@@ -88,17 +88,20 @@ This section provides images of the tests for responsiveness on different screen
 ### Mobile 
 
 ## Tested User Stories
-### Overview of all the products.
-![Poster page 1](documentation/testing/posterpage1.png)
-![](documentation/testing/)
-![](documentation/testing/)
+### Overview of all the posters
+A user can quickly check all the posters available in the shop on a single page. 
 
-### See poster all the posters depending on the poster's motive.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+![Poster page 1 desk](documentation/testing/posterpage1.png)
+
+![Poster page 2 tablet](documentation/testing/)
+
+![Poster page 3 mobile](documentation/testing/)
+
+### See poster all the posters depending on the poster's motive/category
+When users select to view posters by category, they get redirected to a page that displays all the posters for the selected category.
+
+![Category page desk](documentation/testing/desk-categorypage.png)
+
 ![](documentation/testing/)
 ![](documentation/testing/)
 
@@ -254,8 +257,10 @@ Test existing web application features that are not related to a User Story.
 
 ### Menu/Navbar
 #### Hidden Menu/Navbar
-![](documentation/testing/)
-![](documentation/testing/)
+All the navbar links in the offcanvas navbar work accordingly if the user is authenticated or not and redirect the user to the right page.
+
+![Hidden out](documentation/testing/hiddenmenu2.png)
+![Hidden in](documentation/testing/hiddenmenu4.png)
 
 Home
 ![](documentation/testing/)
@@ -269,7 +274,7 @@ Sign Up
 ![Sign up page](documentation/testing/signup1.png)
 
 Profile
-![](documentation/testing/)
+![Profile page](documentation/testing/desk-profile.png)
 
 Sign out
 
