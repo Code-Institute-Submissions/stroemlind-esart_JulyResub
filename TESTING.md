@@ -87,15 +87,27 @@ This section provides images of the tests for responsiveness on different screen
 ![](documentation/testing/)
 
 ### View a product detail for each product on the page.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+The user gets a detailed view of the poster. The name, price, stock info, and like button are visible. The accordion works accordingly and displays the given information below each subject. The terms and conditions page button takes the user to the right page.
 
-### Like different posters/products and see them on my user page.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+![Product detail page](documentation/testing/desk-posterdetail1.png)
+
+![Product detail info](documentation/testing/posterdetail1.png)
+
+![Product detail info to Terms](documentation/testing/terms.png)
+
+
+### Like different posters and see them on my user page
+An authenticated user can like and unlike the posters through a heart-shaped button. The button works accordingly. 
+The user should see the liked poster on a separate page instead of the profile page. If the user is not authenticated, the heart button is not visible on the poster detail page or the navbar.
+Unfortunately, the code to render the page is not fully developed yet and has a text with a message about it. Please see the unfixed bugs section.
+
+![Unliked Poster button](documentation/testing/posterdetail1.png)
+
+![Liked Poster button](documentation/testing/posterlike.png)
+
+![Liked Poster page](documentation/testing/desk-likedposterpage.png)
+
+![No Like button](documentation/testing/posterdetail2.png)
 
 ### Request a customized poster.
 A user can fill out a form on the index page with a request to get a customized poster. 
@@ -185,8 +197,13 @@ A user can manage the shopping cart by adding products and removing products to 
 ![Error add poster](documentation/testing/erroraddcart.png)
 
 ### Confirmation that the payment went through.
-![](documentation/testing/)
-![](documentation/testing/)
+After purchase, the user gets confirmation displayed on their browser window with a message and redirected to a success checkout page. Here the user can see the complete order information about the purchase. If the user is an authenticated user for the web application, they can go to their profile page and review the order confirmation.
+
+![Confirmation message](documentation/testing/successbuy.png)
+
+![Confirmation page authenticated](documentation/testing/orderconf.png)
+
+![Confitmation page non-authenticated](documentation/testing/orderconf-noauth.png)
 
 ### Something goes wrong during the shopping process, I want to get a notification about it.
 ![](documentation/testing/)
