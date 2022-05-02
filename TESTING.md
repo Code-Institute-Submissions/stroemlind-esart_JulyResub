@@ -210,7 +210,7 @@ This section provides images of the tests for responsiveness on different screen
 
 ![Poster detail view 1](documentation/testing/mobile-posterdetail1.png)
 
-![Poster detail view 2](documentation/testing/desk-posterdetail2.png)
+![Poster detail view 2](documentation/testing/mobile-posterdetail2.png)
 
 #### Liked Posters page
 ![Liked posters page](documentation/testing/mobile-likedposters.png)
@@ -421,7 +421,7 @@ All the navbar links in the offcanvas navbar work accordingly if the user is aut
 ![Hidden in](documentation/testing/hiddenmenu4.png)
 
 Home
-![](documentation/testing/)
+![Home](documentation/testing/tablet-home.png)
 
 Login
 
@@ -447,11 +447,12 @@ Customize/Request Poster
 ![Request Poster Form](documentation/testing/requestform1.png)
 
 Categories
-![](documentation/testing/)
+![Categories](documentation/testing/tablet-menu2.png)
 
 #### Visable icon Menu/Navbar
 Serach bar
 The search function works accordingly. If a user tries to search with an empty field or invalid form, an error message appears on their browser window.
+
 ![Searchbar](documentation/testing/searchbar1.png)
 
 ![Search input](documentation/testing/searchbar2.png)
@@ -463,9 +464,11 @@ The search function works accordingly. If a user tries to search with an empty f
 ![Search no input](documentation/testing/errorsearch.png)
 
 Liked Posters Page
+
 ![Liked Posters page](documentation/testing/tablet-likedposters.png)
 
 Profile
+
 ![Profile 1](documentation/testing/mobile-profile1.png)
 
 ![Profile 2](documentation/testing/mobile-profile2.png)
@@ -473,6 +476,7 @@ Profile
 ![PRofile 3](documentation/testing/mobile-profile3.png)
 
 Shopping Cart
+
 ![Shopping cart free](documentation/testing/tablet-cart1.png)
 
 ![Shopping cart no](documentation/testing/tablet-cart2.png)
@@ -528,7 +532,7 @@ When users click on one of the Social Media icons in the footer, they get redire
 
 ![Instagram](documentation/testing/instagram.png)
 
-![Pinterest](documentation/testing/)
+![Pinterest](documentation/testing/pinterest.png)
 
 ## Unfixed Bugs
 * Remove text from the request Poster Form 

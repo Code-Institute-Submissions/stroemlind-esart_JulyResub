@@ -90,7 +90,7 @@ And for the footer:
 #### Navbar: 
 ![Navbar no login](documentation/testing/navbar1.png)
 
-![Navbar user login]()
+![Navbar user login](documentation/testing/mobile-menu2.png)
 
 The web application contains a two-part navbar at the top of the pages: An offcanvas menu that the user access by clicking on the round button at the top left corner and a row with icons at the top right corner of the page. 
 * Offcanvas menu: 
@@ -152,11 +152,11 @@ Depending on if the user does different actions on the web application, a little
 
 * Success message if the user signs up for the newsletter.
 
-![Success message newsletter](docuemntation/testing/newsletter5.png)
+![Success message newsletter](documentation/testing/newsletter5.png)
 
 * Success message if the user updates delivery information
 
-![Success message newsletter](docuemntation/testing/infosuccess.png)
+![Success message newsletter](documentation/testing/infosuccess.png)
 
 * Error message if the user tries to search for something on the web application, but the input is not a valid one.
 
@@ -172,7 +172,7 @@ Depending on if the user does different actions on the web application, a little
 
 * Error message if the user tries to go to checkout with no products in the shopping cart
 
-![Error message newsletter](docuemntation/testing/trycheckoutwithnopost.png)
+![Error message newsletter](documentation/testing/trycheckoutwithnopost.png)
 
 #### Request Poster Form: 
 A user can fill out a form on the index page with a request to get a customized poster. The form contains five input fields: 
