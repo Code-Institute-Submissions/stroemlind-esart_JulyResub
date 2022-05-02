@@ -73,7 +73,7 @@ This section provides images of the tests for responsiveness on different screen
 
 ## Tested User Stories
 ### Overview of all the products.
-![](documentation/testing/)
+![Poster page 1](documentation/testing/posterpage1.png)
 ![](documentation/testing/)
 ![](documentation/testing/)
 
@@ -170,32 +170,43 @@ Home
 ![](documentation/testing/)
 
 Login
-![](documentation/testing/)
+
+![Login page](documentation/testing/desk-login.png)
 
 Sign Up
-![](documentation/testing/)
+
+![Sign up page](documentation/testing/signup1.png)
 
 Profile
 ![](documentation/testing/)
 
 Sign out
-![](documentation/testing/)
+
+![Sign Out page](documentation/testing/desk-signout.png)
 
 All Posters
-![](documentation/testing/)
+
+![Poster page](documentation/testing/posterpage1.png)
 
 Customize/Request Poster
-![](documentation/testing/)
+
+![Request Poster Form](documentation/testing/requestform1.png)
 
 Categories
 ![](documentation/testing/)
 
 #### Visable icon Menu/Navbar
-Search function
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+Serach bar
+The search function works accordingly. If a user tries to search with an empty field or invalid form, an error message appears on their browser window.
+![Searchbar](documentation/testing/searchbar1.png)
+
+![Search input](documentation/testing/searchbar2.png)
+
+![Search result](documentation/testing/searchbar3.png)
+
+![Search result other input](documentation/testing/searchbar4.png)
+
+![Search no input](documentation/testing/errorsearch.png)
 
 Liked Posters Page
 ![](documentation/testing/)
