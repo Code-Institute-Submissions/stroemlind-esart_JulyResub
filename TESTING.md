@@ -119,45 +119,62 @@ This section provides images of the tests for responsiveness on different screen
 
 ### Tablet
 #### Home
-![Home page](documentation/testing/)
+![Home page 1](documentation/testing/tablet-home.png)
+
+![Home page 2](documentation/testing/tablet-home2.png)
+
+![Request Form](documentation/testing/tablet-requestform.png)
 
 #### Menu/Navbar
-![Menu/Navbar](documentation/testing/)
+![Menu/Navbar](documentation/testing/tablet-menu1.png)
+
+![Menu/Navbar](documentation/testing/tablet-menu2.png)
+
+![Menu/Navbar](documentation/testing/tablet-menu3.png)
 
 #### Sign Up/Login/Sign Out/Profile page
-![Signup](documentation/testing/desk-)
+![Signup](documentation/testing/tablet-signup.png)
 
-![Login](documentation/testing/desk-login.png)
+![Login](documentation/testing/tablet-login.png)
 
-![Signout](documentation/testing/desk-signout.png)
+![Signout](documentation/testing/tablet-signout.png)
 
-![Profile page](documentation/testing/desk-profile.png)
+![Profile page 1](documentation/testing/tablet-profile1.png)
+
+![Profile page 2](documentation/testing/tablet-profile2.png)
 
 #### Posters view, category and detail view
-![](documentation/testing/)
-![Category page](documentation/testing/desk-categorypage.png)
+![All Poster view](documentation/testing/tablet-posters.png)
 
-![Poster detail view](documentation/testing/desk-posterdetail1.png)
+![Category page](documentation/testing/tablet-category.png)
+
+![Poster detail view](documentation/testing/tablet-posterdetail.png)
 
 #### Liked Posters page
-![Liked posters page](documentation/testing/desk-likedposterpage.png)
+![Liked posters page](documentation/testing/tablet-likedposters.png)
 
 #### Shopping Cart
-![Cart No free](documentation/testing/desk-checkout.png)
+![Cart No free](documentation/testing/tablet-cart2.png)
 
-![Cart free](documentation/testing/)
-![Cart empty](documentation/testing/)
+![Cart free](documentation/testing/tablet-cart1.png)
+
+![Cart empty](documentation/testing/tablet-emptycart.png)
 
 #### Checkout/Checkout Success
-![](documentation/testing/)
-![](documentation/testing/)
+![Checkout 1](documentation/testing/tablet-checkout1.png)
+
+![Checkout 2](documentation/testing/tablet-checkout2.png)
+
+![Success 1](documentation/testing/tablet-success1.png)
+
+![Success 2](documentation/testing/tablet-success2.png)
 
 #### Footer/About Us/Terms & Conditions
-![Whole footer](documentation/testing/footer1.png)
+![Whole footer](documentation/testing/tablet-footer.png)
 
-![About Us](documentation/testing/aboutus.png)
+![About Us](documentation/testing/tablet-aboutus.png)
 
-![Terms & Cond](documentation/testing/terms.png)
+![Terms & Cond](documentation/testing/tablet-terms.png)
 
 ### Mobile
 #### Home
