@@ -242,7 +242,8 @@ When users click on the Privacy Policy link in the footer, they get redirected t
 When users send a mail through the Send Us a Hello link, it opens the user's nearest open email source with a subject prefilled. The mail comes to the given email address.
 ![Send hello mail open](documentation/testing/hello1.png)
 ![Send hello mail send](documentation/testing/hello2.png)
-![Send hello mail in inbox](documentation/testing/hello3.png)
+![Send hello mail in inbox](documentation/testing/hello4.png)
+![Send hello mail in inbox](documentation/testing/hello5.png)
 
 
 #### Social Media platforms
