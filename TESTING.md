@@ -168,11 +168,21 @@ An authenticated user who makes a purchase can view their order history on their
 ![Full Order conf.](documentation/testing/orderconf.png)
 
 ### Manage the shopping cart by adding, editing, and deleting products in the bag.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+A user can manage the shopping cart by adding products and removing products to update the cart. When adjusting the shopping cart, the user gets a message of success. There is only one of each poster in stock, and the sizes are the ones given; the user can not update the shopping cart with the size or quantity of the posters.
+
+![Add poster to cart](documentation/testing/desk-checkout.png)
+
+![Add posters to cart](documentation/testing/shoppingcart.png)
+
+![Remove poster from cart](documentation/testing/successremovecart.png)
+
+![Remove all posters from cart](documentation/testing/successremovecart2.png)
+
+![Success add poster](documentation/testing/successaddcart.png)
+
+![Success add poster](documentation/testing/successaddcart2.png)
+
+![Error add poster](documentation/testing/erroraddcart.png)
 
 ### Confirmation that the payment went through.
 ![](documentation/testing/)
