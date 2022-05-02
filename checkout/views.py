@@ -136,9 +136,8 @@ def success_checkout(request, order_number):
     if 'cart' in request.session:
         del request.session['cart']
 
-    template = 'checkout/success_checkout.html'
     context = {
         'order': order,
     }
 
-    return render(request, template, context)
+    return render(request, 'checkout/success_checkout.html', context)
