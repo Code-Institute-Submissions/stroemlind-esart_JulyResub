@@ -85,7 +85,8 @@ And for the footer:
 ## Features
 ### Existing Features
 #### Navbar: 
-![]()
+![Navbar no login](documentation/testing/navbar1.png)
+![Navbar user login]()
 
 The web application contains a two-part navbar at the top of the pages: An offcanvas menu that the user access by clicking on the round button at the top left corner and a row with icons at the top right corner of the page. 
 * Offcanvas menu: 
@@ -96,7 +97,13 @@ When a user accesses the offcanvas menu, it opens up on the left side of the pag
   * All Posters page 
   * Request customized Poster form 
   * Posters by Categories with a dropdown function displaying all the different categories 
-  ![]()
+  ![Offcanvas menu button](documentation/testing/hiddenmenu1.png)
+
+  ![Offcanvas no login](documentation/testing/hiddenmenu2.png)
+
+  ![Offcanvas user login](documentation/testing/hiddenmenu3.png)
+
+  ![Offcanvas with categories](documentation/testing/hiddenmenu4.png)
 
 * Icon visible menu:
 The icons on the right side of the navbar give the user easy access to:
@@ -104,12 +111,16 @@ The icons on the right side of the navbar give the user easy access to:
   * If the user is authenticated, the heart icon will take the user to the page where the user can view all the posters they have provided a 'like' to different posters.
   * If the user is authenticated, the person icon will take the user to the page where the user can view the profile page.
   * The shopping cart, takes the user to the page of the shopping cart.
-  ![]()
+  ![Icon navbar no login](documentation/testing/successsignout.png)
+  ![Icon navbar no login](documentation/testing/successsignout.png)
+  ![Icon navbar user login](documentation/testing/successlogin.png)
 
 #### Messages: 
 Depending on if the user does different actions on the web application, a little message box pop-ups at the right top corner of the page. The different messages that can a user can encounter are: 
-* Success message for Signing Up to the web application or logging in to it.
-![]()
+* Success message for Signing Up to the web application, logging in to it or signing out.
+![Success message Sign Up]()
+![Success message Login](documentation/testing/successlogin.png)
+![SUccess message Sign out](documentation/testing/successsignout.png)
 
 * Success message for adding a product to the cart displays the total amount in the shopping cart, and if it's under the free delivery threshold, tell the user how much is left to shop for to get free delivery.
 ![]()
@@ -118,16 +129,16 @@ Depending on if the user does different actions on the web application, a little
 ![]()
 
 * Success message if the user signs up for the newsletter.
-![]()
+![Success message newsletter](docuemntation/testing/newsletter5.png)
 
 * Error message if the user tries to search for something on the web application, but the input is not a valid one.
-![]()
+![Error message search](documentation/testing/errorsearch.png)
 
 * Error message if the user tries to add a poster already in the shopping cart.
 ![]()
 
 * Error message if the user tries to sign up for the newsletter service with an existing email.
-![]()
+![Error message existing email](documentation/testing/newsletter6.png)
 
 #### Request Poster Form: 
 A user can fill out a form on the index page with a request to get a customized poster. The form contains five input fields: 
