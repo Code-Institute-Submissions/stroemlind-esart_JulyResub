@@ -398,6 +398,8 @@ The [requirements.txt](requirements.txt) command for the installed packages is:
 </details>
 
 ### Models
+These are the models made for this project.
+
 #### checkout app models
 ```python
 <import uuid
@@ -819,4 +821,6 @@ Footer at bottom:
 [Send Email](https://www.youtube.com/watch?v=1BaLWYUO1k4)
 
 ### Media
+All the images displayed to the user are made and ownd by the creator of this project.
+
 ### Acknowledgements (edited) 
