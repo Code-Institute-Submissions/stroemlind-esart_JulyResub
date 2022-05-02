@@ -398,7 +398,285 @@ The [requirements.txt](requirements.txt) command for the installed packages is:
 </details>
 
 ### Models
+#### checkout app models
+```python
+<import uuid
 
+from django.db import models
+from django.db.models import Sum
+from django.conf import settings
+
+from django_countries.fields import CountryField
+
+from posters.models import Poster
+from customers.models import Customer
+
+
+class Order(models.Model):
+    """
+    The model handling Orders
+    """
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    customer_info = models.ForeignKey(
+        Customer,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='orders'
+    )
+    full_name = models.CharField(max_length=70, null=False, blank=False)
+    email = models.EmailField(max_length=200, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    postcode = models.CharField(max_length=10, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    town_or_city = models.CharField(max_length=85, null=False, blank=False)
+    country = CountryField(
+        blank_label='(Select Country)',
+        null=False,
+        blank=False
+    )
+    date = models.DateTimeField(auto_now_add=True)
+    delivery_cost = models.DecimalField(
+        max_digits=6, decimal_places=2,
+        null=False, default=0
+    )
+    order_total = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        null=False,
+        default=0
+    )
+    total_cost = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        null=False,
+        default=0
+    )
+
+    def _generate_order_number(self):
+        """
+        Generate a random, unique order number using UUID
+        Code from Boutique Ado
+        """
+        return uuid.uuid4().hex.upper()
+
+    def update_total(self):
+        """
+        Update grand total each time a line item is added,
+        accounting for delivery costs.
+        Codebase from Boutique Ado
+        """
+        self.order_total = self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+            self.delivery_cost = settings.STANDARD_DELIVERY_COST
+        else:
+            self.delivery_cost = 0
+        self.total_cost = self.order_total + self.delivery_cost
+        self.save()
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        Code from Boutique Ado
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number
+
+
+class OrderLineItem(models.Model):
+    """
+    Model for each line of the order
+    """
+    order = models.ForeignKey(
+        Order,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE,
+        related_name='lineitems'
+    )
+    poster = models.ForeignKey(
+        Poster,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE
+    )
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=False,
+        blank=False,
+        editable=False
+    )
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the lineitem total
+        and update the order total.
+        """
+        self.lineitem_total = self.poster.price * self.quantity
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f'Name {self.poster.name} on order {self.order.order_number}'
+>
+```
+
+####  customers app models
+```python
+<from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+from django_countries.fields import CountryField
+
+
+class Customer(models.Model):
+    """
+    A model for maintaining default delivery information and
+    order history for registered customers
+    """
+    customer = models.OneToOneField(User, on_delete=models.CASCADE)
+    defualt_email = models.EmailField(
+        max_length=200,
+        null=True,
+        blank=True
+    )
+    default_phone_number = models.CharField(
+        max_length=20,
+        null=True,
+        blank=True
+    )
+    default_street_address1 = models.CharField(
+        max_length=80,
+        null=True,
+        blank=True
+    )
+    default_street_address2 = models.CharField(
+        max_length=80,
+        null=True,
+        blank=True
+    )
+    default_postcode = models.CharField(
+        max_length=10,
+        null=True,
+        blank=True
+    )
+    default_county = models.CharField(
+        max_length=80,
+        null=True,
+        blank=True
+    )
+    default_town_or_city = models.CharField(
+        max_length=85,
+        null=True,
+        blank=True
+    )
+    default_country = CountryField(
+        blank_label='(Select Country)',
+        null=True,
+        blank=True
+    )
+
+    def __str__(self):
+        return self.customer.username
+
+
+@receiver(post_save, sender=User)
+def create_or_update_customer_info(sender, instance, created, **kwargs):
+    """
+    A function to create or update the user profile
+    """
+    if created:
+        Customer.objects.create(customer=instance)
+
+    instance.customer.save()
+>
+```
+
+#### home app models
+```python
+<from django.db import models
+
+
+class NewsletterSubscriber(models.Model):
+    """
+    A model to collect email for Newsletter
+    subcriptions
+    """
+    news_email = models.EmailField()
+    subscribe_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.news_email
+
+
+class RequestPoster(models.Model):
+    """
+    The model to take request for customized Posters
+    """
+    full_name = models.CharField(max_length=70, null=False, blank=False)
+    email = models.EmailField(max_length=200, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True)
+    motive = models.CharField(max_length=500, null=False, blank=False)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.full_name
+>
+```
+
+#### posters app models
+```python
+<from django.db import models
+from django.contrib.auth.models import User
+
+
+class Motive(models.Model):
+    """ The model for motives / Categories """
+
+    name = models.CharField(max_length=200)
+    friendly_name = models.CharField(max_length=200, null=True, blank=True)
+
+    class Meta:
+        """ Defines the model name in plural """
+        verbose_name_plural = 'Motives'
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        """ Returns the friendly name of a motive """
+        return self.friendly_name
+
+
+class Poster(models.Model):
+    """ The model for the Poster product """
+    name = models.CharField(max_length=200)
+    motive = models.ForeignKey(
+        'Motive', null=True, blank=True, on_delete=models.SET_NULL)
+    description = models.TextField()
+    size = models.BooleanField(default=False, null=True, blank=True)
+    quantity = models.IntegerField(default=0)
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+    image = models.CharField(max_length=100, null=True, blank=True)
+    like = models.ManyToManyField(
+        User, related_name='poster_like', blank=True)
+
+    def __str__(self):
+        return self.name
+>
+```
 
 ## Testing
 To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
