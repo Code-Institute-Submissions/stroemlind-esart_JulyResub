@@ -73,16 +73,93 @@ This section provides images of the tests for responsiveness on different screen
 
 ## Tested User Stories
 ### Overview of all the products.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### See poster all the posters depending on the poster's motive.
-### View a product detail for each product on the page. 
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
+### View a product detail for each product on the page.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### Like different posters/products and see them on my user page.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### Request a customized poster.
+A user can fill out a form on the index page with a request to get a customized poster. 
+The Full name, email, Phone number, and Description fields are required. If a user tries to submit the form with one or more of these fields empty, they get a notification letting them know that the field is required or missing valid characters, for example, the email field. 
+
+Submit form with empty Full Name field 
+![RequestForm1](documentation/testing/requestform2.png)
+
+Submit form with empty Email field or submit email whitout an "@"
+![RequestForm](documentation/testing/request3.png)
+
+![RequestForm](documentation/testing/requestform3.png)
+
+Submit form with empty Phone number field
+![RequestForm](documentation/testing/requestform4.png)
+
+Submit form with empty Description field
+![RequestForm](documentation/testing/requestform5.png)
+
+Submit form with correct input in fields
+![RequestForm](documentation/testing/requestform7.png)
+
+Submit form Success message and conformation
+![RequestForm](documentation/testing/requestform6.png)
+
+Submitted form stored on the Admin page
+![RequestForm](documentation/testing/requestform8.png)
+
 ### Create a user profile page for smoother checkouts and be able to edit information when needed.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### View order history on my user page.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### Manage the shopping cart by adding, editing, and deleting products in the bag.
-### Confirmation that it went through after purchase.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
+### Confirmation that the payment went through.
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### Something goes wrong during the shopping process, I want to get a notification about it.
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+![](documentation/testing/)
+
 ### Manage products through the admin page.
+![](documentation/testing/)
+![](documentation/testing/)
+
+## Tested Features
+![](documentation/testing/)
 
 ## Unfixed Bugs
 * Remove text from the request Poster Form 

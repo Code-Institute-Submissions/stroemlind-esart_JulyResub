@@ -136,8 +136,8 @@ A user can fill out a form on the index page with a request to get a customized 
 * Phone number: phone number of the person making the request
 * Description of desired poster design: The person making the request can give relevant information about what they want the poster to look like, size, canvas, etc. 
 * Image: for the user to send a photo of the motive to complete the request.
-The Full name, email, and Phone number fields are required. Those are the information needed to contact the person about the request and start a dialog.
-![]()
+The Full name, email, Phone number and Description fields are required. Those are the information needed to contact the person about the request and start a dialog.
+![RequestForm](documentation/testing/requestform1.png)
 
 #### Sign Up for newsletters:
 A user can sign up for a newsletter by applying their email to the form.
