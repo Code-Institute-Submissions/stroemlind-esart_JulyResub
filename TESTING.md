@@ -225,7 +225,7 @@ A user can quickly check all the posters available in the shop on a single page.
 
 ![Poster page 1 desk](documentation/testing/posterpage1.png)
 
-![Poster page 2 tablet](documentation/testing/)
+![Poster page 2 tablet](documentation/testing/tablet-posters.png)
 
 ![Poster page 3 mobile](documentation/testing/)
 
@@ -234,8 +234,7 @@ When users select to view posters by category, they get redirected to a page tha
 
 ![Category page desk](documentation/testing/desk-categorypage.png)
 
-![](documentation/testing/)
-![](documentation/testing/)
+![Category page tablet](documentation/testing/tablet-category.png)
 
 ### View a product detail for each product on the page.
 The user gets a detailed view of the poster. The name, price, stock info, and like button are visible. The accordion works accordingly and displays the given information below each subject. The terms and conditions page button takes the user to the right page.
@@ -438,17 +437,18 @@ The search function works accordingly. If a user tries to search with an empty f
 ![Search no input](documentation/testing/errorsearch.png)
 
 Liked Posters Page
-![](documentation/testing/)
-![](documentation/testing/)
+![Liked Posters page](documentation/testing/tablet-likedposters.png)
 
 Profile
 ![](documentation/testing/)
 ![](documentation/testing/)
 
 Shopping Cart
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+![Shopping cart free](documentation/testing/tablet-cart1.png)
+
+![Shopping cart no](documentation/testing/tablet-cart2.png)
+
+![Shopping cart empty](documentation/testing/tablet-emptycart.png)
 
 ### Footer
 The results for testing the existing features in the footer. 
