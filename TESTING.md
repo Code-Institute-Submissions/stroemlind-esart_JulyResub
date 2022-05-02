@@ -47,7 +47,7 @@ The code passed through [PEP8 linter](http://pep8online.com/). The result confir
 ### Google Chrome
 The website runs without any issues in the Google Chrome browser
 
-  ![Chrome](documentation/testing/chrome.png)
+  ![Chrome](documentation/testing/desk-posterdetail1.png)
 
 ### Mozilla Firefox
 The website runs without any issues in the Mozilla Firefox browser
@@ -68,24 +68,139 @@ The website runs without any issues in the Safari browser
 This section provides images of the tests for responsiveness on different screen sizes.
 
 ### Desktop
+#### Home
+![Home page](documentation/testing/desk-home.png)
+
+#### Menu/Navbar
+![Menu/Navbar](documentation/testing/desk-menu.png)
+
+#### Sign Up/Login/Sign Out/Profile page
+![Signup](documentation/testing/desk-signup.png)
+
+![Login](documentation/testing/desk-login.png)
+
+![Signout](documentation/testing/desk-signout.png)
+
+![Profile page](documentation/testing/desk-profile.png)
+
+#### Posters view, category and detail view
+![All Posters](documentation/testing/desk-posters.png)
+
+![Category page](documentation/testing/desk-categorypage.png)
+
+![Poster detail view](documentation/testing/desk-posterdetail1.png)
+
+#### Request Poster Form
+![RequestPosterForm](documentation/testing/requestform1.png)
+
+#### Liked Posters page
+![Liked posters page](documentation/testing/desk-likedposterpage.png)
+
+#### Shopping Cart
+![Cart No free](documentation/testing/desk-checkout.png)
+
+![Cart free](documentation/testing/desk-cartfree.png)
+
+![Cart empty](documentation/testing/desk-emptycart.png)
+
+#### Checkout/Checkout Success
+![Checkout page](documentation/testing/desk-checkout1.png)
+
+![Checkout payment](documentation/testing/desk-checkout2.png)
+
+![Checkout Success](documentation/testing/desk-successbuy.png)
+
+#### Footer/About Us/Terms & Conditions
+![Whole footer](documentation/testing/footer1.png)
+
+![About Us](documentation/testing/aboutus.png)
+
+![Terms & Cond](documentation/testing/terms.png)
+
+### Tablet
+#### Home
+![Home page](documentation/testing/)
+
+#### Menu/Navbar
+![Menu/Navbar](documentation/testing/)
+
+#### Sign Up/Login/Sign Out/Profile page
+![Signup](documentation/testing/desk-)
+
+![Login](documentation/testing/desk-login.png)
+
+![Signout](documentation/testing/desk-signout.png)
+
+![Profile page](documentation/testing/desk-profile.png)
+
+#### Posters view, category and detail view
+![](documentation/testing/)
+![Category page](documentation/testing/desk-categorypage.png)
+
+![Poster detail view](documentation/testing/desk-posterdetail1.png)
+
+#### Liked Posters page
+![Liked posters page](documentation/testing/desk-likedposterpage.png)
+
+#### Shopping Cart
+![Cart No free](documentation/testing/desk-checkout.png)
+
+![Cart free](documentation/testing/)
+![Cart empty](documentation/testing/)
+
+#### Checkout/Checkout Success
+![](documentation/testing/)
+![](documentation/testing/)
+
+#### Footer/About Us/Terms & Conditions
+![Whole footer](documentation/testing/footer1.png)
+
+![About Us](documentation/testing/aboutus.png)
+
+![Terms & Cond](documentation/testing/terms.png)
+
+### Mobile
+#### Home
+![Home page](documentation/testing/)
+
+#### Menu/Navbar
+![Menu/Navbar](documentation/testing/)
+
+#### Sign Up/Login/Sign Out/Profile page
+![Signup](documentation/testing/desk-)
+
+![Login](documentation/testing/desk-login.png)
+
+![Signout](documentation/testing/desk-signout.png)
+
+![Profile page](documentation/testing/desk-profile.png)
+
+#### Posters view, category and detail view
 ![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-![](documentation/testing/)!
-### Tablet 
-### Mobile 
+![Category page](documentation/testing/desk-categorypage.png)
+
+![Poster detail view](documentation/testing/desk-posterdetail1.png)
+
+#### Liked Posters page
+![Liked posters page](documentation/testing/desk-likedposterpage.png)
+
+#### Shopping Cart
+![Cart No free](documentation/testing/desk-checkout.png)
+
+![Cart free](documentation/testing/)
+![Cart empty](documentation/testing/)
+
+#### Checkout/Checkout Success
+![](documentation/testing/)
+![](documentation/testing/)
+
+#### Footer/About Us/Terms & Conditions
+![Whole footer](documentation/testing/footer1.png)
+
+![About Us](documentation/testing/aboutus.png)
+
+![Terms & Cond](documentation/testing/terms.png)
+
 
 ## Tested User Stories
 ### Overview of all the posters
@@ -324,9 +439,13 @@ The results for testing the existing features in the footer.
 A user can quickly sign up for a newsletter. The user gets a notification success message displayed on their screen when sign-up is complete.
 If the user tries to add an invalid email or an existing email on the subscription list, an error message will be displayed o their screen.
 ![Newsletter sign up](documentation/testing/newsletter4.png)
+
 ![Newsletter sign up success](documentation/testing/newsletter5.png)
+
 ![Newsletter empty field](documentation/testing/newsletter2.png)
+
 ![Newsletter missing "@"](documentation/testing/newsletter4.png)
+
 ![Newsletter exist](documentation/testing/newsletter6.png)
 
 #### About Us page
@@ -348,15 +467,20 @@ When users click on the Privacy Policy link in the footer, they get redirected t
 #### Send a hello email
 When users send a mail through the Send Us a Hello link, it opens the user's nearest open email source with a subject prefilled. The mail comes to the given email address.
 ![Send hello mail open](documentation/testing/hello1.png)
+
 ![Send hello mail send](documentation/testing/hello2.png)
+
 ![Send hello mail in inbox](documentation/testing/hello4.png)
+
 ![Send hello mail in inbox](documentation/testing/hello5.png)
 
 
 #### Social Media platforms
 When users click on one of the Social Media icons in the footer, they get redirected to the given web application. The link opens in a new tab in the browser window.
 ![Facebook](documentation/testing/facebook.png)
+
 ![Instagram](documentation/testing/instagram.png)
+
 ![Pinterest](documentation/testing/)
 
 ## Unfixed Bugs
