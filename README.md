@@ -152,7 +152,7 @@ The Full name, email, Phone number and Description fields are required. Those ar
 
 #### Sign Up for newsletters:
 A user can sign up for a newsletter by applying their email to the form.
-![]()
+![Newsletter Sign Up](documentation/testing/newsletter1.png)
 
 #### Footer:
 The Footer gives the user access to the following features:

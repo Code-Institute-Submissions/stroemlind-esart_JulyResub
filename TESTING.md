@@ -211,30 +211,45 @@ Shopping Cart
 ![](documentation/testing/)
 
 ### Footer
-![](documentation/testing/)
+The results for testing the existing features in the footer. 
 
-About Us page
-![](documentation/testing/)
+#### Newsletter Sign Up
+A user can quickly sign up for a newsletter. The user gets a notification success message displayed on their screen when sign-up is complete.
+If the user tries to add an invalid email or an existing email on the subscription list, an error message will be displayed o their screen.
+![Newsletter sign up](documentation/testing/newsletter4.png)
+![Newsletter sign up success](documentation/testing/newsletter5.png)
+![Newsletter empty field](documentation/testing/newsletter2.png)
+![Newsletter missing "@"](documentation/testing/newsletter4.png)
+![Newsletter exist](documentation/testing/newsletter6.png)
 
-Posters
-![](documentation/testing/)
+#### About Us page
+When users click on the About Us link in the footer, they get redirected to the About Us page.
+![About Us page](documentation/testing/aboutus.png)
 
-Terms and Conditions
-![](documentation/testing/)
+#### Posters
+When users click on the Posters link in the footer, they get redirected to the All Posters page.
+![Poster page](documentation/testing/posterpage1.png)
 
-Privacy Policy
-![](documentation/testing/)
+#### Terms and Conditions
+When users click on the Terms and Conditions link in the footer, they get redirected to the Terms and Conditions page.
+![Terms & Conditions page](documentation/testing/terms.png)
 
-Send a hello email
-![](documentation/testing/)
+#### Privacy Policy
+When users click on the Privacy Policy link in the footer, they get redirected to the Privacy Policy page, and it opens up in a new tab in the browser window.
+![Privacy Policy page](documentation/testing/privacy.png)
 
-Social Media platforms
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+#### Send a hello email
+When users send a mail through the Send Us a Hello link, it opens the user's nearest open email source with a subject prefilled. The mail comes to the given email address.
+![Send hello mail open](documentation/testing/hello1.png)
+![Send hello mail send](documentation/testing/hello2.png)
+![Send hello mail in inbox](documentation/testing/hello3.png)
 
-### Newsletter
-![](documentation/testing/)
+
+#### Social Media platforms
+When users click on one of the Social Media icons in the footer, they get redirected to the given web application. The link opens in a new tab in the browser window.
+![Facebook](documentation/testing/facebook.png)
+![Instagram](documentation/testing/instagram.png)
+![Pinterest](documentation/testing/)
 
 ## Unfixed Bugs
 * Remove text from the request Poster Form 
