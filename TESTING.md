@@ -363,9 +363,10 @@ If something happens during the payment process, the user gets notified with err
 ![Checkoutform fail 7](documentation/testing/checkout1.png)
 
 
-### Manage products through the admin page.
-![](documentation/testing/)
-![](documentation/testing/)
+### Manage posters through the admin page
+An admin or superuser for the web application can add, edit and delete posters to the shop by the admin panel. The events get displayed on a message board on the admin panel.
+
+![Manage Posters](documentation/testing/posteractions.png)
 
 ## Tested Features
 Test existing web application features that are not related to a User Story.
@@ -486,6 +487,7 @@ When users click on one of the Social Media icons in the footer, they get redire
 ## Unfixed Bugs
 * Remove text from the request Poster Form 
 ![Code for forms with Crispy FormHelper1](documentation/testing/crispyformhelper1.png)
+
 ![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)
 
 * A bug that I can not figure out how to solve correctly is the Add to cart button not changing when a user adds a poster to the shopping cart. To fix this in the meantime, I implemented an Error message letting the user know that the poster was already in the shopping cart.
