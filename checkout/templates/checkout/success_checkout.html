@@ -175,6 +175,7 @@
                 </div>
             </div>
         </div>
+        {% if user.is_authenticated %}
         <div class="col-12 col-md-9 col-lg-4 mt-2 mb-4 mx-lg-auto mx-md-0">
             <div class="card rounded-0 border-dark m-0">
                 <div class="card-body rounded-0 border-dark">
@@ -196,6 +197,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
     <div class="row">
         <div class="col-12 col-md-10 col-lg-7 mb-2">

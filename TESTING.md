@@ -125,11 +125,40 @@ Submitted form stored on the Admin page
 ![RequestForm](documentation/testing/requestform8.png)
 
 ### Create a user profile page for smoother checkouts and be able to edit information when needed.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+#### Sign Up
+The sign-up function works accordingly. A user can sign-up with a username, email, and password. The email field is only optional in the user does not want to give it for the sign-up. 
+If the user does not provide a valid input or an empty input to the required fields, a message gets displayed, letting the user know why the sign-up process did not go through. The user gets redirected to the home page with a successful sign-up.
+
+![Sign Up username](documentation/testing/signup7.png)
+
+![Sign Up email](documentation/testing/signup2.png)
+
+![Sign Up Password 1](documentation/testing/signup3.png)
+
+![Sign Up Password 2](documentation/testing/signup4.png)
+
+![Sign Up Password 3](documentation/testing/signup5.png)
+
+![Sign Up success](documentation/testing/signup6.png)
+
+#### Login
+The login function works accordingly. A user can log in with given account details from sign up. If the user does not provide a valid input or an empty input to the required fields, a message gets displayed, letting the user know why the login process did not go through. The user gets redirected to the home page with a successful log in.
+
+![Login required 1](documentation/testing/login2.png)
+
+![Login required 2](documentation/testing/login3.png)
+
+![Login incorrect input](documentation/testing/login4.png)
+
+![Login Success](documentation/testing/successlogin.png)
+
+#### Edit Profile information
+A user can prefill out the delivery form for purchases or update it after purchase. The information given during the buying process gets saved if the user checks the box for it.
+
+![Before purchase update](documentation/testing/)
+
+![After purchase update](documentation/testing/)
+
 
 ### View order history on my user page.
 ![](documentation/testing/)

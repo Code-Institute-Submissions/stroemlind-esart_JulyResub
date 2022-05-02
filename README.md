@@ -134,7 +134,7 @@ A user can create a personal account for the web application. The created accoun
 Depending on if the user does different actions on the web application, a little message box pop-ups at the right top corner of the page. The different messages that can a user can encounter are: 
 * Success message for Signing Up to the web application, logging in to it or signing out.
 
-![Success message Sign Up]()
+![Success message Sign Up](documentation/testing/signup6.png)
 
 ![Success message Login](documentation/testing/successlogin.png)
 
