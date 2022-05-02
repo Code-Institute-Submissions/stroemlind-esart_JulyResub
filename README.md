@@ -141,25 +141,38 @@ Depending on if the user does different actions on the web application, a little
 ![Success message Sign out](documentation/testing/successsignout.png)
 
 * Success message for adding a product to the cart displays the total amount in the shopping cart, and if it's under the free delivery threshold, tell the user how much is left to shop for to get free delivery.
-![Success message add to cart]()
+
+![Success message add to cart](documentation/testing/successaddcart.png)
+
+![Success message add to cart 2](documentation/testing/successaddcart2.png)
 
 * Success message if the user removes an item from the shopping cart.
-![Success message remove from cart]()
+
+![Success message remove from cart](documentation/testing/successremovecart.png)
 
 * Success message if the user signs up for the newsletter.
 
 ![Success message newsletter](docuemntation/testing/newsletter5.png)
+
+* Success message if the user updates delivery information
+
+![Success message newsletter](docuemntation/testing/infosuccess.png)
 
 * Error message if the user tries to search for something on the web application, but the input is not a valid one.
 
 ![Error message search](documentation/testing/errorsearch.png)
 
 * Error message if the user tries to add a poster already in the shopping cart.
-![Error message add to cart]()
+
+![Error message add to cart](documentation/testing/erroraddcart.png)
 
 * Error message if the user tries to sign up for the newsletter service with an existing email.
 
 ![Error message existing email](documentation/testing/newsletter6.png)
+
+* Error message if the user tries to go to checkout with no products in the shopping cart
+
+![Error message newsletter](docuemntation/testing/trycheckoutwithnopost.png)
 
 #### Request Poster Form: 
 A user can fill out a form on the index page with a request to get a customized poster. The form contains five input fields: 
