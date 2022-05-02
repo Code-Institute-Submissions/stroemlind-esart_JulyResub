@@ -1,6 +1,5 @@
 # E.Stromlind Art (ESART)
-amiresponisive image
-![]()
+![E.Stromlind](documentation/images/e.stromlind.jpeg)
 
 ES Art is the name of the web application for E.Strömlind art & posters. 
 E.Strömlind takes the colorful and vibrant moments in life and makes them abstract and easy for the eye. The inspiration for the posters comes from different types of photos, like concert pictures, fashion editorials from magazines, or random everyday life pictures. All the posters are handmade on acrylic paper, drawn with pen and different types of markers.
