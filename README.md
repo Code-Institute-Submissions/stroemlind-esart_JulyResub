@@ -97,8 +97,6 @@ The website's primary colors are:
 The red color highlights errors or messages to catch the user's attention.
 The black color is to connect and contrast the primary colors of the posters. 
 
-![Colors](documentation/images/color.png)
-
 ### Typography
 #### Fonts
 The fonts for this project comes from [Google fonts](https://fonts.google.com/), and are the following ones:
