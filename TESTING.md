@@ -155,9 +155,9 @@ The login function works accordingly. A user can log in with given account detai
 #### Edit Profile information
 A user can prefill out the delivery form for purchases or update it after purchase. The information given during the buying process gets saved if the user checks the box for it.
 
-![Before purchase update](documentation/testing/)
+![Before purchase update](documentation/testing/profileinfobefore.png)
 
-![After purchase update](documentation/testing/)
+![After purchase update](documentation/testing/infoafterupdate.png)
 
 
 ### View order history on my user page.
