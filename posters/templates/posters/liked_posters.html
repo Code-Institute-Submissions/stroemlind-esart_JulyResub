@@ -4,10 +4,10 @@
 {% block content %}
 <div class="container">
     <div class="row g-2 mt-4">
-        <h2 class="col ps-3 ps-sm-4 ps-md-5" id="poster-header">Posters</h2>
+        <h2 class="col ps-3 ps-sm-4 ps-md-5" id="poster-header">Liked Posters</h2>
     </div>
+{% if user.is_authenticated %}
     <div class="row justify-content-around mb-3">
-    {{ likes }}
     {% if like in likes %}
         {% for poster in posters %}
         <div class="col-lg-3 col-md-5 col-sm-5 col-10 card border-dark rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto pt-2 h-100 w-auto poster-element">
@@ -32,9 +32,10 @@
         {% endfor %}
     {% else %}
     <div class="col">
-        <p>No liked poster at the moment!</p>
+        <p>This page is currently under maintenance! We appreciate your understanding!</p>
     </div>
     {% endif %}
     </div>
+{% endif %}
 </div>
 {% endblock %}
