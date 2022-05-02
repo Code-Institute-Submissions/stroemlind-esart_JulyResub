@@ -26,6 +26,15 @@ The website design is minimalistic, focusing on the main product, handmade poste
 
 ### SEO and Keywords
 The keyword research process begins with browsing through other web applications and shops that sell posters. After going through many web applications, brainstorming begins for general topics that would fit the content and purpose of the website.
+Some of the web applications from the research process:
+* [Wall og Art](https://wallofart.com/)
+* [Postery](https://www.postery.com/se/)
+* [Poster Store](https://posterstore.se/)
+* [Papertown](https://papertown.se/)
+* [pstr Studio](https://www.pstrstudio.com/)
+* [The Poster Club](https://theposterclub.com/)
+* [Artsy Fartsy](https://artsyfartsy.se/)
+
 * Topics: 
   * Print
   * Art
