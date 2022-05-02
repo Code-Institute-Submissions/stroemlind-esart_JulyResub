@@ -466,8 +466,11 @@ Liked Posters Page
 ![Liked Posters page](documentation/testing/tablet-likedposters.png)
 
 Profile
-![](documentation/testing/)
-![](documentation/testing/)
+![Profile 1](documentation/testing/mobile-profile1.png)
+
+![Profile 2](documentation/testing/mobile-profile2.png)
+
+![PRofile 3](documentation/testing/mobile-profile3.png)
 
 Shopping Cart
 ![Shopping cart free](documentation/testing/tablet-cart1.png)
