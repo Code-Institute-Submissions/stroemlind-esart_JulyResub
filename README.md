@@ -25,6 +25,51 @@ Note: The creator of this web application is the owner of all the images used.
 The website design is minimalistic, focusing on the main product, handmade posters. The typography and colors' main point is to create an atmosphere that gives the user a feeling of being in the drawing process of the posters. 
 
 ### SEO and KeyWords
+Start of the keyword research process. I was brainstorming for general topics that would fit the content and purpose of the website.
+* Topics: 
+  * Print
+  * Art
+  * Posters
+  * Home decoration
+  * Wall decoration
+  * Painting
+  * housewarming gifts
+
+Chosen Topics for this project are: 
+* Art 
+* Wall decoration
+* Painting
+
+* Keywords:
+  * Art: posters, print, black and white, handmade, design, artist, painter
+  * Wall decoration: frames, home decoration, homestyle, create a wall with art
+  * Painting: Print, photography, poster, on the wall, meaning, exclusive 
+
+The web application users and potential customers get identified by answering the following question from the web marketing lessons via Code Institute.
+* Who are your users?
+A person who has an interest in art, interior design, and home decore 
+Someone who wants an easy way to make changes to their home
+Someone who wants to give a unique gift to someone 
+
+* Which online platforms would you find lots of your users on? Would your users use social media? If yes, which platforms do you think you would find them on?
+Yes, they will be on social media to get inspiration, and some of them may use social media to shop directly. 
+  * Instagram
+  * Facebook
+  * Pinterest
+  * TikTok(Unsure, in need to get more information about the customer before deciding)
+
+* What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?
+They need a site that gives the users inspirational content on how they could use the posters. They could mix and match more posters from the site and get a unique portrait of them or other family members or friends. Get ideas for gifts for someone, like a home warming gift.
+
+* Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?
+Yes, the business would offer some sales maybe once or twice a year. There would not be many sales occasions or discounts to make it unique and align with the business concept. If it is unique and gives the customer what they are after, they will buy it at a price offered.
+
+* What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
+The goal is to create unique and personal art for people to create a private atmosphere at home or for someone to give as a personal gift to someone. 
+Social media channels will be at the center of this to achieve this. Create content like creating your picture wall or how a customer could use the art instead of photos.
+
+* Would your business have a budget to spend on advertising? Or would it need to work with free or low-cost options to market itself?
+From the start, it would need to do a lot of free or low-cost options in marketing because it is a small independent business focusing on personal art.
 
 #### Facebook page 
 The Facebook page is a mock-up created with [Canva](https://www.canva.com/) using the Code Institutes template.
