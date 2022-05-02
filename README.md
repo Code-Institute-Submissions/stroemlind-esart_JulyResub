@@ -173,8 +173,6 @@ The icons on the right side of the navbar give the user easy access to:
 
   ![Icon navbar no login](documentation/testing/successsignout.png)
 
-  ![Icon navbar no login](documentation/testing/successsignout.png)
-
   ![Icon navbar user login](documentation/testing/successlogin.png)
 
 #### Create an account and login as created user

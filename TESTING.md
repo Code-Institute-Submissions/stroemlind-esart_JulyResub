@@ -536,6 +536,7 @@ When users click on one of the Social Media icons in the footer, they get redire
 
 ## Unfixed Bugs
 * Remove text from the request Poster Form 
+
 ![Code for forms with Crispy FormHelper1](documentation/testing/crispyformhelper1.png)
 
 ![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)

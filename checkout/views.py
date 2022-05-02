@@ -130,8 +130,7 @@ def success_checkout(request, order_number):
                 customer_form.save()
 
     messages.success(request, f'Order successfully made! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        Your order number is {order_number}.')
 
     if 'cart' in request.session:
         del request.session['cart']
