@@ -68,6 +68,22 @@ The website runs without any issues in the Safari browser
 This section provides images of the tests for responsiveness on different screen sizes.
 
 ### Desktop
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
+![](documentation/testing/)!
 ### Tablet 
 ### Mobile 
 
@@ -205,12 +221,29 @@ After purchase, the user gets confirmation displayed on their browser window wit
 
 ![Confitmation page non-authenticated](documentation/testing/orderconf-noauth.png)
 
-### Something goes wrong during the shopping process, I want to get a notification about it.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+### Something goes wrong during the shopping process, I want to get a notification about it
+If something happens during the payment process, the user gets notified with error messages displayed for them. For example, suppose the card account does not have a sufficient amount, or the user needs to authenticate the card during the process. In that case, a message will appear with the error, and an authentication pop-up will appear on the screen. If the user does not fill out the delivery form with valid and required information, the user will get a notification about the invalid input and get a chance to fix it. For the Full Name, Email and Phone number field, they only get highlighted and if the user hovers over the field they get the infromation about what the problem is.
+
+![Card failure amount](documentation/testing/paymentfail-card.png)
+
+![Card authentication popup](documentation/testing/cardauth1.png)
+
+![Card failure authentication](documentation/testing/cardauth2.png)
+
+![Checkoutform fail 1](documentation/testing/checkout6.png)
+
+![Checkoutform fail 2](documentation/testing/checkout5.png)
+
+![Checkoutform fail 3](documentation/testing/checkout7.png)
+
+![Checkoutform fail 4](documentation/testing/checkout4.png)
+
+![Checkoutform fail 5](documentation/testing/checkout3.png)
+
+![Checkoutform fail 6](documentation/testing/checkout2.png)
+
+![Checkoutform fail 7](documentation/testing/checkout1.png)
+
 
 ### Manage products through the admin page.
 ![](documentation/testing/)
