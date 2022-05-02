@@ -451,7 +451,9 @@ jQuery for index request poster form:
 Bootstrap:
 [Bootstarp5](https://https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-[](https://)
+Footer at bottom:
+[Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/)
+
 [](https://)
 ### Media
 ### Acknowledgements (edited) 
