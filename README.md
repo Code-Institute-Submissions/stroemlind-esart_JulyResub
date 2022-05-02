@@ -88,6 +88,7 @@ And for the footer:
 ## Features
 ### Existing Features
 #### Navbar: 
+
 ![Navbar no login](documentation/testing/navbar1.png)
 
 ![Navbar user login](documentation/testing/mobile-menu2.png)
@@ -203,50 +204,76 @@ The Footer gives the user access to the following features:
 
 #### View all the Posters: 
 A user can see all the available posters in the shop on a designated page for it. It shows the poster's image, name, and what each poster costs in EUR.
-![]()
+
+![All Posters](documentation/testing/tablet-posters.png)
 
 #### View Posters by category: 
 A user can browse through posters in a given category.
-![]()
+
+![Category](documentation/testing/tablet-category.png)
 
 #### View a Poster in detail:
 The web application gives the user access to details about each poster available in the store. The user sees a bigger image of the poster, its name, the price, add to cart button, and a heart button on this page. The page also provides an accordion with the details, size guide, and return information. The detail contains information about the motive, the size of the poster, and what kind of canvas it's made on. The size guide gives the user information about the sizes in measurements. 
 The return information tab gives the user the most important part about the return policy and links to the terms and conditions page.
-![]() 
+
+![Poster Detail 1](documentation/testing/posterdetail1.png)
+
+![Poster Detail 2](documentation/testing/posterdetail2.png)
 
 #### Like a Poster for saving for later or collect them to review:
 A user who is authenticated can like/heart posters as a reserve for later functionality. The function makes it easy for the user to track the kind of style of a poster they are after.
-![]()
+
+![Poster Liked](documentation/testing/posterlike.png)
 
 #### Add To Cart: 
 The add to cart button allows the user to add a poster to the cart. The button only allows the user to add one of the same posters to the cart as the posters are one of a kind. If a user tries to add the same poster twice, they will get a notification saying that the poster already exists in the shopping cart.
-![]()
+
+![Add to Cart](documentation/testing/mobile-posterdetail2.png)
+
+![All ready in Cart](documentation/testing/erroraddcart.png)
 
 #### View shopping cart: 
 A user can access the shopping cart page anytime during their time spent at the web application. If there are no posters in the shopping cart, they see a message saying that the shopping cart is currently empty. Have the user add posters to the shopping cart; they will be displayed on a table with the information about the poster and the total cost of all the posters together. If the shopping cart contains an unlimited amount under €70, the user gets notified by a red text, letting them know how much more they need to spend to get free delivery. 
 From the shopping cart, they can either go to check out or back to the all poster page to browser some more.
-![]()
+
+![Shopping Cart](documentation/testing/desk-checkout.png)
+
+![Emtyp Shopping Cart](documentation/testing/mobile-emptycart.png)
 
 #### Remove poster from shopping cart:
 If a user wants to update the current shopping cart, they can remove the poster by clicking on the 'x' on the right side of the table. If users remove all the posters in the shopping cart, they will get redirected to the home page.
-![]()
+
+![Remove from cart](documentation/testing/successremovecart.png)
+
+![Removed all from cart](documentation/testing/successremovecart2.png)
 
 #### Buy Posters: 
 Users can buy posters via a checkout page with stripe card payment.
 The user needs to fill out a form about delivery information and card information to go through with a purchase.
 A user, if authenticated, can choose to save the delivery information for later purchases in the future. 
 When a purchase has gone through, the user gets redirected to a success page with the order information and an option to go to their profile page to see order history or saved information if they have chosen to save delivery information during purchase.
-![]()
-![]()
 
-#### Save information regarding shipping/ delivery and update:
+![Buy Posters 1](documentation/testing/desk-checkout1.png)
+
+![Buy Posterss 2](documentation/testing/desk-checkout2.png)
+
+![Sucees Checkout](documentation/testing/desk-successbuy.png)
+
+#### Save information regarding shipping/delivery and update:
 A user who is authenticated can, during the buying process, choose if they want to save the delivery information to their profile for future purchases. On their profile page, the user can prefill the delivery information form to update it before or after the purchase with the delivery information if it has changed since the last purchase.
-![]()
-![]()
+
+![Save info](documentation/testing/payment-info.png)
+
+![Update info Before](documentation/testing/info-none.png)
+
+![Update info After](documentation/testing/infoafterupdate.png)
 
 #### See order history made by the user, if authenticated:
 On the profile page of an authenticated user, all the orders made by the user shows in an order history table. The user can click on the order number to get all the specific order information about that order.
-![]()
+
+![Order History box 1](documentation/testing/order1.png)
+
+![Order History box 2](documentation/testing/desk-profile.png)
 
 ### Features Left to Implement
 
