@@ -160,10 +160,12 @@ A user can prefill out the delivery form for purchases or update it after purcha
 ![After purchase update](documentation/testing/infoafterupdate.png)
 
 
-### View order history on my user page.
-![](documentation/testing/)
-![](documentation/testing/)
-![](documentation/testing/)
+### View order history on my user page
+An authenticated user who makes a purchase can view their order history on their designated profile page. When clicking on the order number, it takes the user to a page to view the information about that specific order.
+
+![Order History section](documentation/testing/order1.png)
+
+![Full Order conf.](documentation/testing/orderconf.png)
 
 ### Manage the shopping cart by adding, editing, and deleting products in the bag.
 ![](documentation/testing/)
