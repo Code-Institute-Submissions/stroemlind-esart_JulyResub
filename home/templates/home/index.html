@@ -71,15 +71,3 @@
     </div>
 </div>
 {% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    <script>
-       $( "#request-post" ).submit(function( event ) {
-            event.preventDefault();
-        });
-        $( "#form-submit" ).click(function() {
-             $( "#request-post" ).submit();
-        });
-    </script>
-{% endblock %}
