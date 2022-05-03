@@ -126,6 +126,28 @@ And for the footer:
 
 ### Wireframes
 
+#### Desktop
+
+![wireframe-desktop1](documentation/wireframes/7.png)
+
+![wireframe-desktop2](documentation/wireframes/8.png)
+
+![wireframe-desktop3](documentation/wireframes/9.png)
+
+![wireframe-desktop4](documentation/wireframes/10.png)
+
+![wireframe-desktop5](documentation/wireframes/11.png)
+
+![wireframe-desktop6](documentation/wireframes/12.png)
+
+![wireframe-desktop7](documentation/wireframes/13.png)
+
+![wireframe-desktop8](documentation/wireframes/14.png)
+
+![wireframe-desktop9](documentation/wireframes/15.png)
+
+![wireframe-desktop10](documentation/wireframes/16.png)
+
 #### Mobile
 
 ![wireframe1](documentation/wireframes/wireframe1.png)
