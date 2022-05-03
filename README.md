@@ -805,7 +805,7 @@ Stripe
 [Stripe JS Docs](https://stripe.com/docs/js)
 [Stripe Testing](https://stripe.com/docs/testing)
 
-Customer like page
+Customer like page:
 [Stackoverflow](https://stackoverflow.com/questions/63547411/django-filter-liked-posts-by-user )
 
 jQuery for index request poster form:
@@ -816,8 +816,6 @@ Bootstrap:
 
 Footer at bottom:
 [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/)
-
-[Send Email](https://www.youtube.com/watch?v=1BaLWYUO1k4)
 
 ### Media
 All the images displayed to the user are made and ownd by the creator of this project.
