@@ -336,6 +336,10 @@ On the profile page of an authenticated user, all the orders made by the user sh
 
 * Add the functionality for users to be able to delete their registered accounts.
 
+* Sending emails is another feature left to implement in the future. The user doesn't get an email when registering to the site or an email confirmation about a purchase. Sending an email is a great way to enhance the users' overall experience of visiting the web application and shop.
+
+* I am aware of the error and warning shown during payment steps. The javaScript code for the handle stripe submits payment is written by following the Code Institute Boutique Ado walkthrough guide and stripe documentation steps. I am also aware that there can be improvements to the overall code regarding stripe, adding more variables and actions to make it more secure and enhance the user's overall experience.
+
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
 
