@@ -369,7 +369,8 @@ Unfortunately, the code to render the page is not fully developed yet and has a 
 A user can fill out a form on the index page with a request to get a customized poster. 
 The Full name, email, Phone number, and Description fields are required. If a user tries to submit the form with one or more of these fields empty, they get a notification letting them know that the field is required or missing valid characters, for example, the email field. 
 
-Submit form with empty Full Name field 
+Submit form with empty Full Name field
+
 ![RequestForm1](documentation/testing/requestform2.png)
 
 Submit form with empty Email field or submit email whitout an "@"
@@ -622,9 +623,6 @@ Crispy formHelper
 ![Code for forms with Crispy FormHelper1](documentation/testing/crispyformhelper1.png)
 
 ![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)
-
-jQuery code in index.html:
-![]()
 
 * A bug that I can not figure out how to solve correctly is the Add to cart button not changing when a user adds a poster to the shopping cart. To fix this in the meantime, I implemented an Error message letting the user know that the poster was already in the shopping cart.
 
