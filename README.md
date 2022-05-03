@@ -822,4 +822,12 @@ Footer at bottom:
 ### Media
 All the images displayed to the user are made and ownd by the creator of this project.
 
-### Acknowledgements (edited) 
+### Acknowledgements
+First, I would like to acknowledge and give gratitude to my mentor Tim Nelson, who always tries to help me create a good project, and thank him for all the time and effort he gave me during this project and all the other projects. 
+At the beginning of this project, he guided me on what kind of eCommerce I would like to create regarding the chosen product and what I needed to implement in the project to get the desired outcome.
+Tim helped me debug my code for the like poster functionality for this project and provided me with information about how I could try and implement the functionality of the "Add to Cart" button, which is still a work in progress.
+
+I would also like to acknowledge the help from the Code Institute tutor Johnn and the Code Institute Slack community. Johnn showed me how to reset and save my data during a database malfunction.
+The Slack Community always has people willing to help each other or who have faced similar problems during their coding journey. 
+
+To end this README file, I would like to acknowledge my coding journey these past eight months. I have learned a lot of new, exciting skills and a new way to work and look at things. I know that I'm only at the beginning of my developer path and still have a lot more to learn. 
