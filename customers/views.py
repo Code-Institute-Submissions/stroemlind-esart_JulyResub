@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from checkout.models import Order
 from .models import Customer
 from .forms import CustomerForm
 
 
+@login_required
 def customer_profile(request):
     """
     The view to render a logged in user/customers

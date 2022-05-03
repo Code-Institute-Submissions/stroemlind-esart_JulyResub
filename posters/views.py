@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 from cart.context import cart_contents
 from .models import Poster, Motive
@@ -79,13 +80,11 @@ def like_poster(request, pk):
     return redirect(reverse('poster-detail', args=[pk]))
 
 
+@login_required
 def posters_liked(request):
     """
     The function to determine the view if a user has liked a post or not
     """
-    # poster = get_object_or_404(Poster)
-
-    # if poster.like.filter(id=request.user.id).exists():
     if request.user.is_authenticated:
         likes = Poster.objects.get(pk=1).like.all()
 
@@ -95,23 +94,3 @@ def posters_liked(request):
     }
 
     return render(request, template, context)
-
-    # poster = get_object_or_404(Poster, pk=pk)
-
-    # if poster.like.filter(pk=request.user.pk).exists():
-    #     poster.like.remove(request.user)
-    # else:
-    #     poster.like.add(request.user)
-
-    # return redirect(request.META.get('HTTP_REFERER'))
-
-    # posters = get_object_or_404(Poster, like=request.user)
-
-    # if request.user.is_authenticated:
-    #     likes = Poster.objects.filter(like=posters)
-
-    # poster = get_object_or_404(Poster, pk=pk)
-    # liked = False
-
-    # if poster.like.filter(id=like.request.user.id).exists():
-    #     liked = True
