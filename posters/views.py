@@ -32,7 +32,8 @@ def posters_all_view(request):
                 )
                 return redirect(reverse('posters'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             posters = posters.filter(queries)
 
     context = {
