@@ -535,12 +535,20 @@ When users click on one of the Social Media icons in the footer, they get redire
 ![Pinterest](documentation/testing/pinterest.png)
 
 ## Unfixed Bugs
-* Remove text from the request Poster Form 
+* The Request for a customized poster form shows the "This field is required" error message, even though the user has not taken any actions to submit the form. I tried various ways to prevent it by adding Crispy formHelper and jQuery code on the index.html page to prevent eventDefult and trigger the form submit on click events. The form had some formatting errors before using crispy forms, creating tables element on the deployed page, which only showed via the code validation. I believe this bug occurs because the form tries to submit when the page load and my attempts to fix it until now may not be the right way for it. 
+
+Crispy formHelper
 
 ![Code for forms with Crispy FormHelper1](documentation/testing/crispyformhelper1.png)
 
 ![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)
 
+jQuery code in index.html:
+![]()
+
 * A bug that I can not figure out how to solve correctly is the Add to cart button not changing when a user adds a poster to the shopping cart. To fix this in the meantime, I implemented an Error message letting the user know that the poster was already in the shopping cart.
+
+* The Liked Posters page displays a text letting the user know that it is currently under maintenance. That is because I could not at the moment figure out who to iterate through the code in the view and access it to display the likes on the page. At the moment, A QuerySet of the authenticated user is the only thing that the code picks up. 
+The maintenance text felt like the best solution for the time being until the code structure is complete and fixed, instead of taking down the page completely.
 
 * This project took shape with two different computers and screen sizes. Depending on which computer, the d in the heading "E.Stromlind posters and art" disappears into the image to the right. I have lowered the pixel size from 60px to 55px to make it look better on both computers, but it is something to look over in more detail.

@@ -12,7 +12,6 @@
             <table class="tabel table-bordered border-dark w-100 my-3">
                 <thead class="border-bottom border-dark">
                     <th scope="col" colspan="2" class="ps-2 py-2 th-text">In the Shopping Cart</th>
-                    <!-- <th scope="col" class="ps-2 py-2">Quantity</th> -->
                     <th scope="col" colspan="2" class="ps-2 py-2">Price</th>
                 </thead>
                 {% for item in cart_items %}
@@ -30,9 +29,6 @@
                                 {{ item.poster.name }}
                             </a>
                         </td>
-                        <!-- <td class="py-3 px-2">
-                            <p class="my-0">{{ item.quantity }}</p>
-                        </td> -->
                         <td class="py-3 px-2">
                             € {{ item.poster.price }}
                         </td>
