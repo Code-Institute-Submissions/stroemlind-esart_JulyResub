@@ -547,4 +547,8 @@ The maintenance text felt like the best solution for the time being until the co
 
 * This project took shape with two different computers and screen sizes. Depending on which computer, the d in the heading "E.Stromlind posters and art" disappears into the image to the right. I have lowered the pixel size from 60px to 55px to make it look better on both computers, but it is something to look over in more detail.
 
-* 
+* I am aware of the DevTools warning for the customer profile page and the liked poster page.
+I am not sure if it's because of DevTools extensions or if it has to do with the code. The web application site works by displaying the pages and the current functionality. Looking at the "view source code" for the page does not indicate the problem for my comprehension.
+I also checked the terminal for the logs when accessing the pages, and the response there is 200.
+
+* There was a code validation error with HTML and CSS for the Customer profile page and the liked poster page. Adding Login required decorators to the rendering of the view does templates the validation error got solved.
