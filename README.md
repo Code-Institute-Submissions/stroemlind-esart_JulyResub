@@ -770,6 +770,8 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/stroemlind/esart)
 ## Credits
+The walkthrough project Boutique Ado from Code Institute was a significant source and guide for building and implementing some core functions for this project. I have tried to create a design that would be unique for this project but followed the step on how to build it up via the Boutique Ado walkthrough lessons.
+
 ### Content
 Color choose: 
 [Coolors.co](https://coolors.co/)
