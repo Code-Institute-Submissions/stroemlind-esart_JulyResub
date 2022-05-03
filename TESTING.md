@@ -321,6 +321,10 @@ class TestViews(TestCase):
 >
 ```
 
+The tests run results:
+
+![Tested Code](documentation/testing/tested-code.png)
+
 ## Tested User Stories
 ### Overview of all the posters
 A user can quickly check all the posters available in the shop on a single page. 
