@@ -288,7 +288,7 @@ class TestRequestPosterModel(TestCase):
 >
 ```
 
-#### The test code from poster.tests_views.py:
+#### The test code from posters.tests_views.py:
 ```python
 <
 from django.test import TestCase
