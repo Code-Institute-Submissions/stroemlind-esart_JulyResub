@@ -7,14 +7,13 @@ Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Saf
 ## Code Validation
 
 ### HTML
-There are no errors form the offical [W3C Validatior](https://validator.w3.org/)
+There are no errors form the offical [W3C Validatior](https://validator.w3.org/), except for the customer profile page and the liked poster page, which gave an Error 500. See unfixed bugs for more infromation. 
+
    ![HTML-validation](documentation/testing/html1.png)
 
    ![HTML-validation](documentation/testing/html8.png)
     
   Link to the validation for the home page: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fes-art.herokuapp.com%2F)
-
-Except for the customer profile page and the liked poster page, which gave an Error 500. See unfixed bugs for more infromation. 
 
 ### CSS
 There are no major errors form the offical [Jigsaw validator](https://jigsaw.w3.org/css-validator/), except for on the customer and liked poster page, where an error occur. The warning for the valid pages am I aware of.
@@ -552,3 +551,5 @@ jQuery code in index.html:
 The maintenance text felt like the best solution for the time being until the code structure is complete and fixed, instead of taking down the page completely.
 
 * This project took shape with two different computers and screen sizes. Depending on which computer, the d in the heading "E.Stromlind posters and art" disappears into the image to the right. I have lowered the pixel size from 60px to 55px to make it look better on both computers, but it is something to look over in more detail.
+
+* 

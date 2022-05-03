@@ -828,4 +828,4 @@ Tim helped me debug my code for the like poster functionality for this project a
 I would also like to acknowledge the help from the Code Institute tutor Johnn and the Code Institute Slack community. Johnn showed me how to reset and save my data during a database malfunction.
 The Slack Community always has people willing to help each other or who have faced similar problems during their coding journey. 
 
-To end this README file, I would like to acknowledge my coding journey these past eight months. I have learned a lot of new, exciting skills and a new way to work and look at things. I know that I'm only at the beginning of my developer path and still have a lot more to learn. 
+To end this README file, I would like to acknowledge my coding journey these past eight months. I have learned a lot of new, exciting skills and a new way to work and look at things. I know that I'm only at the beginning of my developer path and still have much more to learn. 
