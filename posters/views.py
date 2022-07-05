@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 from cart.context import cart_contents
 from .models import Poster, Motive
+from .forms import PosterForm
 
 
 def posters_all_view(request):
@@ -95,3 +96,63 @@ def posters_liked(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def add_poster(request):
+    """
+    The view and function for adding new poster to the site
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'inavlid')
+        return redirect(reverse('home'))
+    poster_form = PosterForm(request.POST or None)
+    if request.method == 'POST':
+        if poster_form.is_valid:
+            poster_form.save()
+            messages.success(request, 'Poster added successfully!')
+            return redirect(reverse('posters'))
+    template = 'posters/add-poster.html'
+    context = {
+        'poster_form': poster_form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_poster(request, id):
+    """
+    The function and view for edit poster
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'inavlid')
+        return redirect(reverse('home'))
+    poster = get_object_or_404(Poster, id=id)
+    poster_form = PosterForm(request.POST or None, instance=poster)
+    if request.method == 'POST':
+        if poster_form.is_valid:
+            poster_form.save()
+            messages.success(request, 'Poster updated successfully!')
+            return redirect(reverse('posters'))
+    template = 'posters/edit-poster.html'
+    context = {
+        'poster_form': poster_form,
+        'poster': poster,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_poster(request, id):
+    """
+    The view and function for deleteing a poster
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'inavlid')
+        return redirect(reverse('home'))
+    poster = get_object_or_404(Poster, id=id)
+    poster.delete()
+    messages.success(request, 'Poster deleted')
+    return redirect(reverse('posters'))

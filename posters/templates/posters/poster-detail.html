@@ -41,6 +41,31 @@
                             </form>
                           {% endif %}
                         </div>
+                        {% if request.user.is_superuser %}
+                        <a href="{% url 'edit_poster' poster.pk %}" class="btn">
+                          <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modal-delete">
+                          <i class="fas fa-trash"></i> Delete
+                        </a>
+                        <div class="modal fade" id="Modal-delete" tabindex="-1" aria-labelledby="Modal-deleteLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Poster</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure you want to delete this poster?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                <a href="{% url 'delete_poster' poster.pk %}" type="button" class="btn btn-primary">Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="accordion accordion-flush border-top border-bottom" id="accordionFlush">
                         <div class="accordion-item">
