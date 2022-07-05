@@ -800,7 +800,7 @@ White Noise:
 [White Noise](http://whitenoise.evans.io/en/stable/index.html)
 [Devcenter](https://devcenter.heroku.com/articles/django-assets)
 
-mobile wireframe base:
+Mobile wireframe base:
 [imockups](https://imockups.com/iphone-xs-wireframe-template_3884)
 
 Canva for wireframe design:
@@ -841,6 +841,9 @@ Bootstrap:
 
 Footer at bottom:
 [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/)
+
+404 Error page:
+[GeeksForGeeks](https://www.geeksforgeeks.org/django-creating-a-404-error-page/)
 
 ### Media
 All the images displayed to the user are made and ownd by the creator of this project.
