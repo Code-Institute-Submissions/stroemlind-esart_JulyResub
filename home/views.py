@@ -5,6 +5,13 @@ from .models import NewsletterSubscriber, RequestPoster
 from .forms import NewsletterForm, RequestPosterForm
 
 
+def error_404_view(request, exception):
+    """
+    A view to render a custom 404 page
+    """
+    return render(request, '404.html')
+
+
 def index(request):
     """
     A view to render the index page
