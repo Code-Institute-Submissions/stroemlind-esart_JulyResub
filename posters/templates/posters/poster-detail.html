@@ -51,17 +51,17 @@
                           </a>
                           <div class="modal fade" id="Modal-delete" tabindex="-1" aria-labelledby="Modal-deleteLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                              <div class="modal-content">
+                              <div class="modal-content border border-dark rounded-0">
                                 <div class="modal-header">
                                   <h5 class="modal-title" id="exampleModalLabel">Delete Poster</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                  Are you sure you want to delete this poster?
+                                  Are you sure you want to delete poster {{ poster.name }}?
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                                  <a href="{% url 'delete_poster' poster.pk %}" type="button" class="btn btn-primary">Delete</a>
+                                  <button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">No</button>
+                                  <a href="{% url 'delete_poster' poster.pk %}" type="button" class="btn btn-danger rounded-0">Delete</a>
                                 </div>
                               </div>
                             </div>
