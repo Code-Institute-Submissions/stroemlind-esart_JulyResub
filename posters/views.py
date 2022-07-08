@@ -87,8 +87,11 @@ def posters_liked(request):
     """
     The function to determine the view if a user has liked a post or not
     """
+
     if request.user.is_authenticated:
         likes = Poster.objects.get(pk=1).like.all()
+
+    # user_likes = Poster.objects.filter(like=likes)
 
     template = 'posters/liked_posters.html'
     context = {
