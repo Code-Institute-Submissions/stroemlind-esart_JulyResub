@@ -150,9 +150,12 @@ def delete_poster(request, id):
     The view and function for deleteing a poster
     """
     if not request.user.is_superuser:
-        messages.error(request, 'inavlid')
+        messages.error(
+            request,
+            'Invalid! Are you sure you are a staff member?'
+        )
         return redirect(reverse('home'))
     poster = get_object_or_404(Poster, id=id)
     poster.delete()
-    messages.success(request, 'Poster deleted')
+    messages.success(request, 'Poster successfully deleted!')
     return redirect(reverse('posters'))
