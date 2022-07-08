@@ -3,9 +3,33 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<form action="" method="post">
-    {% csrf_token %}
-    {{ poster_form|crispy }}
-    <button class="btn">submit</button>
-</form>
+<div class="container">
+    <div class="row g-2 mt-4">
+        <div class="col-12">
+            <h2>Add Poster</h2>
+        </div>
+    </div>
+    <div class="row bg-requestform">
+        <div class="col-12 col-md-7 col-lg-7 col-xl-7 py-3 order-2 order-md-1">
+            <form action="" method="post" class="form-control bg-requestform border-0">
+                {% csrf_token %}
+                {{ poster_form|crispy }}
+                <button class="btn btn-dark rounded-0 mt-2">submit</button>
+            </form>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 col-xl-4 bg-requestform my-auto mx-auto order-1 order-md-2 border-start border-dark">
+            <p class="ps-2 mt-2 text-black">To add a new poster to the shop, please fill out the form.<br>
+                Remember to fill out all the fields nesseccary to give the customer 
+                all the right information they need about the poster.<br>
+            </p>
+            <p class="mb-0 ps-2 text-black">NOTE:</p>
+            <ul class="ms-2 text-black">
+                <li class="mb-2">Description should include Size and Category/Motive</li>
+                <li class="mb-2">Quantity should always be set to 1, if no other directions are given</li>
+                <li class="mb-2">Set Size to True, give messurments and/or Size in the description</li>
+                <li class="mb-2">Remember, you can always edit if a mistake would occur</li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}
