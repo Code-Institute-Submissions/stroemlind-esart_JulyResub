@@ -16,30 +16,30 @@ class PosterForm(forms.ModelForm):
 
         widgets = {
                 'name': forms.TextInput(attrs={
-                    'class': 'form-control request-form mb-2',
+                    'class': 'form-control poster-form mb-2',
                     'placeholder': 'Enter Poster Name Here',
                     'aria-label': 'Enter Poster Name',
                 }),
                 'motive': forms.Select(attrs={
-                    'class': 'form-control request-form mb-2',
+                    'class': 'form-control poster-form mb-2',
                 }),
                 'description': forms.Textarea(attrs={
-                    'class': 'form-control request-form mb-2',
+                    'class': 'form-control poster-form mb-2',
                     'placeholder': 'Enter Poster Description Here',
                     'aria-label': 'Enter Poster Description',
                 }),
                 'size': forms.NullBooleanSelect(attrs={
-                    'class': 'form-control request-form mb-2',
+                    'class': 'form-control poster-form mb-2',
                     'placeholder': 'Select Size',
                     'aria-label': 'Select Size',
                 }),
                 'quantity': forms.NumberInput(attrs={
-                    'class': 'form-control request-form mb-2',
+                    'class': 'form-control poster-form mb-2',
                     'placeholder': 'Enter Quantity',
                     'aria-label': 'Enter Quantity',
                 }),
                 'price': forms.NumberInput(attrs={
-                    'class': 'form-control request-form mb-2',
+                    'class': 'form-control poster-form mb-2',
                     'placeholder': 'Enter Price Here',
                     'aria-label': 'Enter Price',
                 }),

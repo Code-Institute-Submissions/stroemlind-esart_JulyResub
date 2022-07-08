@@ -122,7 +122,8 @@ h3 {
     }
 }
 
-.request-form {
+.request-form,
+.poster-form {
     border-radius: 0;
     border: solid 1px #000001;
     color: #000001;
