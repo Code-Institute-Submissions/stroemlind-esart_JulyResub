@@ -43,7 +43,7 @@ class PosterForm(forms.ModelForm):
                     'placeholder': 'Enter Price Here',
                     'aria-label': 'Enter Price',
                 }),
-                'image': forms.TextInput(attrs={
+                'image': forms.FileInput(attrs={
                     'class': 'form-control rounded-0 border-dark mb-2',
                     'placeholder': 'Enter Image Here e.g image.jpeg',
                     'aria-label': 'Enter Image',

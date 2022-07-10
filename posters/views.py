@@ -90,12 +90,16 @@ def posters_liked(request):
 
     if request.user.is_authenticated:
         likes = Poster.objects.get(pk=1).like.all()
+        user_likes = Poster.objects.filter(like__id=likes)
 
     # user_likes = Poster.objects.filter(like=likes)
+    # user_likes = User.objects.filter(poster_like__in=[<id>])
+    # user_likes = Poster.objects.filter(like__id=likes)
 
     template = 'posters/liked_posters.html'
     context = {
         'likes': likes,
+        'user_likes': user_likes,
     }
 
     return render(request, template, context)
@@ -109,7 +113,7 @@ def add_poster(request):
     if not request.user.is_superuser:
         messages.error(request, 'inavlid')
         return redirect(reverse('home'))
-    poster_form = PosterForm(request.POST or None)
+    poster_form = PosterForm(request.POST, request.FILES or None)
     if request.method == 'POST':
         if poster_form.is_valid:
             poster_form.save()

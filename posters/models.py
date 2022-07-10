@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 class Motive(models.Model):
@@ -29,7 +30,7 @@ class Poster(models.Model):
     size = models.BooleanField(default=False, null=True, blank=True)
     quantity = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=7, decimal_places=2)
-    image = models.CharField(max_length=100, null=True, blank=True)
+    image = CloudinaryField('image', default='placeholder')
     like = models.ManyToManyField(
         User, related_name='poster_like', blank=True)
 

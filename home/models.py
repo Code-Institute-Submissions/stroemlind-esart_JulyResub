@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class NewsletterSubscriber(models.Model):
@@ -22,7 +23,7 @@ class RequestPoster(models.Model):
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     motive = models.CharField(max_length=500, null=False, blank=False)
-    image = models.ImageField(null=True, blank=True)
+    image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
         return self.full_name
