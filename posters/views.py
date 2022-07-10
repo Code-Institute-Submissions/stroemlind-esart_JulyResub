@@ -119,6 +119,7 @@ def add_poster(request):
             poster_form.save()
             messages.success(request, 'Poster added successfully!')
             return redirect(reverse('posters'))
+
     template = 'posters/add-poster.html'
     context = {
         'poster_form': poster_form,
