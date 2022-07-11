@@ -14,15 +14,6 @@
         <div class="col-10 m-sm-3 m-md-3 m-lg-3 mx-auto mt-3 poster-element">
             <div class="row p-0">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5 me-sm-4 me-md-4 me-lg-4 mx-xl-4">
-                <!-- {% if poster.image %}
-                <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{% static '' %}img/{{ poster.image }}" class="card-img-top rounded-0 border border-dark" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
-                </a>
-                {% else %}
-                <a href="{% url 'poster-detail' poster.pk %}">
-                    <img src="{% static '' %}img/no-image.jpeg" class="card-img-top rounded-0" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
-                </a>
-                {% endif %} -->
                 {% if "placeholder" in poster.image.url %}
                   <a href="{% url 'poster-detail' poster.pk %}">
                       <img src="https://res.cloudinary.com/elistr/image/upload/v1657457420/no-image_nmjzlm.png" class="card-img-top rounded-0" alt="Images whit a black X and text No Image">
