@@ -137,8 +137,10 @@ def edit_poster(request, id):
         messages.error(request, 'inavlid')
         return redirect(reverse('home'))
     poster = get_object_or_404(Poster, id=id)
-    poster_form = PosterForm(request.POST or None, instance=poster)
+    # poster_form = PosterForm(request.POST or None, instance=poster)
+    poster_form = PosterForm(instance=poster)
     if request.method == 'POST':
+        poster_form = PosterForm(request.POST, request.FILES, instance=poster)
         if poster_form.is_valid:
             poster_form.save()
             messages.success(request, 'Poster updated successfully!')
