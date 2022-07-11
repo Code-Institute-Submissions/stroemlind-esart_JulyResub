@@ -111,13 +111,16 @@ For this project, the different icons for the navbar are:
 * [hamburger-menu](https://fontawesome.com/v5/icons/align-justify?s=solid)
 * [search](https://fontawesome.com/v5/icons/search?s=solid)
 * [heart](https://fontawesome.com/v5/icons/heart?s=regular)
+* [plus](https://fontawesome.com/v5/icons/plus?s=solid)
 * [user](https://fontawesome.com/v5/icons/user?s=regular)
-* [shopping-cart](https://fontawesome.com/v5/icons/shopping-cart?s=solid )
+* [shopping-cart](https://fontawesome.com/v5/icons/shopping-cart?s=solid)
 
 , for the pages, like poster-detail.html are: 
 * [heart-regular](https://fontawesome.com/v5/icons/heart?s=regular)
 * [heart-solid](https://fontawesome.com/v5/icons/heart?s=solid)
 * [arrow-left](https://fontawesome.com/v5/icons/angle-double-left?s=solid)
+* [edit](https://fontawesome.com/v5/icons/edit?s=solid)
+* [trash](https://fontawesome.com/v5/icons/trash?s=solid)
 
 And for the footer:
 * [facebook-icon](https://fontawesome.com/v5/icons/facebook-f?s=brands)
@@ -844,6 +847,9 @@ Footer at bottom:
 
 404 Error page:
 [GeeksForGeeks](https://www.geeksforgeeks.org/django-creating-a-404-error-page/)
+
+Edit Poster View with Image:
+[StackOverflow](https://stackoverflow.com/questions/64099360/update-post-through-function-based-view-in-django)
 
 ### Media
 All the images displayed to the user are made and ownd by the creator of this project.
