@@ -111,7 +111,10 @@ def add_poster(request):
     The view and function for adding new poster to the site
     """
     if not request.user.is_superuser:
-        messages.error(request, 'inavlid')
+        messages.error(
+            request,
+            'Invalid! Are you sure you are a staff member?'
+        )
         return redirect(reverse('home'))
     poster_form = PosterForm(request.POST, request.FILES or None)
     if request.method == 'POST':
@@ -119,6 +122,13 @@ def add_poster(request):
             poster_form.save()
             messages.success(request, 'Poster added successfully!')
             return redirect(reverse('posters'))
+        else:
+            messages.error(
+                request,
+                'Failed to add poster. Please check if the form is valid'
+            )
+    else:
+        poster_form = PosterForm
 
     template = 'posters/add-poster.html'
     context = {
@@ -134,7 +144,10 @@ def edit_poster(request, id):
     The function and view for edit poster
     """
     if not request.user.is_superuser:
-        messages.error(request, 'inavlid')
+        messages.error(
+            request,
+            'Invalid! Are you sure you are a staff member?'
+        )
         return redirect(reverse('home'))
     poster = get_object_or_404(Poster, id=id)
     # poster_form = PosterForm(request.POST or None, instance=poster)
@@ -145,6 +158,15 @@ def edit_poster(request, id):
             poster_form.save()
             messages.success(request, 'Poster updated successfully!')
             return redirect(reverse('posters'))
+        else:
+            messages.error(
+                request,
+                'Failed to add poster. Please check if the form is valid'
+            )
+    else:
+        poster_form = PosterForm(instance=poster)
+        messages.info(request, f'You are editing {poster.name}')
+
     template = 'posters/edit-poster.html'
     context = {
         'poster_form': poster_form,
@@ -167,5 +189,5 @@ def delete_poster(request, id):
         return redirect(reverse('home'))
     poster = get_object_or_404(Poster, id=id)
     poster.delete()
-    messages.success(request, 'Poster successfully deleted!')
+    messages.success(request, f'Poster {poster.name} successfully deleted!')
     return redirect(reverse('posters'))
