@@ -405,6 +405,7 @@ To build this project the following packages needs to be installed:
 
 | Package  | Version | Description |
 | ------------- | ------------- | ------------- |
+| [Cloudinary](https://cloudinary.com/) | 1.29.0 | A cloud-based storage for and uploading images and videos |
 | [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework|
 | dj_database_url | 0.5.0 | Utilizes the 12factor inspired DATABASE_URL environment variable to configure Django apps  |
 | [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) | 0.48.0 | An integrated Django application for addressing authentication, registration, account management, and social account authentication. |

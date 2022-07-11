@@ -93,7 +93,7 @@ def posters_liked(request):
         user_likes = Poster.objects.filter(like__id=likes)
 
     # user_likes = Poster.objects.filter(like=likes)
-    # user_likes = User.objects.filter(poster_like__in=[<id>])
+    # user_likes = User.objects.filter(poster_like__in=[request.user.id])
     # user_likes = Poster.objects.filter(like__id=likes)
 
     template = 'posters/liked_posters.html'
