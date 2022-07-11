@@ -27,7 +27,7 @@
                   <a href="{% url 'poster-detail' poster.pk %}">
                       <img src="https://res.cloudinary.com/elistr/image/upload/v1657457420/no-image_nmjzlm.png" class="card-img-top rounded-0" alt="Images whit a black X and text No Image">
                   </a>
-                  {% else %}
+                {% else %}
                   <a href="{% url 'poster-detail' poster.pk %}">
                       <img src="{{ poster.image.url }}" alt="Image of poster motive" class="card-img-top rounded-0 border border-dark">
                   </a>

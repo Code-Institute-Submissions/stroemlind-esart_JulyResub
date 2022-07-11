@@ -11,7 +11,7 @@
     </div>
     <div class="row bg-requestform">
         <div class="col-12 col-md-7 col-lg-7 col-xl-7 py-3 order-2 order-md-1">
-            <form action="" method="post" class="form-control bg-requestform border-0">
+            <form action="" method="post" class="form-control bg-requestform border-0" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ poster_form|crispy }}
                 <button class="btn btn-dark rounded-0 mt-2">submit</button>
