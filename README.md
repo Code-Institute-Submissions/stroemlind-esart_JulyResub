@@ -718,6 +718,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 * On the apps dashboard page, navigate to the Settings tab.
 * On the Settings page, go down to the config vars section. 
 * Create the following config vars:
+  * Set the key to `CLOUDINARY_URL`, value to `cloudinary-provided-API-key`, and click add. 
   * Set the key to `DATABASE_URL`, value to `Provided-postgres-link`, and click add. 
   * Set the key to `SECRET_KEY`, value to `Your-SECRET_KEY`, and click add. 
   * Set the key to `DEBUG`, value to `True`, and click add. 
@@ -737,6 +738,16 @@ Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also r
     * Make sure that the API keys begins with 'pk_test_...' and 'sk_test_...'.
 
 Note: Remember to have the env.py file and have it in the **.gitignore** file before the first deployment. So no value information will be visible after deployment. Add the Stripes API Keys to the env.py file and set the variables from the env.py file in the settings.py file. 
+
+* To obtain a Cloudinary API key 
+  * go to the [Cloudinary](https://cloudinary.com/) site signup up for free by clicking on the Sign Up For Free button.Follow these steps to set up the account:
+   * Provide name, email and choose a password
+   * For Primary interest, choose Programmable Media for image and video API
+   * Change the assigned cloud name to something memorable 
+   * Click Create Account
+   * Verify your email, and the service is ready to use
+   * Navigate to the Cloudinary dashboard
+   * Click on 'API Environment variable' to copy the API key.
 
 * To obtain a PostgreSQL DATABASE_URL 
   * Install the supporting libraries by typing in the command 'pip3 install dj_database_url pyscopg2'
