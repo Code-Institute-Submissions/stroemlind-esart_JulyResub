@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
@@ -89,8 +90,9 @@ def posters_liked(request):
     """
 
     if request.user.is_authenticated:
-        likes = Poster.objects.get(pk=1).like.all()
-        user_likes = Poster.objects.filter(like__id=likes)
+        # user_likes = Poster.objects.filter(like__id=likes)
+        likes = Poster.objects.get(id=request.user.id).like.all()
+        # user_likes = likes.objects.filter(poster_like__in==[request.user.id])
 
     # user_likes = Poster.objects.filter(like=likes)
     # user_likes = User.objects.filter(poster_like__in=[request.user.id])
@@ -99,7 +101,7 @@ def posters_liked(request):
     template = 'posters/liked_posters.html'
     context = {
         'likes': likes,
-        'user_likes': user_likes,
+        # 'user_likes': user_likes,
     }
 
     return render(request, template, context)
