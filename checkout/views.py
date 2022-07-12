@@ -131,13 +131,8 @@ def success_checkout(request, order_number):
             if customer_form.is_valid():
                 customer_form.save()
 
-    # subject = render_to_string(
-    #     'checkout/confirmation_emails/confirmation_email_subject.txt',
-    #     {'order': order})
     subject = f"ES Art Confirmation for Order Number {order.order_number}"
-    # body = render_to_string(
-    #     'checkout/confirmation_emails/confirmation_email_body.txt',
-    #     {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
     contact_email = settings.DEFAULT_FROM_EMAIL
     body = (
         f"Hello {order.full_name}!\n"
