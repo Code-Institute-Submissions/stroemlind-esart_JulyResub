@@ -18,8 +18,8 @@
                 <tbody>
                     <tr class="border-bottom border-dark">
                         <td class="py-2 ps-2 ps-sm-4 ps-md-4 ps-lg-4 ps-xl-4 td-p" style="width: 150px;">
-                            {% if "placeholder" in item.poster.image %}
-                                <img src="https://res.cloudinary.com/elistr/image/upload/v1657457420/no-image_nmjzlm.png" class="img-cart" alt="{{ poster.name }}">
+                            {% if "placeholder" in item.poster.image or item.poster.image.url == None %}
+                                <img src="{% static 'img/no-image.jpeg' %}" class="img-cart" alt="{{ poster.name }}">
                             {% else %}
                                 <img src="{{ item.poster.image.url }}" class="img-cart" alt="{{ item.poster.name }}">
                             {% endif %}

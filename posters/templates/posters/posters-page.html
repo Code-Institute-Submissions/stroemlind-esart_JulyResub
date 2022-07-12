@@ -9,9 +9,9 @@
     <div class="row justify-content-around mb-3">
         {% for poster in posters %}
         <div class="col-lg-3 col-md-3 col-sm-3 col-10 card border-dark rounded-0 m-sm-2 m-md-2 m-lg-3 mx-auto mb-3 pt-2 h-100 w-auto poster-element">
-            {% if "placeholder" in poster.image.url %}
+            {% if "placeholder" in poster.image.url or poster.image.url == None %}
             <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
-                <img src="https://res.cloudinary.com/elistr/image/upload/v1657457420/no-image_nmjzlm.png" class="img-poster" alt="Images whit a black X and text No Image">
+                <img src="{% static 'img/no-image.jpeg' %}" class="img-poster" alt="Images whit a black X and text No Image">
             </a>
             {% else %}
             <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
