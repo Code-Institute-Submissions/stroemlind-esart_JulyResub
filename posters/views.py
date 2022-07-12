@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect, reverse, HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
@@ -121,7 +121,8 @@ def add_poster(request):
         if poster_form.is_valid:
             poster_form.save()
             messages.success(request, 'Poster added successfully!')
-            return redirect(reverse('posters'))
+            # return redirect(reverse('posters'))
+            return HttpResponseRedirect(reverse('posters'))
         else:
             messages.error(
                 request,
@@ -157,7 +158,8 @@ def edit_poster(request, id):
         if poster_form.is_valid:
             poster_form.save()
             messages.success(request, 'Poster updated successfully!')
-            return redirect(reverse('posters'))
+            # return redirect(reverse('posters'))
+            return HttpResponseRedirect(reverse('posters'))
         else:
             messages.error(
                 request,
