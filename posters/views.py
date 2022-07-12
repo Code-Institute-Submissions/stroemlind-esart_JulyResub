@@ -89,9 +89,9 @@ def posters_liked(request):
     """
     The function to determine the view if a user has liked a post or not
     """
-    # get the user
+    # Get the user
     user = get_object_or_404(User, username=request.user)
-    # find their likes by their user id
+    # Find their likes by their user id
     likes = Poster.objects.filter(like=user.id)
 
     template = 'posters/liked_posters.html'
@@ -118,7 +118,6 @@ def add_poster(request):
         if poster_form.is_valid:
             poster_form.save()
             messages.success(request, 'Poster added successfully!')
-            # return redirect(reverse('posters'))
             return HttpResponseRedirect(reverse('posters'))
         else:
             messages.error(
