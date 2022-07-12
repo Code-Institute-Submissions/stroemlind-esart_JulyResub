@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.contrib import messages
 from django.conf import settings
 from django.utils import timezone
@@ -129,8 +131,23 @@ def success_checkout(request, order_number):
             if customer_form.is_valid():
                 customer_form.save()
 
-    messages.success(request, f'Order successfully made! \
-        Your order number is {order_number}.')
+    subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [order.email]
+        )
+
+    messages.success(
+        request,
+        f'Order successfully made! Your order number is {order_number}.')
 
     if 'cart' in request.session:
         del request.session['cart']
