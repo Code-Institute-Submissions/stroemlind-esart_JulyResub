@@ -131,12 +131,27 @@ def success_checkout(request, order_number):
             if customer_form.is_valid():
                 customer_form.save()
 
-    subject = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_subject.txt',
-        {'order': order})
-    body = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_body.txt',
-        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    # subject = render_to_string(
+    #     'checkout/confirmation_emails/confirmation_email_subject.txt',
+    #     {'order': order})
+    subject = f"ES Art Confirmation for Order Number {{ order.order_number }}"
+    # body = render_to_string(
+    #     'checkout/confirmation_emails/confirmation_email_body.txt',
+    #     {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    body = (
+        f"Hello {order.full_name }!"
+        "This is a confirmation of your order at ES Art."
+        "Your order information is below:"
+        f"Order Number: {order.order_number}"
+        f"Order Date: {order.date}"
+        f"Order Total: €{order.order_total}"
+        f"Delivery: €{order.delivery_cost}"
+        f"Grand Total: €{order.total_cost}"
+        f"If you have any questions, feel contact us at {contact_email}."
+        f"Thank you for your order!"
+        f"Sincerely,"
+        f"ES Art"
+    )
 
     send_mail(
             subject,
