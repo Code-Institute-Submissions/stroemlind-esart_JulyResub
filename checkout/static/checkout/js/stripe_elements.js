@@ -42,7 +42,7 @@ var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
-    card.update({ 'disabled': true});
+    card.update({'disabled': true});
     $('#submit-button').attr('disabled', true);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -53,19 +53,16 @@ form.addEventListener('submit', function(ev) {
             var errorDiv = document.getElementById('card-errors');
             var html = `
                 <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
+                    <i class="fas fa-times"></i>
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
-            card.update({ 'disabled': false});
+            card.update({'disabled': false});
             $('#submit-button').attr('disabled', false);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
             }
         }
-    }).fail(function () {
-        // just reload the page
-        location.reload();
     });
 });
