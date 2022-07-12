@@ -8,38 +8,36 @@
     </div>
 {% if user.is_authenticated %}
     <div class="row justify-content-around mb-3">
-        {{likes}}
-    {% if like in poster_like %}
-        {% for poster in posters %}
-        <div class="col-lg-3 col-md-5 col-sm-5 col-10 card border-dark rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto pt-2 h-100 w-auto poster-element">
-            {% if poster.image %}
-            <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
-                <img src="{% static '' %}img/{{ poster.image }}" class="img-poster" alt="{{ poster.name }} " aria-label="A link to the post through the post image (Open in the same tab)">
-            </a>
-            {% else %}
-            <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
-                <img src="{% static '' %}img/no-image.jpeg" class="img-poster" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
-            </a>
-            {% endif %}
-            <div class="row card-body border-top border-dark p-0">
-                <div class="col-10 p-0 ps-1 pt-1">
-                    <a href="{% url 'poster-detail' poster.pk %}" class="product-title">
-                        <p class="ps-2 mb-0">{{ poster.name }}</p>
-                    </a>
-                    <p class="ps-2"><strong>€</strong> {{ poster.price }}</p>
-                </div>
+    {% for poster in likes %}
+    <div class="col-lg-3 col-md-5 col-sm-5 col-10 card border-dark rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto pt-2 h-100 w-auto poster-element">
+        {% if poster.image %}
+        <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
+            <img src="{{ poster.image.url }}" class="img-poster" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+        </a>
+        {% else %}
+        <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
+            <img src="{% static 'img/no-image.jpeg' %}" class="img-poster" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
+        </a>
+        {% endif %}
+        <div class="row card-body border-top border-dark p-0">
+            <div class="col-10 p-0 ps-1 pt-1">
+                <a href="{% url 'poster-detail' poster.pk %}" class="product-title">
+                    <p class="ps-2 mb-0">{{ poster.name }}</p>
+                </a>
+                <p class="ps-2"><strong>€</strong> {{ poster.price }}</p>
             </div>
         </div>
-        {% endfor %}
-    {% else %}
+    </div>
+    {% empty %}
     <div class="col-10 col-sm-8 col-md-8 col-lg-5 mx-auto my-5 card border-0 rounded-0">
         <div class="card-body text-center empty">
-            <p>This page is currently under maintenance! We appreciate your understanding!</p>
+            <p>You currently have not <strong>liked</strong> any posters.</p>
             <p>Let's <a class="text-link" href="{% url 'posters' %}">Go Back</a> 
                 to the <a class="text-link" href="{% url 'posters' %}">Posters</a></p>
         </div>
     </div>
-    {% endif %}
+    {% endfor %}
+    
     </div>
 {% endif %}
 </div>
