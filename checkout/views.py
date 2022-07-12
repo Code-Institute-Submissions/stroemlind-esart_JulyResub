@@ -138,18 +138,19 @@ def success_checkout(request, order_number):
     # body = render_to_string(
     #     'checkout/confirmation_emails/confirmation_email_body.txt',
     #     {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    contact_email = settings.DEFAULT_FROM_EMAIL
     body = (
-        f"Hello {order.full_name}!"
-        "This is a confirmation of your order at ES Art."
-        "Your order information is below:"
-        f"Order Number: {order.order_number}"
-        f"Order Date: {order.date}"
-        f"Order Total: €{order.order_total}"
-        f"Delivery: €{order.delivery_cost}"
-        f"Grand Total: €{order.total_cost}"
-        f"If you have any questions, feel contact us at {contact_email}."
-        "Thank you for your order!"
-        "Sincerely,"
+        f"Hello {order.full_name}!\n"
+        "This is a confirmation of your order at ES Art.\n"
+        "Your order information is below:\n\n"
+        f"Order Number: {order.order_number}\n"
+        f"Order Date: {order.date}\n"
+        f"Order Total: €{order.order_total}\n"
+        f"Delivery: €{order.delivery_cost}\n"
+        f"Grand Total: €{order.total_cost}\n\n"
+        f"If you have any questions, feel contact us at {contact_email}.\n"
+        "Thank you for your order!\n\n"
+        "Sincerely,\n"
         "ES Art"
     )
 
@@ -159,9 +160,6 @@ def success_checkout(request, order_number):
         settings.DEFAULT_FROM_EMAIL,
         [order.email]
     )
-    print("email sent successfully")
-    print(settings.DEFAULT_FROM_EMAIL)
-    print(settings.)
 
     messages.success(
         request,
