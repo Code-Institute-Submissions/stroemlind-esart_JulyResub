@@ -528,6 +528,26 @@ If something happens during the payment process, the user gets notified with err
 
 ![Checkoutform fail 7](documentation/testing/checkout1.png)
 
+### Add, edit and delete poster through the web application's front-end as Admin/Superuser
+An admin or Superuser for the web application can add, edit and delete posters to the shop through frontend applications. The User gets a notification each time they successfully add, edit, or delete a poster. The User also receives a message about which poster they are editing.
+
+* Add a poster to the shop
+![Add Poster](documentation/testing/addposter-test.png)
+
+![Success message add poster](documentation/testing/info-add.png)
+
+* Edit a poster to the shop
+![Edit Poster](documentation/testing/tablet-editposterpage.png)
+
+![Information about edit poster](documentation/testing/info-editposter.png)
+
+![Success message edit poster](documentation/testing/info-updatesuccess.png)
+
+* Delete a poster from the shop
+![Delete Poster](documentation/testing/tablet-deleteposter.png)
+
+![Success message delete poster](documentation/testing/info-delete.png)
+
 
 ### Manage posters through the admin page
 An admin or superuser for the web application can add, edit and delete posters to the shop by the admin panel. The events get displayed on a message board on the admin panel.
@@ -574,6 +594,14 @@ Categories
 ![Categories](documentation/testing/tablet-menu2.png)
 
 #### Visable icon Menu/Navbar
+Icon menu row depending if authenticated User or not.
+
+![No Authenticated User](documentation/testing/tablet-home.png)
+
+![Authenticated User](documentation/testing/mobile-menu2.png)
+
+![Superuser/Admin](documentation/testing/menuiconssuper.png)
+
 Serach bar
 The search function works accordingly. If a user tries to search with an empty field or invalid form, an error message appears on their browser window.
 
@@ -589,7 +617,13 @@ The search function works accordingly. If a user tries to search with an empty f
 
 Liked Posters Page
 
-![Liked Posters page](documentation/testing/tablet-likedposters.png)
+![Liked Posters page without likes](documentation/testing/tablet-nolikedposters.png)
+
+![Liked Posters page with likes](documentation/testing/tablet-likedposters.png)
+
+Add Poster Page, if Superuser
+
+![Add poster](documentation/testing/tablet-addposterpage.png)
 
 Profile
 
