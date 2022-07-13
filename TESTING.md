@@ -33,9 +33,36 @@ I am aware of the warning about the Stripe element, but to setup this code I fol
     ![script.js](documentation/testing/jshint.png)
 
 ### Python
-The code passed through [PEP8 linter](http://pep8online.com/). The result confirmed there are no problems with the code.
+The code passed through [PEP8 linter](http://pep8online.com/). The result confirmed there are no problems with the code. Below a selection of tests are shown:
 
-![PEP8](documentation/testing/pep8forms.png)
+#### Cart app
+![PEP8 views.py](documentation/testing/pep8-cart-views.png)
+![PEP8 context.py](documentation/testing/pep8-cartcontext.png)
+![PEP8 urls.py](documentation/testing/pep8-carturls.png)
+
+#### Checkout app
+![PEP8 views.py](documentation/testing/pep8-checkoutviews.png)
+![PEP8 urls.py](documentation/testing/pep8-checkouturls.png)
+![PEP8 models.py](documentation/testing/pep8-checkoutmodels.png)
+![PEP8 forms.py](documentation/testing/pep8-checkoutforms.png)
+
+#### Customer app
+![PEP8 views.py](documentation/testing/pep8-customerviews.png)
+![PEP8 urls.py](documentation/testing/pep8-customerurls.png)
+![PEP8 models.py](documentation/testing/pep8-customermodels.png)
+![PEP8 forms.py](documentation/testing/pep8-customerforms.png)
+
+#### Home app
+![PEP8 views.py](documentation/testing/pep8-homeviews.png)
+![PEP8 urls.py](documentation/testing/pep8-homeurls.png)
+![PEP8 models.py](documentation/testing/pep8-homemodels.png)
+![PEP8 forms.py](documentation/testing/pep8-homeforms.png)
+
+#### Posters app
+![PEP8 views.py](documentation/testing/pep8-posterviews.png)
+![PEP8 urls.py](documentation/testing/pep8-posterurls.png)
+![PEP8 models.py](documentation/testing/pep8-postermodels.png)
+![PEP8 forms.py](documentation/testing/pep8-posterforms.png)
 
 ## Browser Compatibility
 ### Google Chrome
