@@ -8,17 +8,20 @@ Note: The creator of this web application is the owner of all the images used.
 
 ## User Stories
 
-* As a Shopper, I want to get an overview of all the products.
-* As a Shopper, I want to be able to see poster all the posters depending on the poster's motive.
-* As a Shopper, I want to be able to view a product detail for each product on the page. 
-* As a Shopper, I want to be able to like different posters/products and see them on my user page.
-* As a Shopper, I want to be able to request a customized poster.
-* As a Shopper, I want to be able to create a user profile page for smoother checkouts and be able to edit information when needed.
-* As a Shopper, I want to be able to see my order history on my user page.
-* As a Shopper, I want to be able to manage the shopping cart by adding, editing, and deleting products in the bag.
-* As a Shopper, I want to get confirmation that it went through after purchase.
-* As a Shopper, if something goes wrong during the shopping process, I want to get a notification about it.
-* As a Store Manager, I want to be able to manage products through the admin page.
+* As a Shopper/User, I can get an overview of all the products on one page.
+* As a Shopper/User, I want to see all the posters depending on the poster's motive.
+* As a Shopper/User, I can view a product detail for each product available in the store.
+* As a Shopper/User, I can sign up for a newsletter.
+* As a Verified Shopper/User, I want to be able to like different posters/products.
+* As a Verified Shopper/User, I want to see the posters/product I liked on a designated page.
+* As a Shopper/User, I want to be able to request a customized poster.
+* As a Shopper/User, I can create a user profile page for smoother checkouts and be able to edit information when needed.
+* As a Verified Shopper/User, I can see my order history on my profile page.
+* As a Shopper/User, I can manage the shopping cart by adding, editing, and deleting products in the cart.
+* As a Shopper/User, I want a confirmation that it went through after purchase.
+* As a Shopper/User, I want to get a notification about something going wrong during the shopping process.
+* As a Verified Admin/Superuser, I can manage products through the admin page.
+* As a Verified Admin/Superuser, I can create, edit and delete posters through the web application's front-end.
 
 ## UX
 The website design is minimalistic, focusing on the main product, handmade posters. The typography and colors' main point is to create an atmosphere that gives the user a feeling of being in the drawing process of the posters. 
