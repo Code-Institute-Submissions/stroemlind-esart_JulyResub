@@ -425,6 +425,8 @@ These are the following technologies and packages used to develop this project:
 
 * [Cloudinary](https://cloudinary.com/): Cloudinary is used to to upload and store images for this project.
 
+* [Draw.io](https://app.diagrams.net/): To make an Entity Relationship Diagram.
+
 ### Django packages
 To build this project the following packages needs to be installed:
 <details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
@@ -817,6 +819,7 @@ In order to make a local copy of this project, you can type the following into y
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/stroemlind/esart)
+
 ## Credits
 The walkthrough project Boutique Ado from Code Institute was a significant source and guide for building and implementing some core functions for this project. I have tried to create a design that would be unique for this project but followed the step on how to build it up via the Boutique Ado walkthrough lessons.
 
@@ -903,6 +906,9 @@ Edit Poster View with Image:
 
 Debugging 500 error:
 [Stackoverflow](https://stackoverflow.com/questions/61854083/django-heroku-server-error-500-when-i-set-debug-false-on-true-it-is-working)
+
+Draw.io for ERD:
+[Draw.io](https://app.diagrams.net/)
 
 ### Media
 All the images displayed to the user are made and ownd by the creator of this project.
