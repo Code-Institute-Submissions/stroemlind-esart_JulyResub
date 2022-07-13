@@ -383,7 +383,9 @@ If a page does not exist on the web application, an error 404 page will be displ
 
 * Add the functionality for users to be able to delete their registered accounts.
 
-* Set up the "Forgot Password" on the login page, to make the application more user friendly. 
+* Set up the "Forgot Password" on the login page, to make the application more user friendly.
+
+* Set up Stripe with webhooks to make the payment process more secure for the user.
 
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
