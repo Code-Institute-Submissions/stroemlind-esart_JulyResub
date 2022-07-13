@@ -450,7 +450,13 @@ The [requirements.txt](requirements.txt) command for the installed packages is:
 </details>
 
 ### Models
-These are the models made for this project.
+There are eight models created for this project. The ERD (Entity Relationship Diagram) displays their relationship with one another. The arrows can trace the connection between a model's field to another model.
+
+* ERD (Entity Relationship Diagram)
+
+![Erd](documentation/testing/esarterd.png)
+
+* These are the models made for this project. 
 
 #### checkout app models
 ```python
