@@ -351,20 +351,13 @@ On the profile page of an authenticated user, all the orders made by the user sh
 
 ### Features Left to Implement
 
-* A feature left to implement for the future would be to wire up the application to Amazon AWS3 and create a front-end feature to add new posters to the shop and website.
-
-* The usage of white noise for this project makes the attached images with the request form not get stored in the database. The next step is to set up the project to an image storage database, like Cloudinary or Amazon AWS3 service.
-
 * Add the Like button and add to cart button on the poster page for each poster to give the users a smoother shopping and user experience.
 
 * Add Single sign-on with social accounts for the users to easily create and access purchases and a user profile.
 
 * Add the functionality for users to be able to delete their registered accounts.
 
-* Sending emails is another feature left to implement in the future. The user doesn't get an email when registering to the site or an email confirmation about a purchase. Sending an email is a great way to enhance the users' overall experience of visiting the web application and shop.
-If the user has not saved the login information, it will also help set up the "Forgot Password" on the login page.
-
-* I am aware of the error and warning shown during payment steps. The javaScript code for the handle stripe submits payment is written by following the Code Institute Boutique Ado walkthrough guide and stripe documentation steps. I am also aware that there can be improvements to the overall code regarding stripe, adding more variables and actions to make it more secure and enhance the user's overall experience.
+* Set up the "Forgot Password" on the login page, to make the application more user friendly. 
 
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
@@ -399,6 +392,8 @@ These are the following technologies and packages used to develop this project:
 
 * [Xml-stipemap](https://www.xml-sitemaps.com/details-es-art.herokuapp.com-49daa557a.html): To create a sitemap for the deployed web application and generate a way for the 'SEO spiders' to crawl on the pages of the web application.
 
+* [Cloudinary](https://cloudinary.com/): Cloudinary is used to to upload and store images for this project.
+
 ### Django packages
 To build this project the following packages needs to be installed:
 <details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
@@ -406,6 +401,7 @@ To build this project the following packages needs to be installed:
 | Package  | Version | Description |
 | ------------- | ------------- | ------------- |
 | [Cloudinary](https://cloudinary.com/) | 1.29.0 | A cloud-based storage for and uploading images and videos |
+| [Cloudinary Storage](https://pypi.org/project/django-cloudinary-storage/) | 0.0.6 | A cloud-based storage for and uploading images and videos with Cloudinary|
 | [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework|
 | dj_database_url | 0.5.0 | Utilizes the 12factor inspired DATABASE_URL environment variable to configure Django apps  |
 | [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) | 0.48.0 | An integrated Django application for addressing authentication, registration, account management, and social account authentication. |
@@ -416,7 +412,6 @@ To build this project the following packages needs to be installed:
 | [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
 | [stripe](https://stripe.com/se) | 2.74.0 | A workframe to bring together everything needed to build websites and apps that can receive and send payments worldwide.  |
 | [Whitenoise](https://whitenoise.evans.io/en/stable/django.html) | 6.0.0 | Whitenoise allows the web app to serve its own static files |
-
 
 The [requirements.txt](requirements.txt) command for the installed packages is:
 - `pip3 install -r requirements.txt`
@@ -634,6 +629,7 @@ def create_or_update_customer_info(sender, instance, created, **kwargs):
 #### home app models
 ```python
 <from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class NewsletterSubscriber(models.Model):
@@ -657,7 +653,7 @@ class RequestPoster(models.Model):
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     motive = models.CharField(max_length=500, null=False, blank=False)
-    image = models.ImageField(null=True, blank=True)
+    image = image = CloudinaryField('image')
 
     def __str__(self):
         return self.full_name
@@ -838,6 +834,10 @@ Newsletter:
 Request form image:
 [GeeksforGeeks](https://www.geeksforgeeks.org/imagefield-django-forms/)
 
+Cloudinary:
+[Medium](https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37)
+[Cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/)
+
 Stripe
 [Stripe Card](https://stripe.com/docs/payments/cards/overview)
 [Stripe Elements](https://stripe.com/docs/payments/elements)
@@ -862,6 +862,9 @@ Footer at bottom:
 
 Edit Poster View with Image:
 [StackOverflow](https://stackoverflow.com/questions/64099360/update-post-through-function-based-view-in-django)
+
+Debugging 500 error:
+[Stackoverflow](https://stackoverflow.com/questions/61854083/django-heroku-server-error-500-when-i-set-debug-false-on-true-it-is-working)
 
 ### Media
 All the images displayed to the user are made and ownd by the creator of this project.
