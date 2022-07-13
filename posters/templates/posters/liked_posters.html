@@ -9,7 +9,7 @@
 {% if user.is_authenticated %}
     <div class="row justify-content-around mb-3">
     {% for poster in likes %}
-    <div class="col-lg-3 col-md-5 col-sm-5 col-10 card border-dark rounded-0 m-sm-3 m-md-3 m-lg-3 mx-auto pt-2 h-100 w-auto poster-element">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-10 card border-dark rounded-0 m-2 m-sm-2 m-md-2 m-lg-3 mx-auto pt-2 h-100 w-auto">
         {% if poster.image %}
         <a href="{% url 'poster-detail' poster.pk %}" class="pb-2">
             <img src="{{ poster.image.url }}" class="img-poster" alt="{{ poster.name }}" aria-label="A link to the post through the post image (Open in the same tab)">
