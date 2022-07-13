@@ -15,6 +15,7 @@ def error_404_view(request, exception):
 def index(request):
     """
     A view to render the index page
+    and render the RequestPoster form
     """
 
     form = RequestPosterForm(request.POST, request.FILES)
