@@ -88,7 +88,9 @@ This section provides images of the tests for responsiveness on different screen
 ![RequestPosterForm](documentation/testing/requestform1.png)
 
 #### Liked Posters page
-![Liked posters page](documentation/testing/desk-likedposterpage.png)
+![Liked posters page](documentation/testing/desktop-likedpage.png)
+
+![Liked posters page](documentation/testing/desktop-likedposters.png)
 
 #### Shopping Cart
 ![Cart No free](documentation/testing/desk-checkout.png)
@@ -361,9 +363,11 @@ Unfortunately, the code to render the page is not fully developed yet and has a 
 
 ![Liked Poster button](documentation/testing/posterlike.png)
 
-![Liked Poster page](documentation/testing/desk-likedposterpage.png)
+![Liked Poster page](documentation/testing/desktop-likedposters.png)
 
 ![No Like button](documentation/testing/posterdetail2.png)
+
+![No Liked Posters](documentation/testing/desktop-likedpage.png)
 
 ### Request a customized poster.
 A user can fill out a form on the index page with a request to get a customized poster. 
@@ -454,13 +458,15 @@ A user can manage the shopping cart by adding products and removing products to 
 ![Error add poster](documentation/testing/erroraddcart.png)
 
 ### Confirmation that the payment went through.
-After purchase, the user gets confirmation displayed on their browser window with a message and redirected to a success checkout page. Here the user can see the complete order information about the purchase. If the user is an authenticated user for the web application, they can go to their profile page and review the order confirmation.
+After purchase, the user gets confirmation displayed on their browser window with a message and redirected to a success checkout page. Here the user can see the complete order information about the purchase. If the user is an authenticated user for the web application, they can go to their profile page and review the order confirmation. A confirmation email is sent to the given email.
 
 ![Confirmation message](documentation/testing/successbuy.png)
 
 ![Confirmation page authenticated](documentation/testing/orderconf.png)
 
 ![Confitmation page non-authenticated](documentation/testing/orderconf-noauth.png)
+
+![Confirmation email](documentation/testing/mail-conf.png)
 
 ### Something goes wrong during the shopping process, I want to get a notification about it
 If something happens during the payment process, the user gets notified with error messages displayed for them. For example, suppose the card account does not have a sufficient amount, or the user needs to authenticate the card during the process. In that case, a message will appear with the error, and an authentication pop-up will appear on the screen. If the user does not fill out the delivery form with valid and required information, the user will get a notification about the invalid input and get a chance to fix it. For the Full Name, Email and Phone number field, they only get highlighted and if the user hovers over the field they get the infromation about what the problem is.
@@ -625,9 +631,6 @@ Crispy formHelper
 ![Code for forms with Crispy FormHelper2](documentation/testing/crispyformhelper2.png)
 
 * A bug that I can not figure out how to solve correctly is the Add to cart button not changing when a user adds a poster to the shopping cart. To fix this in the meantime, I implemented an Error message letting the user know that the poster was already in the shopping cart.
-
-* The Liked Posters page displays a text letting the user know that it is currently under maintenance. That is because I could not at the moment figure out who to iterate through the code in the view and access it to display the likes on the page. At the moment, A QuerySet of the authenticated user is the only thing that the code picks up. 
-The maintenance text felt like the best solution for the time being until the code structure is complete and fixed, instead of taking down the page completely.
 
 * This project took shape with two different computers and screen sizes. Depending on which computer, the d in the heading "E.Stromlind posters and art" disappears into the image to the right. I have lowered the pixel size from 60px to 55px to make it look better on both computers, but it is something to look over in more detail.
 
