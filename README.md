@@ -374,7 +374,7 @@ On the profile page of an authenticated user, all the orders made by the user sh
 ![Order History box 2](documentation/testing/desk-profile.png)
 
 #### Error 404 page
-If a page does not exist on the web application, an error 404 page will be displayed. Letting the user know that the page they are looking for does not exist allows them to go back to the homepage or other suggestions they may try.
+A custom error 404 page if a page does not exist on the web application. It will let the User know that the page they are looking for does not exist and allows them to go back to the homepage or other suggestions they may try.
 
 ![Error404](documentation/testing/error404.png)
 

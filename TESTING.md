@@ -692,6 +692,11 @@ When users click on one of the Social Media icons in the footer, they get redire
 
 ![Pinterest](documentation/testing/pinterest.png)
 
+### Error 404 page
+If a page does not exist on the web application, an error 404 page will be displayed. Letting the user know that the page they are looking for does not exist allows them to go back to the homepage or other suggestions they may try.
+
+![Error404](documentation/testing/error404.png)
+
 ## Unfixed Bugs
 * The Request for a customized poster form shows the "This field is required" error message, even though the user has not taken any actions to submit the form. I tried various ways to prevent it by adding Crispy formHelper and jQuery code on the index.html page to prevent eventDefult and trigger the form submit on click events. The form had some formatting errors before using crispy forms, creating tables element on the deployed page, which only showed via the code validation. I believe this bug occurs because the form tries to submit when the page load and my attempts to fix it until now may not be the right way for it. 
 
