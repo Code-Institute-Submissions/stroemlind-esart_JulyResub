@@ -706,3 +706,15 @@ Crispy formHelper
 * This project took shape with two different computers and screen sizes. Depending on which computer, the d in the heading "E.Stromlind posters and art" disappears into the image to the right. I have lowered the pixel size from 60px to 55px to make it look better on both computers, but it is something to look over in more detail.
 
 * There was a code validation error with HTML and CSS for the Customer profile page and the liked poster page. Adding Login required decorators to the rendering of the view does templates the validation error got solved.
+
+* I am aware of the error messages and warnings in the Devtools when a user tries to make a purchase. These error messages accurse when the card does not have a sufficient amount or they need to authenticate themselves before proceeding with the payment. Stripe picks up the actions and shows them in developer events/activities. I interpret these error messages as the lack of webhook handling because the web application does not use webhooks.
+
+![Error message 1](documentation/testing/pay-auth.png)
+
+![Error message 2](documentation/testing/payerror1.png)
+
+![Error message 3](documentation/testing/payerror2.png)
+
+![Error message 4](documentation/testing/payerror3.png)
+
+![Error message 5](documentation/testing/payerror4.png)
