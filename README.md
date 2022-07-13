@@ -231,7 +231,7 @@ Depending on if the user does different actions on the web application, a little
 
 * Success message if the user updates delivery information
 
-![Success message newsletter](documentation/testing/infosuccess.png)
+![Success message delivery update](documentation/testing/infosuccess.png)
 
 * Error message if the user tries to search for something on the web application, but the input is not a valid one.
 
@@ -247,7 +247,23 @@ Depending on if the user does different actions on the web application, a little
 
 * Error message if the user tries to go to checkout with no products in the shopping cart
 
-![Error message newsletter](documentation/testing/trycheckoutwithnopost.png)
+![Error message checkout](documentation/testing/trycheckoutwithnopost.png)
+
+* Success message if the Superuser adds a new poster
+
+![Success message add poster](documentation/testing/info-add.png)
+
+* Information message about what poster the Superuser decided to edit.
+
+![Information about edit poster](documentation/testing/info-editposter.png)
+
+* Success message if the Superuser edit a poster
+
+![Success message edit poster](documentation/testing/info-updatesuccess.png)
+
+* Success message if the Superuser delete a poster
+
+![Success message delete poster](documentation/testing/info-delete.png)
 
 #### Request Poster Form: 
 A user can fill out a form on the index page with a request to get a customized poster. The form contains five input fields: 
@@ -289,15 +305,20 @@ A user can browse through posters in a given category.
 #### View a Poster in detail:
 The web application gives the user access to details about each poster available in the store. The user sees a bigger image of the poster, its name, the price, add to cart button, and a heart button on this page. The page also provides an accordion with the details, size guide, and return information. The detail contains information about the motive, the size of the poster, and what kind of canvas it's made on. The size guide gives the user information about the sizes in measurements. 
 The return information tab gives the user the most important part about the return policy and links to the terms and conditions page.
+If the user is a Superuser, two additional buttons are displayed, one edit and one delete. These allow the Superuser to edit the poster's information and image or delete the poster.
 
 ![Poster Detail 1](documentation/testing/posterdetail1.png)
 
 ![Poster Detail 2](documentation/testing/posterdetail2.png)
 
+![Poster Detail Superuser](documentation/testing/desk-posterdetailsuper.png)
+
 #### Like a Poster for saving for later or collect them to review:
 A user who is authenticated can like/heart posters as a reserve for later functionality. The function makes it easy for the user to track the kind of style of a poster they are after.
 
 ![Poster Liked](documentation/testing/posterlike.png)
+
+![Liked Poster Page](documentation/testing/desktop-likedposters.png)
 
 #### Add To Cart: 
 The add to cart button allows the user to add a poster to the cart. The button only allows the user to add one of the same posters to the cart as the posters are one of a kind. If a user tries to add the same poster twice, they will get a notification saying that the poster already exists in the shopping cart.
@@ -348,6 +369,11 @@ On the profile page of an authenticated user, all the orders made by the user sh
 ![Order History box 1](documentation/testing/order1.png)
 
 ![Order History box 2](documentation/testing/desk-profile.png)
+
+#### Error 404 page
+If a page does not exist on the web application, an error 404 page will be displayed. Letting the user know that the page they are looking for does not exist allows them to go back to the homepage or other suggestions they may try.
+
+![Error404](documentation/testing/error404.png)
 
 ### Features Left to Implement
 
@@ -835,6 +861,7 @@ Request form image:
 [GeeksforGeeks](https://www.geeksforgeeks.org/imagefield-django-forms/)
 
 Cloudinary:
+[Cloudinary](https://pypi.org/project/cloudinary/)
 [Medium](https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37)
 [Cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/)
 
