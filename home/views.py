@@ -17,11 +17,11 @@ def index(request):
     A view to render the index page
     """
 
-    form = RequestPosterForm(request.POST)
+    form = RequestPosterForm(request.POST, request.FILES)
     context = {}
 
     if request.method == 'POST':
-        form = RequestPosterForm(request.POST)
+        form = RequestPosterForm(request.POST, request.FILES)
         if form.is_valid():
             poster_request = form.save(commit=False)
             full_name = form.cleaned_data.get('full_name')
@@ -35,7 +35,7 @@ def index(request):
                                  phone_number=phone_number,
                                  motive=motive,
                                  image=image,
-                                 )
+            )
             poster_request.save()
             print(poster_request)
             messages.success(
