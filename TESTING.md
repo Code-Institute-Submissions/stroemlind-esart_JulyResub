@@ -84,6 +84,17 @@ This section provides images of the tests for responsiveness on different screen
 
 ![Poster detail view](documentation/testing/desk-posterdetail1.png)
 
+#### Add, Edit and Delete Posters
+![Add Poster 1](documentation/testing/desk-addposter.png)
+
+![Add Poster 2](documentation/testing/desk-addposter1.png)
+
+![Edit Poster 1](documentation/testing/desk-editposter1.png)
+
+![Edit Poster 2](documentation/testing/desk-editposter2.png)
+
+![Delete Poster](documentation/testing/desk-deleteposter.png)
+
 #### Request Poster Form
 ![RequestPosterForm](documentation/testing/requestform1.png)
 
@@ -146,8 +157,17 @@ This section provides images of the tests for responsiveness on different screen
 
 ![Poster detail view](documentation/testing/tablet-posterdetail.png)
 
+#### Add, Edit and Delete Poster view
+![Add Poster](documentation/testing/tablet-addposterpage.png)
+
+![Edit Poster](documentation/testing/tablet-editposterpage.png)
+
+![Delete Poster](documentation/testing/tablet-deleteposter.png)
+
 #### Liked Posters page
-![Liked posters page](documentation/testing/tablet-likedposters.png)
+![Liked posters page with likes](documentation/testing/tablet-likedposters.png)
+
+![Liked posters page without likes](documentation/testing/tablet-nolikedposters.png)
 
 #### Shopping Cart
 ![Cart No free](documentation/testing/tablet-cart2.png)
@@ -208,8 +228,25 @@ This section provides images of the tests for responsiveness on different screen
 
 ![Poster detail view 2](documentation/testing/mobile-posterdetail2.png)
 
+#### Add, Edit and Delete Poster view
+![Add poster 1](documentation/testing/mobile-addposter1.png)
+
+![Add poster 2](documentation/testing/mobile-addposter2.png)
+
+![Add poster 3](documentation/testing/mobile-addposter3.png)
+
+![Edit poster 1](documentation/testing/mobile-editposter1.png)
+
+![Edit poster 2](documentation/testing/mobile-editposter2.png)
+
+![Edit poster 3](documentation/testing/mobile-editposter3.png)
+
+![Delete poster](documentation/testing/mobile-deleteposter.png)
+
 #### Liked Posters page
-![Liked posters page](documentation/testing/mobile-likedposters.png)
+![Liked posters page with likes](documentation/testing/mobile-likedposter1.png)
+
+![Liked posters page without likes](documentation/testing/mobile-likedposter2.png)
 
 #### Shopping Cart
 ![Cart No free](documentation/testing/mobile-cart1.png)
