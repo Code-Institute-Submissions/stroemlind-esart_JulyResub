@@ -58,7 +58,7 @@ class RequestPosterForm(forms.ModelForm):
                     'placeholder': 'Enter Your Email here',
                     'aria-label': 'Enter Email',
                 }),
-                'phone_number': forms.NumberInput(attrs={
+                'phone_number': forms.TextInput(attrs={
                     'class': 'form-control request-form mb-2',
                     'placeholder': 'Enter Your Phone number here',
                     'aria-label': 'Enter Phone number',
