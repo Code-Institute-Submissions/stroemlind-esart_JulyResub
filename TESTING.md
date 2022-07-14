@@ -782,3 +782,6 @@ Crispy formHelper
    * "... kräver att du vidtar åtgärder för att slutföra betalningen" means that the User needs to take action, like authenticate themself to continue with the payment.
 
 ![Stripe](documentation/testing/stripe.png)
+
+
+* I am aware of the scroll function not working correctly when a User clicks on the Customized link in the menu if they are on the home page. I have tried to fix this whit some JS and jQuery but did not make it work. I tried to get the event on click and toggle the close function for the menu. It is something that I know I need to research more and a function to implement for the future. 
