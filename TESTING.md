@@ -575,7 +575,7 @@ If something happens during the payment process, the user gets notified with err
 ![Checkoutform fail 7](documentation/testing/checkout1.png)
 
 ### Add, edit and delete poster through the web application's front-end as Admin/Superuser
-An admin or Superuser for the web application can add, edit and delete posters to the shop through frontend applications. The User gets a notification each time they successfully add, edit, or delete a poster. The User also receives a message about which poster they are editing.
+An admin or Superuser can add, edit and delete posters to the shop through the frontend applications. The User gets a notification each time they successfully add, edit, or delete a poster. The User also receives a message about which poster they are editing.
 
 * Add a poster to the shop
 
