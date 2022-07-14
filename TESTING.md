@@ -314,6 +314,102 @@ This section covers the responsiveness of different screen sizes. It's divided i
 #### Error 404 page
 ![Mobile Error 404](documentation/testing/mobile-404.png)
 
+## Automated Testing
+This section go through the Django testing done to the project code.
+
+### Testing Posters View
+The test code and the test result with an image are displayed below. The test is to test if the view function and all its functionality for the posters page work.
+
+#### The test codes from tests_views.py:
+```python
+<from django.test import TestCase
+from .models import Poster
+
+
+class TestViews(TestCase):
+    """ Test the code for the views """
+    @classmethod
+    def setUpTestData(cls):
+
+        Poster.objects.create(
+            name='Test Name',
+            description='Test and test',
+            size=True,
+            quantity=1,
+            price=50.00,
+            image='placeholder'
+        )
+
+    def test_get_posters_page(self):
+        """ Test to get the right template for the view """
+        response = self.client.get('/posters/posters/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(
+            response,
+            'posters/posters-page.html',
+            'base.html'
+        )
+>
+```
+
+#### Result from gitpod terminal 
+
+![Test Posters Views](documentation/testing/testpostersviews.png)
+
+### Testing Home Models
+The test code and the test result with an image are displayed below. The test tests whether the RequestPoster model fields have the correct max length from the setup data for the testing.
+
+#### The test codes from tests_views.py:
+```python
+<from django.test import TestCase
+from .models import RequestPoster
+
+
+class TestRequestPosterModel(TestCase):
+    """
+    Test the PostModel
+    """
+    @classmethod
+    def setUpTestData(cls):
+        RequestPoster.objects.create(
+            full_name='Test Out',
+            email='test@mail.com',
+            phone_number='123949596',
+            date='2022.05.03',
+            motive='I want to request',
+            image='placeholder',
+        )
+
+    def test_full_name_max_length(self):
+        """ test full_name max length """
+        poster_request = RequestPoster.objects.get(id=1)
+        max_length = poster_request._meta.get_field('full_name').max_length
+        self.assertEqual(max_length, 70)
+
+    def test_email_max_length(self):
+        """ test email max length """
+        poster_request = RequestPoster.objects.get(id=1)
+        max_length = poster_request._meta.get_field('email').max_length
+        self.assertEqual(max_length, 200)
+
+    def test_phone_number_max_length(self):
+        """ test email max length """
+        poster_request = RequestPoster.objects.get(id=1)
+        max_length = poster_request._meta.get_field('phone_number').max_length
+        self.assertEqual(max_length, 20)
+
+    def test_motive_max_length(self):
+        """ test email max length """
+        poster_request = RequestPoster.objects.get(id=1)
+        max_length = poster_request._meta.get_field('motive').max_length
+        self.assertEqual(max_length, 500)
+>
+```
+
+#### Result from gitpod terminal
+
+![Test Home Models](documentation/testing/testhomemodels.png)
+
 ## Tested User Stories
 ### Overview of all the posters
 A user can quickly check all the posters available in the shop on a single page. 
@@ -506,102 +602,6 @@ An admin or Superuser for the web application can add, edit and delete posters t
 An admin or superuser for the web application can add, edit and delete posters to the shop by the admin panel. The events get displayed on a message board on the admin panel.
 
 ![Manage Posters](documentation/testing/posteractions.png)
-
-## Automated Testing
-This section go through the Django testing done to the project code.
-
-### Testing Posters View
-The test code and the test result with an image are displayed below. The test is to test if the view function and all its functionality for the posters page work.
-
-#### The test codes from tests_views.py:
-```python
-<from django.test import TestCase
-from .models import Poster
-
-
-class TestViews(TestCase):
-    """ Test the code for the views """
-    @classmethod
-    def setUpTestData(cls):
-
-        Poster.objects.create(
-            name='Test Name',
-            description='Test and test',
-            size=True,
-            quantity=1,
-            price=50.00,
-            image='placeholder'
-        )
-
-    def test_get_posters_page(self):
-        """ Test to get the right template for the view """
-        response = self.client.get('/posters/posters/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(
-            response,
-            'posters/posters-page.html',
-            'base.html'
-        )
->
-```
-
-#### Result from gitpod terminal 
-
-![Test Posters Views](documentation/testing/testpostersviews.png)
-
-### Testing Home Models
-The test code and the test result with an image are displayed below. The test tests whether the RequestPoster model fields have the correct max length from the setup data for the testing.
-
-#### The test codes from tests_views.py:
-```python
-<from django.test import TestCase
-from .models import RequestPoster
-
-
-class TestRequestPosterModel(TestCase):
-    """
-    Test the PostModel
-    """
-    @classmethod
-    def setUpTestData(cls):
-        RequestPoster.objects.create(
-            full_name='Test Out',
-            email='test@mail.com',
-            phone_number='123949596',
-            date='2022.05.03',
-            motive='I want to request',
-            image='placeholder',
-        )
-
-    def test_full_name_max_length(self):
-        """ test full_name max length """
-        poster_request = RequestPoster.objects.get(id=1)
-        max_length = poster_request._meta.get_field('full_name').max_length
-        self.assertEqual(max_length, 70)
-
-    def test_email_max_length(self):
-        """ test email max length """
-        poster_request = RequestPoster.objects.get(id=1)
-        max_length = poster_request._meta.get_field('email').max_length
-        self.assertEqual(max_length, 200)
-
-    def test_phone_number_max_length(self):
-        """ test email max length """
-        poster_request = RequestPoster.objects.get(id=1)
-        max_length = poster_request._meta.get_field('phone_number').max_length
-        self.assertEqual(max_length, 20)
-
-    def test_motive_max_length(self):
-        """ test email max length """
-        poster_request = RequestPoster.objects.get(id=1)
-        max_length = poster_request._meta.get_field('motive').max_length
-        self.assertEqual(max_length, 500)
->
-```
-
-#### Result from gitpod terminal
-
-![Test Home Models](documentation/testing/testhomemodels.png)
 
 ## Tested Features
 Test existing web application features that are not related to a User Story.
