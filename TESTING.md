@@ -151,6 +151,9 @@ This section provides images of the tests for responsiveness on different screen
 
 ![Terms & Cond](documentation/testing/terms.png)
 
+#### Error 404 page
+![Desktop 404](documentation/testing/error404.png)
+
 ### Tablet
 #### Home
 ![Home page 1](documentation/testing/tablet-home.png)
@@ -219,6 +222,9 @@ This section provides images of the tests for responsiveness on different screen
 ![About Us](documentation/testing/tablet-aboutus.png)
 
 ![Terms & Cond](documentation/testing/tablet-terms.png)
+
+#### Error 404 page
+![Tablet Error 404](documentation/testing/tablet-404.png)
 
 ### Mobile
 #### Home
@@ -305,6 +311,8 @@ This section provides images of the tests for responsiveness on different screen
 
 ![Terms & Cond](documentation/testing/mobile-terms.png)
 
+#### Error 404 page
+![Mobile Error 404](documentation/testing/mobile-404.png)
 
 ## Tested User Stories
 ### Overview of all the posters
