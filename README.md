@@ -407,6 +407,8 @@ A custom error 404 page if a page does not exist on the web application. It will
 
 * Set up Stripe with webhooks to make the payment process more secure for the user.
 
+* Upgrade the search function for the webpage to take in more parameters and display a message for the User that what they searched for is not available on the web application.
+
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
 
