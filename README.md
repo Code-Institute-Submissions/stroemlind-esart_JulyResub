@@ -172,6 +172,8 @@ And for the footer:
 
 ![Navbar user login](documentation/testing/mobile-menu2.png)
 
+![Navbar superuser login](documentation/testing/menuiconssuper.png)
+
 The web application contains a two-part navbar at the top of the pages: An offcanvas menu that the user access by clicking on the round button at the top left corner and a row with icons at the top right corner of the page. 
 * Offcanvas menu: 
 When a user accesses the offcanvas menu, it opens up on the left side of the page, displaying a list of navigation options. From the options a user can navigate to the:
@@ -322,6 +324,21 @@ A user who is authenticated can like/heart posters as a reserve for later functi
 ![Poster Liked](documentation/testing/posterlike.png)
 
 ![Liked Poster Page](documentation/testing/desktop-likedposters.png)
+
+#### Add, Edit and Delete Poster if Superuser:
+An admin or Superuser for the web application can add, edit and delete posters to the shop through frontend applications.
+
+* Add a poster to the shop
+
+![Add Poster](documentation/testing/addposter-test.png)
+
+* Edit a poster to the shop
+
+![Edit Poster](documentation/testing/tablet-editposterpage.png)
+
+* Delete a poster from the shop
+
+![Delete Poster](documentation/testing/tablet-deleteposter.png)
 
 #### Add To Cart: 
 The add to cart button allows the user to add a poster to the cart. The button only allows the user to add one of the same posters to the cart as the posters are one of a kind. If a user tries to add the same poster twice, they will get a notification saying that the poster already exists in the shopping cart.
