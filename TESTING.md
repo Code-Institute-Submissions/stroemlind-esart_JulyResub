@@ -837,6 +837,8 @@ Crispy formHelper
 
 * I am aware of the error messages and warnings in the Devtools when a user tries to make a purchase. These error messages accurse when the card does not have a sufficient amount or they need to authenticate themselves before proceeding with the payment. Stripe picks up the actions and shows them in developer events/activities. I interpret these error messages as the lack of webhook handling because the web application does not use webhooks.
 
+  * The Error messages:
+
 ![Error message 1](documentation/testing/pay-auth.png)
 
 ![Error message 2](documentation/testing/payerror1.png)
@@ -846,3 +848,11 @@ Crispy formHelper
 ![Error message 4](documentation/testing/payerror3.png)
 
 ![Error message 5](documentation/testing/payerror4.png)
+
+  * From the Stripe activity page:
+  For clarity, since my Stripe page is in Swedish:
+   * "lyckades" means that the payment succeeded.
+   * "misslyckades" means that the payment did not succeed.
+   * "... kräver att du vidtar åtgärder för att slutföra betalningen" means that the User needs to take action, like authenticate themself to continue with the payment.
+
+![Stripe](documentation/testing/stripe.png)
