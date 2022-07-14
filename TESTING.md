@@ -316,7 +316,7 @@ A user can quickly check all the posters available in the shop on a single page.
 
 ![Poster page 3 mobile](documentation/testing/mobile-posters.png)
 
-### See poster all the posters depending on the poster's motive/category
+### See all the posters depending on the poster's motive/category
 When users select to view posters by category, they get redirected to a page that displays all the posters for the selected category.
 
 ![Category page desk](documentation/testing/desk-categorypage.png)
