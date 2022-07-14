@@ -86,7 +86,7 @@ The website runs without any issues in the Safari browser
   ![Safari](documentation/testing/safari.png)
 
 ## Responsiveness
-This section provides images of the tests for responsiveness on different screen sizes.
+This section covers the responsiveness of different screen sizes. It's divided into Desktop, tablet, and mobile screen sizes and provides images to show the tests.
 
 ### Desktop
 #### Home
